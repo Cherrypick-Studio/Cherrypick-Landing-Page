@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Text from '@/components/ui/text'
 import LanguageMenu from '@/components/molecules/header/language-menu'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
-import { HiMiniChevronDown } from 'react-icons/hi2'
 import { RxCross2 } from 'react-icons/rx'
 import { useState, useEffect } from 'react'
 import {
