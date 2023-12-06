@@ -9,7 +9,7 @@ const Clients = () => {
     <div className='my-16 container mx-auto'>
       <SectionTitle
         title='Our Clients'
-        subtitle='Some of our patners and clients'
+        subtitle='Some of our partners and clients'
       />
       <div className='mt-12'>
         <div className='flex relative flex-col w-full justify-between'>
