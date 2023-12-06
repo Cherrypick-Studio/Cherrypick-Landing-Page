@@ -1,6 +1,4 @@
-import Text from '@/components/ui/text'
 import SectionTitle from '../molecules/section-title'
-import Image from 'next/image'
 import CardServices from '../molecules/card-services'
 
 const Services = () => {

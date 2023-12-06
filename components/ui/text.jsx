@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 const getVariant = (variant) => {
   switch (variant) {
     case 'primary':
-      return 'text-black';
+      return 'text-gray-500';
     case 'white':
       return 'text-white'
     case 'subtitle':

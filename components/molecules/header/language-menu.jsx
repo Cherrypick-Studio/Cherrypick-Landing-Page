@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 
+
 const LanguageMenu = () => {
   return (
     <NavigationMenu>

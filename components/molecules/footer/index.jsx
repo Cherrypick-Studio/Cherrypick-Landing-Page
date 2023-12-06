@@ -3,6 +3,7 @@ import Text from '@/components/ui/text'
 import { Button } from '@/components/ui/button'
 import CardIcon from '../card-icon'
 import { Separator } from '@/components/ui/separator'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
           className='-mb-2 lg:-mb-4'
         />
       </div>
-      <div className="bg-center px-4 py-28 flex flex-col text-center space-y-6 justify-center items-center bg-[url('/images/bg-mask-footer.svg')]">
+      <div className="bg-center px-4 py-28 flex flex-col text-center space-y-6 bg-cover md:bg-auto justify-center items-center bg-[url('/images/bg-mask-footer-mobile.svg')] md:bg-[url('/images/bg-mask-footer.svg')]">
         <Text
           variant='white'
           size='h0'
@@ -53,12 +54,27 @@ const Footer = () => {
                   Find Us On
                 </Text>
                 <div className='flex items-center justify-center lg:justify-end space-x-5 mt-2'>
-                  <CardIcon image='/images/icon-footer/instagram.svg' />
-                  <CardIcon image='/images/icon-footer/dribbble.svg' />
-                  <CardIcon image='/images/icon-footer/ri_behance-line.svg' />
-                  <CardIcon image='/images/icon-footer/linkedin.svg' />
-                  <CardIcon image='/images/icon-footer/mail.svg' />
-                  <CardIcon image='/images/icon-footer/ic_baseline-whatsapp.svg' />
+                  <Link href={'#'}>
+
+                  </Link>
+                  <Link href={'#'}>
+                    <CardIcon image='/images/icon-footer/instagram.svg' />
+                  </Link>
+                  <Link href={'#'}>
+                    <CardIcon image='/images/icon-footer/dribbble.svg' />
+                  </Link>
+                  <Link href={'#'}>
+                    <CardIcon image='/images/icon-footer/ri_behance-line.svg' />
+                  </Link>
+                  <Link href={'#'}>
+                    <CardIcon image='/images/icon-footer/linkedin.svg' />
+                  </Link>
+                  <Link href={'#'}>
+                    <CardIcon image='/images/icon-footer/mail.svg' />
+                  </Link>
+                  <Link href={'#'}>
+                    <CardIcon image='/images/icon-footer/ic_baseline-whatsapp.svg' />
+                  </Link>
                 </div>
               </div>
               <div className='text-center lg:text-right'>
@@ -75,13 +91,13 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <Separator orientation='horizontal' />
+          <Separator orientation='horizontal' className='my-2'/>
           <div className='flex justify-center items-center py-8'>
             <Text
               variant='white'
               size='h-6'
             >
-              &copy; 2023 Cherry Pick
+              &copy; {new Date().getFullYear()} Cherry Pick
             </Text>
           </div>
         </div>

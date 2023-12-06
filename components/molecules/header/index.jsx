@@ -6,6 +6,12 @@ import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { HiMiniChevronDown } from 'react-icons/hi2'
 import { RxCross2 } from 'react-icons/rx'
 import { useState, useEffect } from 'react'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -27,7 +33,7 @@ const Header = () => {
   return (
     <>
       <div className={`fixed top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}>
-        <div className='relative flex items-center justify-between container mx-auto py-8'>
+        <div className='relative flex items-center justify-between container mx-auto md:py-8 py-4'>
           <div>
             <Image
               src='/images/logo-white.svg'
@@ -56,62 +62,63 @@ const Header = () => {
                 </div>
                 <div className='flex flex-col justify-center items-center h-full'>
                   <div className='flex flex-col items-center space-y-5'>
-                    <div className='flex items-center space-x-2 cursor-pointer'
-                      onClick={() => setLanguageDropdown(!languageDropdown)}
-                    >
-                      <Image
-                        src='/images/british.svg'
-                        alt='language'
-                        title='language'
-                        height={20}
-                        width={26}
-                      />
-                      <HiMiniChevronDown
-                        data-dropdown={languageDropdown}
-                        className='h-3 w-3 data-[dropdown=true]:rotate-180 transition-all duration-300 ease-in-out'
-                      />
-                    </div>
-                    <div data-dropdown={languageDropdown} className='data-[dropdown=false]:hidden flex flex-col space-y-5 items-center'>
-                      <Text
-                        variant='black'
-                        size='h5'
-                      >
-                        Bahasa Indonesia
-                      </Text>
-                      <Text
-                        variant='black'
-                        size='h5'
-                      >
-                        French
-                      </Text>
-                      <Text
-                        variant='black'
-                        size='h5'
-                      >
-                        Germany
-                      </Text>
-                      <Text
-                        variant='black'
-                        size='h5'
-                      >
-                        Dutch
-                      </Text>
-                      <div className='w-[94px] h-px bg-gray-50' />
-                    </div>
+                    <Accordion type="single" collapsible={true} className='text-center'>
+                      <AccordionItem value="item-1">
+                        <AccordionTrigger>
+                          <Image
+                            src='/images/british.svg'
+                            alt='language'
+                            title='language'
+                            height={20}
+                            width={26}
+                          />
+                        </AccordionTrigger>
+                        <AccordionContent>
+                            <Text
+                              variant='primary'
+                              size='h4'
+                              className='block py-1'
+                            >
+                              Bahasa Indonesia
+                            </Text>
+                            <Text
+                              variant='primary'
+                              size='h4'
+                              className='block py-1'
+                            >
+                              French
+                            </Text>
+                            <Text
+                              variant='primary'
+                              size='h4'
+                              className='block py-1'
+                            >
+                              Germany
+                            </Text>
+                            <Text
+                              variant='primary'
+                              size='h4'
+                              className='block py-1'
+                            >
+                              Dutch
+                            </Text>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
                     <Text
-                      variant='black'
+                      variant='primary'
                       size='h4'
                     >
                       Services
                     </Text>
                     <Text
-                      variant='black'
+                      variant='primary'
                       size='h4'
                     >
                       Works
                     </Text>
                     <Text
-                      variant='black'
+                      variant='primary'
                       size='h4'
                     >
                       Contact

@@ -23,7 +23,7 @@ const CardServices = ({ image, alt, icon, title, description }) => {
             width={40}
           />
           <Text
-            variant='black'
+            variant='primary'
             size='h1'
             weight='700'
           >
@@ -31,10 +31,10 @@ const CardServices = ({ image, alt, icon, title, description }) => {
           </Text>
         </div>
         <Text
-          variant='black'
+          variant='primary'
           size='h4'
           weight='200'
-          className='mt-5'
+          className='mt-5 leading-[30px]'
         >
           { description }
         </Text>

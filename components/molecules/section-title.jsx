@@ -4,7 +4,7 @@ const SectionTitle = ({title, subtitle}) => {
   return (
     <div className='flex flex-col justify-center text-center'>
       <Text
-        variant='black'
+        variant='primary'
         size='h0'
         weight='700'
       >
