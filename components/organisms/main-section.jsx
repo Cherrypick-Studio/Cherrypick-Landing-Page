@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 
 const MainSection = () => {
   return (
-    <div className=" pt-16 md:pt-40 pb-48 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]">
+    <div className=" pt-24 md:pt-40 pb-56 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]">
       <div className='md:container md:mx-auto lg:flex space-y-16 lg:space-y-0'>
         <div className='w-full lg:w-2/5 text-center lg:text-start'>
           <Text
