@@ -4,14 +4,14 @@ import { Button } from '@/components/ui/button'
 
 const MainSection = () => {
   return (
-    <div className=" pt-28 md:pt-40 pb-20 md:bg-cover bg-contain bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-mobile.svg')]">
-      <div className='md:container md:mx-auto lg:flex space-y-6 lg:space-y-0'>
+    <div className=" pt-16 md:pt-40 pb-48 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]">
+      <div className='md:container md:mx-auto lg:flex space-y-16 lg:space-y-0'>
         <div className='w-full lg:w-2/5 text-center lg:text-start'>
           <Text
             variant='white'
             size='h0'
             weight='700'
-            className='block !leading-[70px]'
+            className='block !leading-[44px] md:!leading-[70px]'
           >
             Digitalize Your Products with Us
           </Text>
@@ -19,7 +19,7 @@ const MainSection = () => {
             variant='white'
             size='h2'
             weight='400'
-            className='block my-6 leading-9'
+            className='block my-6 mx-4 md:mx-auto leading-9'
           >
             Create intuitive UI/UX designs aligned with client goals, delivering high-quality UI/UX Design & Development services.
           </Text>

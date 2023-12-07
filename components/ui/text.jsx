@@ -7,7 +7,7 @@ const getVariant = (variant) => {
     case 'white':
       return 'text-white'
     case 'subtitle':
-      return 'text-red-cherry-500 bg-red-cherry-50 py-1 px-4 uppercase'
+      return 'text-red-cherry-500 bg-red-cherry-50 py-2 px-4 uppercase'
     case 'flutix':
       return 'text-[#503E9D]'
     case 'link':
@@ -86,8 +86,11 @@ const Text = ((props, ref) => {
     getWeight(weight),
     getDecoration(decoration),
     getSize(size),
-    className
+    className,
+    {...rest}
   )
+
+  console.log(merged)
 
   return (
     <>

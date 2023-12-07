@@ -4,7 +4,7 @@ import Text from '@/components/ui/text'
 const CardServices = ({ image, alt, icon, title, description }) => {
   return (
     <div>
-      <div>
+      <div className='flex items-center justify-center'>
         <Image
           src={image}
           alt={alt}

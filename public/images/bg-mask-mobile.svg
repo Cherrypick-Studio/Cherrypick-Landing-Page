@@ -1,8 +1,8 @@
-<svg width="460" height="830" viewBox="0 0 460 830" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0H460V737L0 830L0 0Z" fill="url(#paint0_linear_57_631)"/>
+<svg width="460" height="850" viewBox="0 0 460 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H460V737L0 850L0 0Z" fill="url(#paint0_linear_57_631)"/>
 <g clip-path="url(#clip0_57_631)">
-<mask id="mask0_57_631" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="460" height="830">
-<path d="M0 0H460V737L0 830L0 0Z" fill="url(#paint1_linear_57_631)"/>
+<mask id="mask0_57_631" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="460" height="850">
+<path d="M0 0H460V737L0 850L0 0Z" fill="url(#paint1_linear_57_631)"/>
 </mask>
 <g mask="url(#mask0_57_631)">
 <path d="M14.3784 423.875L-119.949 473.775C-127.256 476.486 -131.977 482.643 -131.977 489.446V549.081C-131.977 555.243 -124.567 559.381 -117.952 556.906L18.3115 505.954C20.8253 505.015 23.6879 504.999 26.2198 505.908L73.0743 522.796C76.7788 524.131 79.1905 527.233 79.1905 530.668V627.211C79.1905 630.646 76.7788 633.748 73.0743 635.083L-43.8906 677.239C-51.3058 679.909 -56.1229 686.112 -56.1229 692.982V752.242C-56.1229 758.358 -48.816 762.491 -42.2187 760.114L157.035 688.253C164.444 685.578 169.261 679.38 169.261 672.51V485.318C169.261 478.453 164.444 472.25 157.035 469.575L30.1589 423.798C25.1132 421.976 19.406 422.001 14.3844 423.87L14.3784 423.875Z" fill="#C42127"/>
@@ -23,7 +23,7 @@
 <stop offset="1" stop-color="#E6464C"/>
 </linearGradient>
 <clipPath id="clip0_57_631">
-<rect width="460" height="830" fill="white"/>
+<rect width="460" height="850" fill="white"/>
 </clipPath>
 </defs>
 </svg>

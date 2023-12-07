@@ -20,7 +20,7 @@ const Works = () => {
             width={271}
             className='absolute top-4 md:top-14 left-8 px-4 lg:px-0 lg:left-40 w-[251px] h-[271px] md:w-[364px] md:h-[394px]'
           />
-          <div className='z-20'>
+          <div className='z-20 md:ml-8'>
             <Image
               src='/images/logo-laracamp.svg'
               alt='logo-laracamp'
@@ -31,7 +31,7 @@ const Works = () => {
             <Text
               variant='white'
               size='h4'
-              className='block w-full lg:w-[378px] mt-4 md:mt-8 text-justify leading-[30px]'
+              className='block w-full lg:w-[378px] mt-4 text-justify leading-[30px]'
             >
               Laracamp is a bootcamp that helps junior developers who are really passionate about programming by providing several benefits such as learning videos, 1 on 1 mentoring programs, design kits, and many more.
             </Text>
@@ -43,7 +43,7 @@ const Works = () => {
               title='vector-laracamp'
               height={461}
               width={582}
-              className='lg:absolute -mb-16 mt-4 lg:mt-0 rounded-[20px] shadow-md lg:-bottom-24 lg:right-0'
+              className='lg:absolute -mb-16 mt-4 lg:mt-0 rounded-[20px] shadow-md lg:-bottom-24 lg:right-0 mx-auto'
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ const Works = () => {
               title='bg-shamo'
               height={468}
               width={584}
-              className='absolute bottom-44 lg:bottom-0 inset-x-0 mx-auto'
+              className='absolute bottom-44 md:bottom-0 inset-x-0 mx-auto'
             />
             <div className='relative z-20 order-last lg:order-first'>
               <Image
@@ -115,7 +115,7 @@ const Works = () => {
               <Text
                 variant='flutix'
                 size='h4'
-                className='block w-full mt-5 text-justify leading-[30px]'
+                className='block w-full mt-5 text-justify leading-[30px] mb-6'
               >
                 Flutix is a cinema ticket sales application with various attractive offers and various conveniences for its users.
               </Text>
@@ -135,7 +135,7 @@ const Works = () => {
                 title='vector-flutix'
                 height={733}
                 width={378}
-                className='block lg:hidden -mb-16 mx-auto'
+                className='block lg:hidden -mb-16 mx-auto rounded-[20px]'
               />
             </div>
           </div>
@@ -157,7 +157,7 @@ const Works = () => {
               title='vector-micro'
               height={452}
               width={481}
-              className='lg:absolute -mb-14 lg:-top-20 lg:left-0 mt-4 lg:mt-0 rounded-[20px] shadow-md'
+              className='lg:absolute -mb-14 md:-top-20 lg:left-0 mt-4 lg:mt-0 rounded-[20px] shadow-md mx-auto'
             />
           </div>
           <div className='z-20 w-full lg:w-1/2'>

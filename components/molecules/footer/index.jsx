@@ -35,7 +35,7 @@ const Footer = () => {
           </>
         </Button>
       </div>
-      <div className='bg-gray-500'>
+      <div className='bg-gray-500 -mt-1'>
         <div className='container mx-auto'>
           <div className='flex flex-col lg:flex-row space-y-8 lg:space-y-0 items-center justify-between py-8'>
             <Image

@@ -2,7 +2,7 @@ import Text from '@/components/ui/text'
 
 const Goals = () => {
   return (
-    <div className="bg-cover bg-center bg-[url('/images/bg-mask-2.svg')]">
+    <div className="bg-cover bg-center md:bg-[url('/images/bg-mask-2.svg')] bg-[url('/images/bg-mask-work-mobile.svg')]">
       <div className='container mx-auto py-[100px] flex flex-col items-center justify-center text-center'>
         <Text
           variant='primary'
