@@ -8,7 +8,7 @@ const Services = () => {
         title='Our Services'
         subtitle='Meet the professionals'
       />
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-y-12 md:gap-y-0 md:gap-x-8 mt-12'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-y-12 md:gap-y-12 md:gap-x-8 mt-12'>
         <CardServices
           image='/images/vector-development.svg'
           alt='vector-development'

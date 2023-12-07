@@ -6,7 +6,7 @@ import CardClient from '../molecules/card-client'
 const Clients = () => {
 
   return (
-    <div className='my-16 md:container md:mx-auto'>
+    <div className='my-16 md:container md:mx-auto !px-0'>
       <SectionTitle
         title='Our Clients'
         subtitle='Some of our partners and clients'
