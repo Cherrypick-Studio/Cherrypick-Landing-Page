@@ -1276,6 +1276,7 @@ __metadata:
     clsx: "npm:^2.0.0"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.0.3"
+    lottie-react: "npm:^2.4.0"
     lucide-react: "npm:^0.294.0"
     next: "npm:14.0.3"
     postcss: "npm:^8"
@@ -2909,6 +2910,25 @@ __metadata:
   bin:
     loose-envify: cli.js
   checksum: 39c5fc44c6a8f7f8a92cccf174554fbb307477ef493760407920fdd4ed5f6cc1aec5b6a5ab3c3767ef79547b3e1aea09d8ca08d773232c662d910cfe473a0590
+  languageName: node
+  linkType: hard
+
+"lottie-react@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "lottie-react@npm:2.4.0"
+  dependencies:
+    lottie-web: "npm:^5.10.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 20e0a56b5e9e2654d460ca249f3e692feee445aac7effbc29d580b6cdda814b1d3e37f13d2f920c2e0045a2617eb7368bde4211b6c8c5a40132c44a996d330f8
+  languageName: node
+  linkType: hard
+
+"lottie-web@npm:^5.10.2":
+  version: 5.12.2
+  resolution: "lottie-web@npm:5.12.2"
+  checksum: 6651c656263f89d4703497fc8242f5dc89dfb60e8eec668fed856c7680ea814cec9c59fe799edaec08925cd8ada73b3cf79923b508e1613d49b0e81207bc9e08
   languageName: node
   linkType: hard
 

@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image";
 import Text from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
 import { emailAction } from "@/configs/email-action";
+import Lottie from "lottie-react";
+import heroLottie from "@/public/lotties/hero-section.json";
 
 const MainSection = () => {
   return (
@@ -37,12 +40,17 @@ const MainSection = () => {
           </a>
         </div>
         <div className="w-full lg:w-3/5">
-          <Image
+          {/* <Image
             src="/images/vector-1.svg"
             alt="vector-jumbotron"
             title="vector-jumbotron"
             height={422}
             width={687}
+            className="sm:ml-0 md:float-right"
+          /> */}
+          <Lottie
+            animationData={heroLottie}
+            loop={true}
             className="sm:ml-0 md:float-right"
           />
         </div>
