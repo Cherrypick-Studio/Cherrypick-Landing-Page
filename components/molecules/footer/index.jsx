@@ -85,8 +85,8 @@ const Footer = () => {
                   Payment Accepted
                 </Text>
                 <div className="flex items-center justify-center lg:justify-end space-x-5 mt-2">
-                  <CardIcon image="/images/icon-footer/cib_cc-visa.svg" />
-                  <CardIcon image="/images/icon-footer/simple-icons_wise.svg" />
+                  <CardIcon image="/images/icon-footer/cib_cc-visa.svg" alt="visa-icon" />
+                  <CardIcon image="/images/icon-footer/simple-icons_wise.svg" alt="wise-icon" />
                 </div>
               </div>
             </div>

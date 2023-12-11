@@ -91,9 +91,9 @@ const Text = (props, ref) => {
   );
 
   return (
-    <p className={merged} {...rest}>
+    <span className={merged} {...rest}>
       {children}
-    </p>
+    </span>
   );
 };
 

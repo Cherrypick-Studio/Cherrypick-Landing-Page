@@ -1,47 +1,92 @@
-import Slider from '@/components/molecules/slider'
-import SectionTitle from '@/components/molecules/section-title'
-import Image from 'next/image'
-import CardClient from '../molecules/card-client'
+import Slider from "@/components/molecules/slider";
+import SectionTitle from "@/components/molecules/section-title";
+import CardClient from "../molecules/card-client";
 
 const Clients = () => {
-
   return (
-    <div className='my-16 md:container md:mx-auto !px-0'>
+    <section className="my-16 md:container md:mx-auto !px-0">
       <SectionTitle
-        title='Our Clients'
-        subtitle='Some of our partners and clients'
+        title="Our Clients"
+        subtitle="Some of our partners and clients"
       />
-      <div className='mt-12'>
-        <div className='flex relative flex-col w-full justify-between'>
-          <div className='w-24 h-64 hidden lg:block absolute z-20 bg-white shadow-custom-shadow-left top-0 left-0'/>
+      <div className="mt-12">
+        <div className="flex relative flex-col w-full justify-between">
+          <div className="w-24 h-64 hidden lg:block absolute z-20 bg-white shadow-custom-shadow-left top-0 left-0" />
           <div>
-            <div className='!overflow-x-auto relative flex items-center space-x-6 py-4 w-full md:no-scrollbar'>
-              
-              <CardClient image='/images/flutix.svg' alt='flutix' />
-              <CardClient image='/images/harwigadget.svg' alt='harwigadget' />
-              <CardClient image='/images/kyoo.svg' alt='kyoo' />
-              <CardClient image='/images/komerce.svg' alt='komerce' />
-              <CardClient image='/images/moonton.svg' alt='moonton' />
-              <CardClient image='/images/laracamp.svg' alt='laracamp' />
-              <CardClient image='/images/shamo.svg' alt='shamo' />
-              <CardClient image='/images/micro.svg' alt='micro' />
+            <div className="!overflow-x-auto relative flex items-center space-x-6 py-4 w-full md:no-scrollbar">
+              <CardClient
+                image="/images/flutix.svg"
+                alt="cherrypick-clients-flutix"
+              />
+              <CardClient
+                image="/images/harwigadget.svg"
+                alt="cherrypick-clients-harwigadget"
+              />
+              <CardClient
+                image="/images/kyoo.svg"
+                alt="cherrypick-clients-kyoo"
+              />
+              <CardClient
+                image="/images/komerce.svg"
+                alt="cherrypick-clients-komerce"
+              />
+              <CardClient
+                image="/images/moonton.svg"
+                alt="cherrypick-clients-moonton"
+              />
+              <CardClient
+                image="/images/laracamp.svg"
+                alt="cherrypick-clients-laracamp"
+              />
+              <CardClient
+                image="/images/shamo.svg"
+                alt="cherrypick-clients-shamo"
+              />
+              <CardClient
+                image="/images/micro.svg"
+                alt="cherrypick-clients-micro"
+              />
             </div>
-            <div className='!overflow-x-auto relative flex items-center space-x-6 py-4 w-full md:no-scrollbar'>
-              <CardClient image='/images/flutix.svg' alt='flutix' />
-              <CardClient image='/images/harwigadget.svg' alt='harwigadget' />
-              <CardClient image='/images/kyoo.svg' alt='kyoo' />
-              <CardClient image='/images/komerce.svg' alt='komerce' />
-              <CardClient image='/images/moonton.svg' alt='moonton' />
-              <CardClient image='/images/laracamp.svg' alt='laracamp' />
-              <CardClient image='/images/shamo.svg' alt='shamo' />
-              <CardClient image='/images/micro.svg' alt='micro' />
+            <div className="!overflow-x-auto relative flex items-center space-x-6 py-4 w-full md:no-scrollbar">
+              <CardClient
+                image="/images/flutix.svg"
+                alt="cherrypick-clients-flutix"
+              />
+              <CardClient
+                image="/images/harwigadget.svg"
+                alt="cherrypick-clients-harwigadget"
+              />
+              <CardClient
+                image="/images/kyoo.svg"
+                alt="cherrypick-clients-kyoo"
+              />
+              <CardClient
+                image="/images/komerce.svg"
+                alt="cherrypick-clients-komerce"
+              />
+              <CardClient
+                image="/images/moonton.svg"
+                alt="cherrypick-clients-moonton"
+              />
+              <CardClient
+                image="/images/laracamp.svg"
+                alt="cherrypick-clients-laracamp"
+              />
+              <CardClient
+                image="/images/shamo.svg"
+                alt="cherrypick-clients-shamo"
+              />
+              <CardClient
+                image="/images/micro.svg"
+                alt="cherrypick-clients-micro"
+              />
             </div>
           </div>
-          <div className='w-24 h-64 hidden lg:block absolute z-20 bg-white shadow-custom-shadow-right top-0 right-0'/>
+          <div className="w-24 h-64 hidden lg:block absolute z-20 bg-white shadow-custom-shadow-right top-0 right-0" />
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Clients
+export default Clients;

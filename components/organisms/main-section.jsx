@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const MainSection = () => {
   return (
-    <header className=" pt-24 md:pt-40 pb-56 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]">
+    <section className=" pt-24 md:pt-40 pb-56 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]">
       <div className="md:container md:mx-auto lg:flex space-y-16 lg:space-y-0">
         <div className="w-full lg:w-2/5 text-center lg:text-start">
           <Text
@@ -21,10 +21,10 @@ const MainSection = () => {
             weight="400"
             className="block my-6 mx-4 md:mx-auto leading-9"
           >
-            <h2>
+            <h3>
               Create intuitive UI/UX designs aligned with client goals,
               delivering high-quality UI/UX Design & Development services.
-            </h2>
+            </h3>
           </Text>
           <Button variant="homepage" rounded="2xl">
             Create Together Now
@@ -41,7 +41,7 @@ const MainSection = () => {
           />
         </div>
       </div>
-    </header>
+    </section>
   );
 };
 

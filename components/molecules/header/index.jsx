@@ -29,7 +29,7 @@ const Header = () => {
   });
 
   return (
-    <nav
+    <header
       className={`fixed top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
     >
       <div className="relative flex items-center justify-between container mx-auto md:py-8 py-4">
@@ -42,7 +42,7 @@ const Header = () => {
             width={176}
           />
         </div>
-        <div>
+        <nav>
           <div className="block lg:hidden">
             <HiOutlineMenuAlt1
               className="h-6 w-6 text-white cursor-pointer"
@@ -141,9 +141,9 @@ const Header = () => {
               Services
             </Text>
           </div>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
 
