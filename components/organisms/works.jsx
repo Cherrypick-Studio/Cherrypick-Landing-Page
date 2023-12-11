@@ -30,12 +30,10 @@ const Works = () => {
               size="h4"
               className="block w-full lg:w-[378px] mt-4 text-justify leading-[30px]"
             >
-              <h3>
-                Laracamp is a bootcamp that helps junior developers who are
-                really passionate about programming by providing several
-                benefits such as learning videos, 1 on 1 mentoring programs,
-                design kits, and many more.
-              </h3>
+              Laracamp is a bootcamp that helps junior developers who are really
+              passionate about programming by providing several benefits such as
+              learning videos, 1 on 1 mentoring programs, design kits, and many
+              more.
             </Text>
           </div>
           <div className="relative">
@@ -92,11 +90,9 @@ const Works = () => {
                 size="h4"
                 className="block w-full mt-5 text-justify leading-[30px]"
               >
-                <h3>
-                  Shamo is a shoe sales application with a shopping experience
-                  that prioritizes an easy user experience. and has various
-                  types of shoes from famous brands.
-                </h3>
+                Shamo is a shoe sales application with a shopping experience
+                that prioritizes an easy user experience. and has various types
+                of shoes from famous brands.
               </Text>
             </div>
           </article>
@@ -123,10 +119,8 @@ const Works = () => {
                 size="h4"
                 className="block w-full mt-5 text-justify leading-[30px] mb-6"
               >
-                <h3>
-                  Flutix is a cinema ticket sales application with various
-                  attractive offers and various conveniences for its users.
-                </h3>
+                Flutix is a cinema ticket sales application with various
+                attractive offers and various conveniences for its users.
               </Text>
             </div>
             <div className="lg:mt-10 relative z-20">
@@ -182,12 +176,10 @@ const Works = () => {
               size="h4"
               className="block w-full lg:w-[450px] mt-5 text-justify leading-[30px]"
             >
-              <h3>
-                Micro is a website-based online course application that offers
-                various kinds of online courses. Micro offers a wide selection
-                of materials ranging from business development, content writing,
-                game development, and many other learning materials.
-              </h3>
+              Micro is a website-based online course application that offers
+              various kinds of online courses. Micro offers a wide selection of
+              materials ranging from business development, content writing, game
+              development, and many other learning materials.
             </Text>
           </div>
         </article>

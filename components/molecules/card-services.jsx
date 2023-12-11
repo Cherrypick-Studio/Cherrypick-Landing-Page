@@ -11,7 +11,7 @@ const CardServices = ({ image, alt, icon, title, description }) => {
         <div className="flex items-center space-x-4">
           <Image src={icon} alt="icon" title="icon" height={40} width={40} />
           <Text variant="primary" size="h1" weight="700">
-            <h3>{title}</h3>
+            <h1>{title}</h1>
           </Text>
         </div>
         <Text

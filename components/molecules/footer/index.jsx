@@ -22,7 +22,8 @@ const Footer = () => {
         <Text variant="white" size="h0" weight="700">
           Ready to work on your project?
         </Text>
-        <Button variant="primary" rounded="2xl">
+        TODO: integrate with email
+        <Button variant="primary" rounded="2xl" id="btn-cta">
           Let&apos;s get to work
         </Button>
       </div>

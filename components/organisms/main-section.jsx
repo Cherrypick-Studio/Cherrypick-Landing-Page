@@ -21,12 +21,13 @@ const MainSection = () => {
             weight="400"
             className="block my-6 mx-4 md:mx-auto leading-9"
           >
-            <h3>
+            <h2>
               Create intuitive UI/UX designs aligned with client goals,
               delivering high-quality UI/UX Design & Development services.
-            </h3>
+            </h2>
           </Text>
-          <Button variant="homepage" rounded="2xl">
+          {/* TODO: integrate with email */}
+          <Button variant="homepage" rounded="2xl" id="btn-jumbotron">
             Create Together Now
           </Button>
         </div>

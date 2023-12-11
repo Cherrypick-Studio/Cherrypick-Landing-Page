@@ -65,7 +65,6 @@ const Button = (
 
     return (
       <Comp
-        id='btn-submit'
         className={classname}
         // ref={ref}
         disabled={disabled}
