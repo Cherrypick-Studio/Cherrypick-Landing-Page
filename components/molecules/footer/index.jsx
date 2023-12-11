@@ -45,37 +45,37 @@ const Footer = () => {
                   Find Us On
                 </Text>
                 <div className="flex items-center justify-center lg:justify-end space-x-5 mt-2">
-                  <Link href={"#"}>
+                  <Link href="https://www.instagram.com/cherrypick.studio/">
                     <CardIcon
                       image="/images/icon-footer/instagram.svg"
                       alt="instagram-icon"
                     />
                   </Link>
-                  <Link href={"#"}>
+                  <Link href="https://www.instagram.com/cherrypick.studio/">
                     <CardIcon
                       image="/images/icon-footer/dribbble.svg"
                       alt="dribbble-icon"
                     />
                   </Link>
-                  <Link href={"#"}>
+                  <Link href="https://www.instagram.com/cherrypick.studio/">
                     <CardIcon
                       image="/images/icon-footer/ri_behance-line.svg"
                       alt="behance-icon"
                     />
                   </Link>
-                  <Link href={"#"}>
+                  <Link href="https://www.instagram.com/cherrypick.studio/">
                     <CardIcon
                       image="/images/icon-footer/linkedin.svg"
                       alt="linkedin-icon"
                     />
                   </Link>
-                  <Link href={"#"}>
+                  <Link href="https://www.instagram.com/cherrypick.studio/">
                     <CardIcon
                       image="/images/icon-footer/mail.svg"
                       alt="mail-icon"
                     />
                   </Link>
-                  <Link href={"#"}>
+                  <Link href="https://www.instagram.com/cherrypick.studio/">
                     <CardIcon
                       image="/images/icon-footer/ic_baseline-whatsapp.svg"
                       alt="whatsapp-icon"
