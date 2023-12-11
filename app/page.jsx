@@ -6,12 +6,12 @@ import Works from '@/components/organisms/works'
 
 export default function Home() {
   return (
-    <main className='flex flex-col md:gap-y-24 gap-y-8'>
+    <div className='flex flex-col md:gap-y-24 gap-y-8'>
       <MainSection/>
       <Goals/>
       <Services/>
       <Works/>
       <Clients/>
-    </main>
+    </div>
   )
 }

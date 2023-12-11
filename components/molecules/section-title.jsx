@@ -10,7 +10,7 @@ const SectionTitle = ({title, subtitle}) => {
       >
         { title }
       </Text>
-      <div className='mt-4'>
+      <div className='mt-4 max-w-fit mx-auto'>
         <Text
           variant='subtitle'
           size='h6'
