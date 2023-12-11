@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import CardIcon from "../card-icon";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { emailAction } from "@/configs/email-action";
 
 const Footer = () => {
   return (
@@ -22,10 +23,11 @@ const Footer = () => {
         <Text variant="white" size="h0" weight="700">
           Ready to work on your project?
         </Text>
-        TODO: integrate with email
-        <Button variant="primary" rounded="2xl" id="btn-cta">
-          Let&apos;s get to work
-        </Button>
+        <a href={emailAction} target="_blank">
+          <Button variant="primary" rounded="2xl" id="btn-cta">
+            Let&apos;s get to work
+          </Button>
+        </a>
       </div>
       <div className="bg-gray-500 -mt-1">
         <div className="container mx-auto">
@@ -86,8 +88,14 @@ const Footer = () => {
                   Payment Accepted
                 </Text>
                 <div className="flex items-center justify-center lg:justify-end space-x-5 mt-2">
-                  <CardIcon image="/images/icon-footer/cib_cc-visa.svg" alt="visa-icon" />
-                  <CardIcon image="/images/icon-footer/simple-icons_wise.svg" alt="wise-icon" />
+                  <CardIcon
+                    image="/images/icon-footer/cib_cc-visa.svg"
+                    alt="visa-icon"
+                  />
+                  <CardIcon
+                    image="/images/icon-footer/simple-icons_wise.svg"
+                    alt="wise-icon"
+                  />
                 </div>
               </div>
             </div>

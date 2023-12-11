@@ -34,7 +34,7 @@ const Header = () => {
       className={`fixed top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
     >
       <div className="relative flex items-center justify-between container mx-auto md:py-8 py-4">
-        <div>
+        <Link href="#section-hero">
           <Image
             src="/images/logo-white.svg"
             alt="cherry-pick-logo"
@@ -42,7 +42,7 @@ const Header = () => {
             height={40}
             width={176}
           />
-        </div>
+        </Link>
         <nav>
           <div className="block lg:hidden">
             <HiOutlineMenuAlt1

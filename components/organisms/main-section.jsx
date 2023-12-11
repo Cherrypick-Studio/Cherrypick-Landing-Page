@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Text from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
+import { emailAction } from "@/configs/email-action";
 
 const MainSection = () => {
   return (
-    <section className=" pt-24 md:pt-40 pb-56 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]">
+    <section
+      className=" pt-24 md:pt-40 pb-56 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]"
+      id="section-hero"
+    >
       <div className="md:container md:mx-auto lg:flex space-y-16 lg:space-y-0">
         <div className="w-full lg:w-2/5 text-center lg:text-start">
           <Text
@@ -26,10 +30,11 @@ const MainSection = () => {
               delivering high-quality UI/UX Design & Development services.
             </h2>
           </Text>
-          {/* TODO: integrate with email */}
-          <Button variant="homepage" rounded="2xl" id="btn-jumbotron">
-            Create Together Now
-          </Button>
+          <a href={emailAction} target="_blank">
+            <Button variant="homepage" rounded="2xl" id="btn-jumbotron">
+              Create Together Now
+            </Button>
+          </a>
         </div>
         <div className="w-full lg:w-3/5">
           <Image
