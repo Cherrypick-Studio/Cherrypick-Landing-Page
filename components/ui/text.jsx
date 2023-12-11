@@ -90,8 +90,6 @@ const Text = ((props, ref) => {
     {...rest}
   )
 
-  console.log(merged)
-
   return (
     <>
       <span

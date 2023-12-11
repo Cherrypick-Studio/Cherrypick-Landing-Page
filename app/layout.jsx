@@ -14,11 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={rubik.className}>
-        <div>
           <Header />
-          <div>{children}</div>
+          <main>{children}</main>
           <Footer />
-        </div>
       </body>
     </html>
   );
