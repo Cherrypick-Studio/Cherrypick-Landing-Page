@@ -3,7 +3,7 @@ import CardServices from '../molecules/card-services'
 
 const Services = () => {
   return (
-    <section className='pb-16 pt-32 container mx-auto'>
+    <section className='pt-32 container mx-auto' id='section-services'>
       <SectionTitle
         title='Our Services'
         subtitle='Meet the professionals'

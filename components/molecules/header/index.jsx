@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -115,15 +116,33 @@ const Header = () => {
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion> */}
-                  <Text variant="primary" size="h4">
-                    Services
-                  </Text>
-                  <Text variant="primary" size="h4">
-                    Works
-                  </Text>
-                  <Text variant="primary" size="h4">
-                    Contact
-                  </Text>
+                  <Link href="#section-services">
+                    <Text
+                      variant="primary"
+                      size="h4"
+                      onClick={() => setShowMenu(false)}
+                    >
+                      Services
+                    </Text>
+                  </Link>
+                  <Link href="#section-works">
+                    <Text
+                      variant="primary"
+                      size="h4"
+                      onClick={() => setShowMenu(false)}
+                    >
+                      Work
+                    </Text>
+                  </Link>
+                  <Link href="#footer">
+                    <Text
+                      variant="primary"
+                      size="h4"
+                      onClick={() => setShowMenu(false)}
+                    >
+                      Contact
+                    </Text>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -131,15 +150,21 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-10">
             {/* NOTE: commented temporary */}
             {/* <LanguageMenu /> */}
-            <Text variant="link" size="h4">
-              Work
-            </Text>
-            <Text variant="link" size="h4">
-              Contact
-            </Text>
-            <Text variant="link" size="h4">
-              Services
-            </Text>
+            <Link href="#section-services">
+              <Text variant="link" size="h4">
+                Services
+              </Text>
+            </Link>
+            <Link href="#section-works">
+              <Text variant="link" size="h4">
+                Work
+              </Text>
+            </Link>
+            <Link href="#footer">
+              <Text variant="link" size="h4">
+                Contact
+              </Text>
+            </Link>
           </div>
         </nav>
       </div>

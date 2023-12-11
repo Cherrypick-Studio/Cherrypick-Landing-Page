@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="mt-32">
+    <footer className="mt-32" id="footer">
       <div className="flex items-center justify-center">
         <Image
           src="/images/vector-client.svg"
