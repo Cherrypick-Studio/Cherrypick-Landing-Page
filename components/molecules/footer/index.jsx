@@ -23,7 +23,7 @@ const Footer = () => {
           Ready to work on your project?
         </Text>
         <Button variant="primary" rounded="2xl">
-          Let's get to work
+          Let&apos;s get to work
         </Button>
       </div>
       <div className="bg-gray-500 -mt-1">
