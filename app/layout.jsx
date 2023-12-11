@@ -8,7 +8,8 @@ const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Cherrypick Studio",
-  description: "Digitalize Your Products with Us",
+  description:
+    "Cherry Pick is your trusted partner for cutting-edge web and mobile application services. We are committed to helping businesses of all sizes harness the power of technology to drive growth, innovation, and customer engagement.",
 };
 
 export default function RootLayout({ children }) {
