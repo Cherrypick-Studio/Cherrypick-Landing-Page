@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Text from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
@@ -5,17 +6,17 @@ import CardIcon from "../card-icon";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { emailAction } from "@/configs/email-action";
+import Lottie from "lottie-react";
+import getToWorkLottie from "@/public/lotties/get-to-work.json";
 
 const Footer = () => {
   return (
     <footer className="mt-32" id="footer">
       <div className="flex items-center justify-center">
-        <Image
-          src="/images/vector-client.svg"
-          alt="vector-client"
-          title="vector-client"
-          height={398}
-          width={790}
+        <Lottie
+          animationData={getToWorkLottie}
+          loop={true}
+          style={{ width: 790 }}
           className="-mb-2 lg:-mb-4"
         />
       </div>

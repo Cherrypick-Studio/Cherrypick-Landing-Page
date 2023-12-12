@@ -1,11 +1,17 @@
-import Image from 'next/image'
-import Text from '@/components/ui/text'
+"use client";
+import Image from "next/image";
+import Text from "@/components/ui/text";
+import Lottie from "lottie-react";
 
-const CardServices = ({ image, alt, icon, title, description }) => {
+const CardServices = ({ lottieFile, icon, title, description }) => {
   return (
     <article>
       <div className="flex items-center justify-center">
-        <Image src={image} alt={alt} title={alt} height={238} width={379} />
+        <Lottie
+          animationData={lottieFile}
+          loop={true}
+          style={{ height: 238, width: 379 }}
+        />
       </div>
       <div className="mt-16 flex flex-col items-center justify-center text-center">
         <div className="flex items-center space-x-4">
@@ -25,6 +31,6 @@ const CardServices = ({ image, alt, icon, title, description }) => {
       </div>
     </article>
   );
-}
+};
 
-export default CardServices
+export default CardServices;
