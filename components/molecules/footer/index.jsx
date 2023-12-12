@@ -33,13 +33,15 @@ const Footer = () => {
       <div className="bg-gray-500 -mt-1">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 items-center justify-between py-8">
-            <Image
-              src="/images/logo-white.svg"
-              alt="cherry-pick-logo-white"
-              title="cherry-pick-logo-white"
-              height={40}
-              width={176}
-            />
+            <Link href="#section-hero">
+              <Image
+                src="/images/logo-white.svg"
+                alt="cherry-pick-logo-white"
+                title="cherry-pick-logo-white"
+                height={40}
+                width={176}
+              />
+            </Link>
             <div className="flex flex-col lg:flex-row items-center lg:space-x-10 space-y-8 lg:space-y-0">
               <div className="text-center lg:text-right">
                 <Text variant="white" size="h5">
