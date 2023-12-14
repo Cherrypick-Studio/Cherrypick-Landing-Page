@@ -20,12 +20,14 @@ const Services = () => {
           icon="/images/icon-brand-identity.svg"
           title="Brand Identity"
           description="Through branding, the company will have strong awareness, so that consumers can easily identify and remember the brand."
+          delay={0.5}
         />
         <CardServices
           lottieFile={productLottie}
           icon="/images/icon-product-design.svg"
           title="Product Design"
           description="Designing interfaces by imagining, creating, and iterating products that solve user problems or meet specific needs."
+          delay={0.8}
         />
       </div>
     </section>
