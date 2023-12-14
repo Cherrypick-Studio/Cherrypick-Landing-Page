@@ -1,7 +1,8 @@
 "use client";
 import SectionTitle from "@/components/molecules/section-title";
 import CardClient from "../molecules/card-client";
-import { m, LazyMotion, domAnimation } from "framer-motion";
+import { m, LazyMotion, domAnimation, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const topClients = [
   {
@@ -40,13 +41,16 @@ const bottomClients = [
   },
 ];
 const Clients = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
     <section className="my-16 md:container md:mx-auto !px-0">
       <SectionTitle
         title="Our Clients"
         subtitle="Some of our partners and clients"
       />
-      <div className="mt-12">
+      <div className="mt-12" ref={ref}>
         <LazyMotion features={domAnimation}>
           <div className="flex relative flex-col w-full justify-between">
             <div className="w-24 h-64 hidden lg:block absolute z-20 bg-white shadow-custom-shadow-left top-0 left-0" />
@@ -56,7 +60,7 @@ const Clients = () => {
                   <m.div
                     key={client.alt}
                     initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={isInView && { opacity: 1, y: 0 }}
                     transition={{
                       ease: "easeIn",
                       duration: 0.4,
@@ -72,7 +76,7 @@ const Clients = () => {
                   <m.div
                     key={client.alt}
                     initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={isInView && { opacity: 1, y: 0 }}
                     transition={{
                       ease: "easeIn",
                       duration: 0.4,
