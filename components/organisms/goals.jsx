@@ -1,21 +1,38 @@
-import Text from '@/components/ui/text'
+"use client";
+import Text from "@/components/ui/text";
+import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import { useRef } from "react";
 
 const Goals = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
-    <section className="bg-cover bg-center md:bg-[url('/images/bg-mask-2.svg')] bg-[url('/images/bg-mask-work-mobile.svg')]">
+    <section
+      className="bg-cover bg-center md:bg-[url('/images/bg-mask-2.svg')] bg-[url('/images/bg-mask-work-mobile.svg')]"
+      ref={ref}
+    >
       <div className="container mx-auto py-[100px] flex flex-col items-center justify-center text-center">
-        <Text
-          variant="primary"
-          size="h0"
-          weight="700"
-          className="break-words w-full lg:w-[670px] !leading-[62px] block"
-        >
-          <h2>
-            We craft{" "}
-            <span className="text-red-cherry-500">digital products</span> for
-            business and user goals.
-          </h2>
-        </Text>
+        <LazyMotion features={domAnimation}>
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={isInView && { opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 0.8, delay: 0.5 }}
+          >
+            <Text
+              variant="primary"
+              size="h0"
+              weight="700"
+              className="break-words w-full lg:w-[670px] !leading-[62px] block"
+            >
+              <h2>
+                We craft{" "}
+                <span className="text-red-cherry-500">digital products</span>{" "}
+                for business and user goals.
+              </h2>
+            </Text>
+          </m.div>
+        </LazyMotion>
         <Text
           variant="primary"
           size="h2"
@@ -29,6 +46,6 @@ const Goals = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Goals
+export default Goals;

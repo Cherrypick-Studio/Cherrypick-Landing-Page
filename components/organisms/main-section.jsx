@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { emailAction } from "@/configs/email-action";
 import Lottie from "lottie-react";
 import heroLottie from "@/public/lotties/hero-section.json";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 
 const MainSection = () => {
   return (
@@ -39,11 +40,19 @@ const MainSection = () => {
           </a>
         </div>
         <div className="w-full lg:w-3/5">
-          <Lottie
-            animationData={heroLottie}
-            loop={true}
-            className="sm:ml-0 md:float-right"
-          />
+          <LazyMotion features={domAnimation}>
+            <m.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ease: "easeIn", duration: 0.8 }}
+            >
+              <Lottie
+                animationData={heroLottie}
+                loop={true}
+                className="sm:ml-0 md:float-right"
+              />
+            </m.div>
+          </LazyMotion>
         </div>
       </div>
     </section>

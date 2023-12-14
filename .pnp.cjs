@@ -36,6 +36,7 @@ const RAW_RUNTIME_STATE =
           ["clsx", "npm:2.0.0"],\
           ["eslint", "npm:8.55.0"],\
           ["eslint-config-next", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:14.0.3"],\
+          ["framer-motion", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:10.16.16"],\
           ["lottie-react", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:2.4.0"],\
           ["lucide-react", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:0.294.0"],\
           ["next", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:14.0.3"],\
@@ -74,6 +75,25 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@babel/runtime", "npm:7.23.5"],\
           ["regenerator-runtime", "npm:0.14.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@emotion/is-prop-valid", [\
+      ["npm:0.8.8", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@emotion-is-prop-valid-npm-0.8.8-261a0f2426-9.zip/node_modules/@emotion/is-prop-valid/",\
+        "packageDependencies": [\
+          ["@emotion/is-prop-valid", "npm:0.8.8"],\
+          ["@emotion/memoize", "npm:0.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@emotion/memoize", [\
+      ["npm:0.7.4", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@emotion-memoize-npm-0.7.4-5648cf11b8-9.zip/node_modules/@emotion/memoize/",\
+        "packageDependencies": [\
+          ["@emotion/memoize", "npm:0.7.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1687,6 +1707,7 @@ const RAW_RUNTIME_STATE =
           ["clsx", "npm:2.0.0"],\
           ["eslint", "npm:8.55.0"],\
           ["eslint-config-next", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:14.0.3"],\
+          ["framer-motion", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:10.16.16"],\
           ["lottie-react", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:2.4.0"],\
           ["lucide-react", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:0.294.0"],\
           ["next", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:14.0.3"],\
@@ -2713,6 +2734,34 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../.yarn/berry/cache/fraction.js-npm-4.3.7-c2c7e95a8e-9.zip/node_modules/fraction.js/",\
         "packageDependencies": [\
           ["fraction.js", "npm:4.3.7"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["framer-motion", [\
+      ["npm:10.16.16", {\
+        "packageLocation": "../../../../.yarn/berry/cache/framer-motion-npm-10.16.16-01419cd9ac-9.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "npm:10.16.16"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:10.16.16", {\
+        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-560e331ecc/5/.yarn/berry/cache/framer-motion-npm-10.16.16-01419cd9ac-9.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:10.16.16"],\
+          ["@emotion/is-prop-valid", "npm:0.8.8"],\
+          ["@types/react", null],\
+          ["@types/react-dom", null],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:bda0fae2e7a540cff771071697b0bb306949c37a76cc33d16169a22bc7010c140aa2bc69a0cc0c8a1ab30482e278a19d10915ee16a0444f8a9a7e00fc18f2a86#npm:18.2.0"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\

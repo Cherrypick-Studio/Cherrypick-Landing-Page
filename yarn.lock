@@ -28,6 +28,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:^0.8.2":
+  version: 0.8.8
+  resolution: "@emotion/is-prop-valid@npm:0.8.8"
+  dependencies:
+    "@emotion/memoize": "npm:0.7.4"
+  checksum: 2709fd849da334055e4bb29724647af73209a3e7f274ff3ad24d55e244747ade89daf4526bf541837559adb271f70ad26c60d311f51c4bdcc8728e6b14eb3d18
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:0.7.4":
+  version: 0.7.4
+  resolution: "@emotion/memoize@npm:0.7.4"
+  checksum: 6ea6add503898a3ffa90d549c7d841ba31652a37fd12c1517574d7aebcfa7735583489ff0678e28626e33c34f701cb1e9ced71dd4684cb8d43efc054f11bcaff
+  languageName: node
+  linkType: hard
+
 "@eslint-community/eslint-utils@npm:^4.2.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
@@ -1276,6 +1292,7 @@ __metadata:
     clsx: "npm:^2.0.0"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.0.3"
+    framer-motion: "npm:^10.16.16"
     lottie-react: "npm:^2.4.0"
     lucide-react: "npm:^0.294.0"
     next: "npm:14.0.3"
@@ -2061,6 +2078,27 @@ __metadata:
   version: 4.3.7
   resolution: "fraction.js@npm:4.3.7"
   checksum: d6afebe5f7d173304ee7e8e34a81c2a21a3a82cbda09faebe1978fcd5c27fb72282da6210bc846376c709a7861663b84756dd7db52f95799dc3e561664879d67
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^10.16.16":
+  version: 10.16.16
+  resolution: "framer-motion@npm:10.16.16"
+  dependencies:
+    "@emotion/is-prop-valid": "npm:^0.8.2"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 14db78176fb5e301bb095d9ec65cbe00f6494111ec1bcfbe1d0fc4d801b2b45e622ef30e30ff2401758ad8fcb9304ba1958c68787d5cf1b3b460d366e4d1a8b3
   languageName: node
   linkType: hard
 
