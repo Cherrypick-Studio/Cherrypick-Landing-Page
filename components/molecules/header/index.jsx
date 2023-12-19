@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -33,43 +34,49 @@ const Header = () => {
     <header
       className={`fixed top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
     >
-      <div className="relative flex items-center justify-between container mx-auto md:py-8 py-4">
-        <Link href="#section-hero">
-          <Image
-            src="/images/logo-white.svg"
-            alt="cherry-pick-logo"
-            title="cherry-pick-logo"
-            height={40}
-            width={176}
-          />
-        </Link>
-        <nav>
-          <div className="block lg:hidden">
-            <HiOutlineMenuAlt1
-              className="h-6 w-6 text-white cursor-pointer"
-              onClick={() => setShowMenu(true)}
+      <LazyMotion features={domAnimation}>
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
+          className="relative flex items-center justify-between container mx-auto md:py-8 py-4 lg:px-12"
+        >
+          <Link href="#section-hero">
+            <Image
+              src="/images/logo-white.svg"
+              alt="cherry-pick-logo"
+              title="cherry-pick-logo"
+              height={40}
+              width={176}
             />
-            <div
-              data-menu={showMenu}
-              className="fixed inset-0 p-4 bg-white data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
-            >
-              <div className="flex items-center justify-between">
-                <Image
-                  src="/images/logo.svg"
-                  alt="cherry-pick"
-                  title="cherry-pick"
-                  height={40}
-                  width={192}
-                />
-                <RxCross2
-                  className="h-6 w-6 text-black cursor-pointer"
-                  onClick={() => setShowMenu(false)}
-                />
-              </div>
-              <div className="flex flex-col justify-center items-center h-full">
-                <div className="flex flex-col items-center space-y-5">
-                  {/* NOTE: commented temporary */}
-                  {/* <Accordion
+          </Link>
+          <nav>
+            <div className="block lg:hidden">
+              <HiOutlineMenuAlt1
+                className="h-6 w-6 text-white cursor-pointer"
+                onClick={() => setShowMenu(true)}
+              />
+              <div
+                data-menu={showMenu}
+                className="fixed inset-0 p-4 bg-white data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
+              >
+                <div className="flex items-center justify-between">
+                  <Image
+                    src="/images/logo.svg"
+                    alt="cherry-pick"
+                    title="cherry-pick"
+                    height={40}
+                    width={192}
+                  />
+                  <RxCross2
+                    className="h-6 w-6 text-black cursor-pointer"
+                    onClick={() => setShowMenu(false)}
+                  />
+                </div>
+                <div className="flex flex-col justify-center items-center h-full">
+                  <div className="flex flex-col items-center space-y-5">
+                    {/* NOTE: commented temporary */}
+                    {/* <Accordion
                     type="single"
                     collapsible={true}
                     className="text-center"
@@ -116,58 +123,62 @@ const Header = () => {
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion> */}
-                  <Link href="#section-services">
-                    <Text
-                      variant="primary"
-                      size="h4"
-                      onClick={() => setShowMenu(false)}
-                    >
-                      Services
-                    </Text>
-                  </Link>
-                  <Link href="#section-works">
-                    <Text
-                      variant="primary"
-                      size="h4"
-                      onClick={() => setShowMenu(false)}
-                    >
-                      Work
-                    </Text>
-                  </Link>
-                  <Link href="#footer">
-                    <Text
-                      variant="primary"
-                      size="h4"
-                      onClick={() => setShowMenu(false)}
-                    >
-                      Contact
-                    </Text>
-                  </Link>
+                    <Link href="#section-services">
+                      <Text
+                        variant="primary"
+                        size="h4"
+                        onClick={() => setShowMenu(false)}
+                      >
+                        Services
+                      </Text>
+                    </Link>
+                    <Link href="#section-works">
+                      <Text
+                        variant="primary"
+                        size="h4"
+                        onClick={() => setShowMenu(false)}
+                      >
+                        Work
+                      </Text>
+                    </Link>
+                    <Link href="#footer">
+                      <Text
+                        variant="primary"
+                        size="h4"
+                        onClick={() => setShowMenu(false)}
+                      >
+                        Contact
+                      </Text>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="hidden lg:flex items-center space-x-10">
-            {/* NOTE: commented temporary */}
-            {/* <LanguageMenu /> */}
-            <Link href="#section-services">
-              <Text variant="link" size="h4">
-                Services
-              </Text>
-            </Link>
-            <Link href="#section-works">
-              <Text variant="link" size="h4">
-                Work
-              </Text>
-            </Link>
-            <Link href="#footer">
-              <Text variant="link" size="h4">
-                Contact
-              </Text>
-            </Link>
-          </div>
-        </nav>
-      </div>
+            <div className="hidden lg:flex items-center space-x-10">
+              {/* NOTE: commented temporary */}
+              {/* <LanguageMenu /> */}
+              <Link href="#section-services">
+                <Text variant="link" size="h4">
+                  Services
+                </Text>
+              </Link>
+              <Link href="#section-works">
+                <Text variant="link" size="h4">
+                  Work
+                </Text>
+              </Link>
+              <Link href="#footer">
+                <Text variant="link" size="h4">
+                  Contact
+                </Text>
+              </Link>
+            </div>
+          </nav>
+        </m.div>
+      </LazyMotion>
+      {/* <div className="relative flex items-center justify-between container mx-auto md:py-8 py-4">
+        
+      </div> */}
     </header>
   );
 };

@@ -6,7 +6,7 @@ import productLottie from "@/public/lotties/services-product.json";
 
 const Services = () => {
   return (
-    <section className="pt-32 container mx-auto" id="section-services">
+    <section className="pt-32 container mx-auto lg:px-12" id="section-services">
       <SectionTitle title="Our Services" subtitle="Meet the professionals" />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-12 md:gap-y-12 md:gap-x-8 mt-12">
         <CardServices

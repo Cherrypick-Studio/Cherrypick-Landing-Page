@@ -12,7 +12,7 @@ const MainSection = () => {
       className=" pt-24 md:pt-40 pb-56 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]"
       id="section-hero"
     >
-      <div className="md:container md:mx-auto lg:flex space-y-16 lg:space-y-0">
+      <div className="md:container md:mx-auto lg:px-12 lg:flex space-y-16 lg:space-y-0">
         <div className="w-full lg:w-2/5 text-center lg:text-start">
           <Text
             variant="white"

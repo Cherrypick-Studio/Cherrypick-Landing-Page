@@ -19,7 +19,7 @@ export default function Home() {
           transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
         >
           <div className="flex items-center justify-center w-full h-screen bg-red-cherry-500 z-50">
-            <Lottie animationData={splashLottie} loop={false} />
+            <Lottie animationData={splashLottie} loop={false} className="lg:min-w-[50%]" />
           </div>
         </m.div>
       </LazyMotion>
