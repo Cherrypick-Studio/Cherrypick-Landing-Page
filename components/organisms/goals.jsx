@@ -1,6 +1,6 @@
 "use client";
-import Text from "@/components/ui/text";
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
 const Goals = () => {
@@ -8,43 +8,13 @@ const Goals = () => {
   const isInView = useInView(ref);
 
   return (
-    <section
-      className="bg-cover bg-center md:bg-[url('/images/bg-mask-2.svg')] bg-[url('/images/bg-mask-work-mobile.svg')]"
-      ref={ref}
-    >
-      <div className="container mx-auto py-[100px] flex flex-col items-center justify-center text-center">
-        <LazyMotion features={domAnimation}>
-          <m.div
-            initial={{ opacity: 0 }}
-            animate={isInView && { opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 0.8, delay: 0.5 }}
-          >
-            <Text
-              variant="primary"
-              size="h0"
-              weight="700"
-              className="break-words w-full lg:w-[670px] !leading-[62px] block"
-            >
-              <h2>
-                We craft{" "}
-                <span className="text-red-cherry-500">digital products</span>{" "}
-                for business and user goals.
-              </h2>
-            </Text>
-          </m.div>
-        </LazyMotion>
-        <Text
-          variant="primary"
-          size="h2"
-          weight="200"
-          className="w-full lg:w-[789px] mt-8 leading-9"
-        >
-          Help find solutions with UI / UX designs that are intuitive and in
-          accordance with client business goals. We provide a high-quality
-          service in UI/ UX Design & Development.
-        </Text>
-      </div>
-    </section>
+    <Image
+      src={'/images/second-section.svg'}
+      width={100}
+      height={200}
+      className="w-full"
+      alt="cherry-pick-goals"
+    />
   );
 };
 

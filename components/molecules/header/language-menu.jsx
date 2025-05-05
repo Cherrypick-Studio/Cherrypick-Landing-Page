@@ -8,11 +8,14 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
+import { useState } from 'react'
 
 
-const LanguageMenu = () => {
+const LanguageMenu = () =>
+{
+  const [language, setLanguage] = useState('en')
   return (
-    <NavigationMenu>
+    <NavigationMenu className="border rounded-full">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
@@ -23,6 +26,12 @@ const LanguageMenu = () => {
               height={20}
               width={26}
             />
+            <Text
+              size="h4"
+              className="ml-3"
+            >
+              {language.toUpperCase()}
+            </Text>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <NavigationMenuLink>

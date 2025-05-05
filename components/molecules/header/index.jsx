@@ -20,9 +20,9 @@ const Header = () => {
 
   const listenScrollEvent = () => {
     if (window.scrollY > 25) {
-      setScroll("bg-red-cherry-500 shadow-md");
+      setScroll("bg-white shadow-md");
     } else {
-      setScroll("bg-transparent");
+      setScroll("bg-white");
     }
   };
 
@@ -39,34 +39,43 @@ const Header = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
-          className="relative flex items-center justify-between container mx-auto md:py-8 py-4 lg:px-12"
+          className="relative flex items-center justify-between mx-auto py-3 px-10 lg:py-4 lg:px-20"
         >
           <Link href="#section-hero">
             <Image
-              src="/images/logo-white.svg"
+              src="/images/logo-noword.svg"
               alt="cherry-pick-logo"
               title="cherry-pick-logo"
+              className="w-"
               height={40}
-              width={176}
+              width={40}
             />
           </Link>
           <nav>
             <div className="block lg:hidden">
-              <HiOutlineMenuAlt1
-                className="h-6 w-6 text-white cursor-pointer"
-                onClick={() => setShowMenu(true)}
-              />
+              <div className="flex flex-row-reverse gap-3">
+              <div className="w-fit h-fit bg-red-cherry-500 rounded-full p-3">
+                <HiOutlineMenuAlt1
+                  className="h-6 w-6 text-white cursor-pointer"
+                  onClick={() => setShowMenu(true)}
+                  />
+                
+                </div>
+                <div className="-z-10">
+                  <LanguageMenu />
+                </div>
+              </div>
               <div
                 data-menu={showMenu}
-                className="fixed inset-0 p-4 bg-white data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
+                className="fixed inset-0 py-4 px-10 bg-white data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
               >
                 <div className="flex items-center justify-between">
                   <Image
-                    src="/images/logo.svg"
+                    src="/images/logo-noword.svg"
                     alt="cherry-pick"
                     title="cherry-pick"
                     height={40}
-                    width={192}
+                    width={40}
                   />
                   <RxCross2
                     className="h-6 w-6 text-black cursor-pointer"
@@ -123,6 +132,15 @@ const Header = () => {
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion> */}
+                     <Link href="#section-portofolio">
+                      <Text
+                        variant="primary"
+                        size="h4"
+                        onClick={() => setShowMenu(false)}
+                      >
+                        Portfolio
+                      </Text>
+                    </Link>
                     <Link href="#section-services">
                       <Text
                         variant="primary"
@@ -132,13 +150,13 @@ const Header = () => {
                         Services
                       </Text>
                     </Link>
-                    <Link href="#section-works">
+                    <Link href="#section-aboutus">
                       <Text
                         variant="primary"
                         size="h4"
                         onClick={() => setShowMenu(false)}
                       >
-                        Work
+                        About us
                       </Text>
                     </Link>
                     <Link href="#footer">
@@ -157,14 +175,19 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-10">
               {/* NOTE: commented temporary */}
               {/* <LanguageMenu /> */}
+              <Link href="#section-portofolio">
+                <Text variant="link" size="h4">
+                  Portofolio
+                </Text>
+              </Link>
               <Link href="#section-services">
                 <Text variant="link" size="h4">
                   Services
                 </Text>
               </Link>
-              <Link href="#section-works">
+              <Link href="#section-aboutus">
                 <Text variant="link" size="h4">
-                  Work
+                  About Us
                 </Text>
               </Link>
               <Link href="#footer">
@@ -174,6 +197,9 @@ const Header = () => {
               </Link>
             </div>
           </nav>
+          <div className="hidden lg:block">
+          <LanguageMenu/>
+         </div>
         </m.div>
       </LazyMotion>
       {/* <div className="relative flex items-center justify-between container mx-auto md:py-8 py-4">
