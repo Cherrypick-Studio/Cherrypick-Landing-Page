@@ -6,6 +6,7 @@ import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "../ui/button";
 import CardProduct from "../molecules/card-product";
+import { DribbbleIcon } from "lucide-react";
 
 const Works = () => {
   const laracampRef = useRef(null);
@@ -65,7 +66,10 @@ const Works = () => {
               desc='Not every design ends up in production — but every exploration helps us grow, think differently, and uncover new possibilities.' />
           </div>
           <div className="w-full h-auto self-stretch mt-auto">
-          <Button variant="bordered" className='h-fit rounded-full md:ml-auto block'>See All Exploration</Button>
+            <Button variant="bordered" className='h-fit flex items-center gap-2 rounded-full md:ml-auto'>
+              See All Exploration
+              <DribbbleIcon size={20}/>
+            </Button>
          </div>
         </div>
 

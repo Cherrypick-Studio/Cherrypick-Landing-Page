@@ -8,6 +8,7 @@ import Lottie from "lottie-react";
 import splashLottie from "@/public/lotties/splash.json";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import AboutUs from "@/components/organisms/about-us";
+import Highlights from "@/components/organisms/highlights";
 
 export default function Home() {
   return (
@@ -24,13 +25,14 @@ export default function Home() {
           </div>
         </m.div>
       </LazyMotion>
-      <div className="flex flex-col md:gap-y-[100px] gap-y-8">
+      <div className="flex flex-col space-y-20 md:gap-y-[100px] gap-y-8">
         <MainSection />
         <Goals />
         <Works />
         <AboutUs />
-        <Clients />
         <Services />
+        <Clients />
+        <Highlights />
       </div>
     </>
   );

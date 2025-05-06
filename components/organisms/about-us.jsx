@@ -8,7 +8,6 @@ const AboutUs = () =>
     return (
         <section className="px-10 py-[160px] container space-y-3 mx-auto bg-[#FBFBFB] relative overflow-hidden" id="section-aboutus">
             {/* Background image with opacity */}
-            {/* <div className="absolute inset-0 z-0 overflow-hidden"> */}
                 <Image 
                     src="/images/logo-noword.svg" // Replace with your image path
                     alt="Background"
@@ -16,7 +15,6 @@ const AboutUs = () =>
                     height={100}
                     className="opacity-20 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]" // Adjust opacity as needed (0.2 = 20%)
                 />
-            {/* </div> */}
             <div className="z-10 xl:w-[960px] space-y-5">
                 <Text variant="primary" size="h6" rounded="lg" className="text-red-cherry-500">
                     WHO WE ARE
