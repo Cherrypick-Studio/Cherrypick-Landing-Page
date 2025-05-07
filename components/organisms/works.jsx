@@ -8,20 +8,43 @@ import { Button } from "../ui/button";
 import CardProduct from "../molecules/card-product";
 import { DribbbleIcon } from "lucide-react";
 
-const Works = () => {
-  const laracampRef = useRef(null);
-  const inLaracampView = useInView(laracampRef);
-  const shamo = useRef(null);
-  const inShamoView = useInView(shamo);
-  const flutix = useRef(null);
-  const inFlutixView = useInView(flutix);
-  const micro = useRef(null);
-  const inMicroView = useInView(micro);
+const Works = () =>
+{
+  const introRef = useRef(null);
+  const isIntroView = useInView(introRef);
+  const komerceRef = useRef(null);
+  const isKomerceView = useInView(komerceRef);
+  const harwiRef = useRef(null);
+  const isHarwiView = useInView(harwiRef);
+  const betonRef = useRef(null);
+  const isBetonView = useInView(betonRef);
+
+  // other works animate 
+  const introOtherRef = useRef(null);
+  const isIntroOtherView = useInView(introOtherRef);
+  const fortiRef = useRef(null);
+  const isFortiView = useInView(fortiRef);
+  const symmetryRef = useRef(null);
+  const isSymmetryView = useInView(symmetryRef);
+  const spinzyRef = useRef(null);
+  const isSpinzyView = useInView(spinzyRef);
+  const pulseRef = useRef(null);
+  const isPulseView = useInView(pulseRef);
+  const komerceOtherRef = useRef(null);
+  const isKomerceOtherView = useInView(komerceOtherRef);
 
   return (
     <section className="px-10 container space-y-10 mx-auto" id="section-portofolio">
       <LazyMotion features={domAnimation}>
-        <div className="flex w-full justify-between items-end max-md:flex-col gap-3">
+        <m.div
+         initial={{ opacity: 0, x: 50 }}
+         animate={isIntroView && { opacity: 1, x: 0 }}
+         transition={{
+           ease: "easeIn",
+           duration: 0.4,
+           delay:  0.3,
+         }}>
+        <div className="flex w-full justify-between items-end max-md:flex-col gap-3" ref={introRef}>
           <div className="w-full">
             <SectionTitle
               title="Featured Projects"
@@ -32,85 +55,184 @@ const Works = () => {
           <Button variant="bordered" className='h-fit rounded-full  md:ml-auto block'>View All</Button>
          </div>
         </div>
+       </m.div>
 
         {/* list projects  */}
         <div className="flex w-full items-center gap-5 max-md:flex-col">
-          <CardProduct
+          <m.div
+           initial={{ opacity: 0, x: 50 }}
+           animate={isKomerceView && { opacity: 1, x: 0 }}
+           transition={{
+             ease: "easeIn",
+             duration: 0.6,
+             delay:  0.5,
+           }}>
+            <div ref={komerceRef}>
+            <CardProduct
+            
             img={"/images/komerce-project.svg"}
             title={'Komerce'}
             list={[
               'Website','Ecommerce'
               ]} />
+           </div>
+         </m.div>
           
-          <CardProduct
-            img={"/images/harwi-project.svg"}
-            title={'Harwi Gadget'}
-            list={[
-              'Website','Ecommerce'
-            ]} />
+         <m.div
+           initial={{ opacity: 0, x: -50 }}
+           animate={isHarwiView && { opacity: 1, x: 0 }}
+           transition={{
+             ease: "easeIn",
+             duration: 0.6,
+             delay:  0.5,
+           }}>
+            <div ref={harwiRef}>
+            <CardProduct
+              img={"/images/harwi-project.svg"}
+              title={'Harwi Gadget'}
+              list={[
+                'Website','Ecommerce'
+              ]} />
+            </div>
+         </m.div>
         </div>
         
-       <CardProduct
+        <m.div
+         initial={{ opacity: 0, y: 50 }}
+         animate={isBetonView && { opacity: 1, y: 0 }}
+         transition={{
+           ease: "easeIn",
+           duration: 0.6,
+           delay:  0.5,
+         }}>
+          <div ref={betonRef}>
+          <CardProduct
           img={"/images/termo-project.svg"}
           title={'Termo Beton'}
           list={[
             'Website','Company Profile'
             ]} />
+        </div>
+       </m.div>
         
         {/* other works projects  */}
-        <div className="flex w-full justify-between items-end max-md:flex-col gap-3">
-          <div className="w-full">
-            <SectionTitle
-              sizeTitle="h0"
-              title="Other Works"
-              desc='Not every design ends up in production — but every exploration helps us grow, think differently, and uncover new possibilities.' />
+        <m.div
+         initial={{ opacity: 0, y: 50 }}
+         animate={isIntroOtherView && { opacity: 1, y: 0 }}
+         transition={{
+           ease: "easeIn",
+           duration: 0.6,
+           delay:  0.5,
+         }}>
+          <div className="flex w-full justify-between items-end max-md:flex-col gap-3" ref={introOtherRef}>
+            <div className="w-full">
+              <SectionTitle
+                sizeTitle="h0"
+                title="Other Works"
+                desc='Not every design ends up in production — but every exploration helps us grow, think differently, and uncover new possibilities.' />
+            </div>
+            <div className="w-full h-auto self-stretch mt-auto">
+              <Button variant="bordered" className='h-fit flex items-center gap-2 rounded-full md:ml-auto'>
+                See All Exploration
+                <DribbbleIcon size={20}/>
+              </Button>
           </div>
-          <div className="w-full h-auto self-stretch mt-auto">
-            <Button variant="bordered" className='h-fit flex items-center gap-2 rounded-full md:ml-auto'>
-              See All Exploration
-              <DribbbleIcon size={20}/>
-            </Button>
-         </div>
-        </div>
+          </div>
+       </m.div>
 
         {/* list projects  */}
         <div className="flex w-full items-center gap-5 max-md:flex-col">
-          <CardProduct
-            img={"/images/forti-project.svg"}
-            title={'FortiSec'}
-            list={[
-              'Landing Page'
-              ]} />
-            
-            <CardProduct
-              img={"/images/symmetry-project.svg"}
-              title={'Symmetry'}
-              list={[
-                'Landing Page'
-              ]} />
-                
-            <CardProduct
-                img={"/images/spinzy-project.svg"}
-                title={'Spinzy'}
+          <m.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isFortiView && { opacity: 1, x: 0 }}
+            transition={{
+              ease: "easeIn",
+              duration: 0.6,
+              delay:  0.5,
+            }}>
+              <div ref={fortiRef}>
+              <CardProduct
+                img={"/images/forti-project.svg"}
+                title={'FortiSec'}
                 list={[
                   'Landing Page'
                   ]} />
+            </div>
+          </m.div>
+
+          <m.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isSymmetryView && { opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeIn",
+              duration: 0.6,
+              delay:  0.5,
+            }}>
+              <div ref={symmetryRef}>
+                <CardProduct
+                  img={"/images/symmetry-project.svg"}
+                  title={'Symmetry'}
+                  list={[
+                    'Landing Page'
+                  ]} />
+            </div>
+          </m.div>
+                
+          <m.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isSpinzyView && { opacity: 1, x: 0 }}
+            transition={{
+              ease: "easeIn",
+              duration: 0.6,
+              delay:  0.5,
+            }}>
+              <div ref={spinzyRef}>
+              <CardProduct
+                  img={"/images/spinzy-project.svg"}
+                  title={'Spinzy'}
+                  list={[
+                    'Landing Page'
+                    ]} />
+            </div>
+          </m.div>
         </div>
         
         <div className="flex w-full items-center gap-5 max-md:flex-col">
-            <CardProduct
-              img={"/images/pulse-project.svg"}
-              title={'PulseTrack'}
-              list={[
-              'Dashboard Design'
-                ]} />
+          <m.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isPulseView && { opacity: 1, x: 0 }}
+              transition={{
+                ease: "easeIn",
+                duration: 0.6,
+                delay:  0.5,
+              }}>
+                <div ref={pulseRef}>
+              <CardProduct
+                img={"/images/pulse-project.svg"}
+                title={'PulseTrack'}
+                list={[
+                'Dashboard Design'
+                  ]} />
+              </div>
+          </m.div>
             
-            <CardProduct
-              img={"/images/komerce-2-project.svg"}
-              title={'Komerce'}
-              list={[
-                'Landing Page'
-              ]} />
+          <m.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={isKomerceOtherView && { opacity: 1, x: 0 }}
+              transition={{
+                ease: "easeIn",
+                duration: 0.6,
+                delay:  0.5,
+              }}>
+              <div ref={komerceOtherRef}>
+                <CardProduct
+                  img={"/images/komerce-2-project.svg"}
+                  title={'Komerce'}
+                  list={[
+                    'Landing Page'
+                  ]} />
+              </div>
+          </m.div>
         </div>
       </LazyMotion>
     </section>

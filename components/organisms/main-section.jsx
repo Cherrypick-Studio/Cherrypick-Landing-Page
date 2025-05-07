@@ -14,10 +14,12 @@ const MainSection = () => {
       id="section-hero"
     >
       <div className="md:mx-auto max-lg:px-10 lg:px-20 lg:flex space-y-16 w-full lg:space-y-0">
-        <div className="w-full flex items-center gap-2 h-fit">
-          <div className="w-2 h-2 bg-red-cherry-500 rounded-full animate-pulse" />
-          <Text variant="black" size="h4" weight="400">Digital Product Agency</Text>
-        </div>
+        <div className="w-full">
+          <div className="w-fit flex items-center gap-2 h-fit border-b border-red-cherry-500 pb-4">
+            <div className="w-2 h-2 bg-red-cherry-500 rounded-full animate-pulse" />
+            <Text variant="black" size="h4" weight="400">Digital Product Agency</Text>
+          </div>
+       </div>
         <div className="w-fit text-start space-y-[40px]">
           <Text
             variant="black"
@@ -49,7 +51,7 @@ const MainSection = () => {
             </a>
             <a href={emailAction} target="_blank">
             <Button variant="bordered" outline rounded="xl" id="btn-jumbotron" className='flex rounded-full h-full items-center justify-center xl:w-[170px]'>
-              Book a Call
+              Our Portfolio
             </Button>
           </a>
         </div>
