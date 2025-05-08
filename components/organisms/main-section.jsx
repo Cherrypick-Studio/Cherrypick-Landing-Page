@@ -50,7 +50,7 @@ const MainSection = () => {
             </Button>
             </a>
             <a href={emailAction} target="_blank">
-            <Button variant="bordered" outline rounded="xl" id="btn-jumbotron" className='flex rounded-full h-full items-center justify-center xl:w-[170px]'>
+            <Button variant="bordered" rounded="xl" id="btn-jumbotron" className='flex rounded-full h-full items-center justify-center xl:w-[170px]'>
               Our Portfolio
             </Button>
           </a>

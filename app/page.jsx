@@ -9,11 +9,12 @@ import splashLottie from "@/public/lotties/splash.json";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import AboutUs from "@/components/organisms/about-us";
 import Highlights from "@/components/organisms/highlights";
+import LenisProvider from "@/components/molecules/lenis";
 
 export default function Home() {
   return (
-    <>
-      <LazyMotion features={domAnimation}>
+    <LenisProvider>
+       <LazyMotion features={domAnimation}>
         <m.div
           initial={{ opacity: 1, height: "100vh" }}
           animate={{ opacity: 0, height: 0 }}
@@ -34,6 +35,6 @@ export default function Home() {
         <Clients />
         <Highlights />
       </div>
-    </>
+    </LenisProvider>
   );
 }
