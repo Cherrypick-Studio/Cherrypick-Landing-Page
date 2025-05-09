@@ -1,11 +1,8 @@
 "use client";
 import Text from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
-import { emailAction } from "@/configs/email-action";
-import Lottie from "lottie-react";
-import heroLottie from "@/public/lotties/hero-section.json";
-import { m, LazyMotion, domAnimation } from "framer-motion";
 import { ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const MainSection = () => {
   return (
@@ -17,9 +14,11 @@ const MainSection = () => {
         <div className="w-full">
           <div className="w-fit flex items-center gap-2 h-fit border-b border-red-cherry-500 pb-4">
             <div className="w-2 h-2 bg-red-cherry-500 rounded-full animate-pulse" />
-            <Text variant="black" size="h4" weight="400">Digital Product Agency</Text>
+            <Text variant="black" size="h4" weight="400">
+              Digital Product Agency
+            </Text>
           </div>
-       </div>
+        </div>
         <div className="w-fit text-start space-y-[40px]">
           <Text
             variant="black"
@@ -41,20 +40,36 @@ const MainSection = () => {
             </h2>
           </Text>
           <div className="flex gap-3">
-          <a href={emailAction} target="_blank">
-            <Button variant="primary" rounded="xl" id="btn-jumbotron" className='flex rounded-full gap-5 py-2 pl-8 pr-1 items-center'>
-              Book a Call
-              <div className="bg-white rounded-full w-fit h-fit p-3">
-              <ArrowUp className="rotate-[50deg]  text-gray-500 " size={20}/>
-              </div>
-            </Button>
+            <a
+              href="https://calendly.com/cherrypick-main/30min"
+              target="_blank"
+            >
+              <Button
+                variant="primary"
+                rounded="xl"
+                id="btn-jumbotron"
+                className="flex rounded-full gap-5 py-2 pl-8 pr-1 items-center"
+              >
+                Book a Call
+                <div className="bg-white rounded-full w-fit h-fit p-3">
+                  <ArrowUp
+                    className="rotate-[50deg]  text-gray-500 "
+                    size={20}
+                  />
+                </div>
+              </Button>
             </a>
-            <a href={emailAction} target="_blank">
-            <Button variant="bordered" rounded="xl" id="btn-jumbotron" className='flex rounded-full h-full items-center justify-center xl:w-[170px]'>
-              Our Portfolio
-            </Button>
-          </a>
-        </div>
+            <Link href="/portfolio">
+              <Button
+                variant="bordered"
+                rounded="xl"
+                id="btn-jumbotron"
+                className="flex rounded-full h-full items-center justify-center xl:w-[170px]"
+              >
+                Our Portfolio
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
