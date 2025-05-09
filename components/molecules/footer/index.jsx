@@ -9,11 +9,16 @@ import { emailAction } from "@/configs/email-action";
 import Lottie from "lottie-react";
 import getToWorkLottie from "@/public/lotties/get-to-work.json";
 import { ArrowUp } from "lucide-react";
+import { usePathname } from "next/navigation";
 
-const Footer = () => {
+const Footer = () =>
+{
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <footer className="mt-32" id="footer">
-       <section className="px-10 py-[160px] container space-y-3 mx-auto bg-[#FBFBFB] relative overflow-hidden" id="section-aboutus">
+      {pathname !== '/contact' &&
+        <section className="px-10 py-[160px] container space-y-3 mx-auto bg-[#FBFBFB] relative overflow-hidden" id="section-aboutus">
             {/* Background image with opacity */}
                 <Image 
                     src="/images/logo-noword.svg" // Replace with your image path
@@ -22,18 +27,20 @@ const Footer = () => {
                     height={100}
                     className="opacity-20 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]" // Adjust opacity as needed (0.2 = 20%)
                 />
-            <div className="z-10 flex justify-center items-center flex-col w-full gap-5">
+        <Link href={'/contact'}>
+        <div className="z-10 flex justify-center items-center flex-col w-full gap-5">
                 <Button variant="primary" rounded="xl" id="btn-jumbotron" className='flex rounded-full gap-5 py-2 pl-8 pr-1 items-center'>
-                    Get to Know Us
+                Let’s Get Started
                     <div className="bg-white rounded-full w-fit h-fit p-3">
                     <ArrowUp className="rotate-[50deg]  text-gray-500 " size={20}/>
                     </div>
                 </Button>
-                <Text variant="primary" size="h6" rounded="lg" className="text-gray-300 text-xl">
+                <Text variant="primary" size="h6" rounded="lg" className="text-gray-300 text-xl text-center">
                 Start your digital journey with Cherrypick.
                 </Text>
            </div>
-        </section>
+        </Link>
+        </section>}
       <div className="bg-white pt-20 pb-10">
         <div className="container mx-auto space-y-10 max-lg:px-10 lg:px-20">
           <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 items-center justify-between max-lg:items-start py-8">

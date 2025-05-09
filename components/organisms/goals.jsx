@@ -22,7 +22,7 @@ const Goals = () => {
               src={'/images/second-section.svg'}
               width={100}
               height={200}
-              className="w-full container hover:scale-105 transition-all duration-300"
+              className="w-full container hover:scale-105 transition-all duration-300 p-0"
               alt="cherry-pick-goals"
             />
         </div>

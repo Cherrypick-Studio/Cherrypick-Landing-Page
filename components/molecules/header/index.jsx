@@ -39,7 +39,7 @@ const Header = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
-          className="relative flex items-center justify-between mx-auto py-3 px-10 lg:py-4 lg:px-20"
+          className="relative flex items-center justify-between mx-auto py-3 px-0 lg:py-4 lg:px-10"
         >
           <Link href="/">
             <Image

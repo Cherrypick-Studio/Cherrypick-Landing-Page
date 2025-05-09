@@ -1,3 +1,4 @@
+'use client'
 import SectionTitle from "../molecules/section-title";
 import CardServices from "../molecules/card-services";
 import devLottie from "@/public/lotties/services-dev.json";
@@ -8,9 +9,11 @@ import { Button } from "../ui/button";
 import { useRef } from "react";
 import HighLightList from "../molecules/highlight";
 import SliderReview from "../molecules/slider/slider-review";
+import { usePathname } from "next/navigation";
 
 const Highlights = () =>
 {
+  const pathname=usePathname()
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
@@ -53,7 +56,7 @@ const Highlights = () =>
           </div>
         </m.div>
           </LazyMotion>
-          <SliderReview/>
+          {pathname !== "/about-us" && <SliderReview />}
     </section>
   );
 };

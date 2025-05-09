@@ -20,7 +20,7 @@ const DetailSection = ({
          duration: 0.6,
          delay:  0.5,
        }}>
-        <div ref={ref} className="space-y-20 container">
+        <div ref={ref} className="space-y-20 container p-0">
         <Image
               src={img}
               width={100}

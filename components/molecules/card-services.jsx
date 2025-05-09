@@ -10,8 +10,7 @@ const CardServices = ({ lottieFile, icon,number, title, description, delay = 0 }
   const isInView = useInView(ref);
 
   return (
-    <article>
-          <div className="flex bg-[#FBFBFB] w-full flex-col p-10 gap-16 rounded-2xl">
+    <div className="flex bg-[#FBFBFB] w-full flex-col p-10 gap-16 rounded-2xl">
              <div className="flex justify-between">
                 <span className="text-2xl text-gray-150 font-normal">{number}</span>
                 <Image src={icon} alt="icon" title="icon" height={100} width={100} />
@@ -30,7 +29,6 @@ const CardServices = ({ lottieFile, icon,number, title, description, delay = 0 }
                   </Text>
               </div>
           </div>
-    </article>
   );
 };
 

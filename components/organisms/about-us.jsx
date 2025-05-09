@@ -4,6 +4,7 @@ import { Button } from "../ui/button"
 import { ArrowUp } from "lucide-react"
 import { useRef } from "react"
 import { domAnimation, LazyMotion, useInView,m } from "framer-motion"
+import Link from "next/link"
 
 const AboutUs = () =>
 { 
@@ -52,12 +53,14 @@ const AboutUs = () =>
                             <span className="text-black">Create innovative website and mobile apps with best experience for user.</span>
                             And we provide a <span className="text-black">high-quality service</span> in UI/ UX Design & Development.
                         </p>
+                        <Link href={'/about-us'}>
                         <Button variant="primary" rounded="xl" id="btn-jumbotron" className='flex rounded-full gap-5 py-2 pl-8 pr-1 items-center'>
                             Get to Know Us
                             <div className="bg-white rounded-full w-fit h-fit p-3">
                             <ArrowUp className="rotate-[50deg]  text-gray-500 " size={20}/>
                             </div>
-                        </Button>
+                            </Button>
+                        </Link>
                     </div>
                 </m.div>
         </section>
