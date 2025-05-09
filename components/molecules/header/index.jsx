@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
+      className={`sticky top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300 container`}
     >
       <LazyMotion features={domAnimation}>
         <m.div
@@ -41,7 +41,7 @@ const Header = () => {
           transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
           className="relative flex items-center justify-between mx-auto py-3 px-10 lg:py-4 lg:px-20"
         >
-          <Link href="#section-hero">
+          <Link href="/">
             <Image
               src="/images/logo-noword.svg"
               alt="cherry-pick-logo"
@@ -175,7 +175,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-10">
               {/* NOTE: commented temporary */}
               {/* <LanguageMenu /> */}
-              <Link href="#section-portofolio">
+              <Link href="/#section-portofolio">
                 <Text variant="link" size="h4">
                   Portofolio
                 </Text>

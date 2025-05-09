@@ -35,7 +35,7 @@ const Footer = () => {
            </div>
         </section>
       <div className="bg-white pt-20 pb-10">
-        <div className="container mx-auto space-y-10">
+        <div className="container mx-auto space-y-10 max-lg:px-10 lg:px-20">
           <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 items-center justify-between max-lg:items-start py-8">
             <Link href="#section-hero">
               <Image

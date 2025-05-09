@@ -13,7 +13,7 @@ const AboutUs = () =>
     const isIntroView = useInView(introRef);
     return (
         <LazyMotion features={domAnimation}>
-            <section className="px-10 py-[160px] container space-y-3 mx-auto bg-[#FBFBFB] relative overflow-hidden" id="section-aboutus">
+            <section className="px-10 py-[160px] max-lg:px-10 lg:px-20 container space-y-3 mx-auto bg-[#FBFBFB] relative overflow-hidden" id="section-aboutus">
             {/* Background image with opacity */}
                 <m.div
                 initial={{ opacity: 0, y: 0 }}

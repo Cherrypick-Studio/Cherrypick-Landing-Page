@@ -10,7 +10,7 @@ import { ArrowUp } from "lucide-react";
 const MainSection = () => {
   return (
     <section
-      className=" py-24 max-lg:pt-[200px] xl:pt-[400px]"
+      className="py-24 max-lg:pt-[200px] xl:pt-[300px] container"
       id="section-hero"
     >
       <div className="md:mx-auto max-lg:px-10 lg:px-20 lg:flex space-y-16 w-full lg:space-y-0">

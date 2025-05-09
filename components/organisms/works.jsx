@@ -7,8 +7,13 @@ import { useRef } from "react";
 import { Button } from "../ui/button";
 import CardProduct from "../molecules/card-product";
 import { DribbbleIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-const Works = () =>
+const Works = ({
+  titleIntro ='Featured Projects',
+  hideContent = false
+}) =>
 {
   const introRef = useRef(null);
   const isIntroView = useInView(introRef);
@@ -33,8 +38,9 @@ const Works = () =>
   const komerceOtherRef = useRef(null);
   const isKomerceOtherView = useInView(komerceOtherRef);
 
+  const router =useRouter()
   return (
-    <section className="px-10 container space-y-10 mx-auto" id="section-portofolio">
+    <section className="max-lg:px-10 lg:px-20 container space-y-10 mx-auto" id="section-portofolio">
       <LazyMotion features={domAnimation}>
         <m.div
          initial={{ opacity: 0, x: 50 }}
@@ -47,13 +53,16 @@ const Works = () =>
         <div className="flex w-full justify-between items-end max-md:flex-col gap-3" ref={introRef}>
           <div className="w-full">
             <SectionTitle
-              title="Featured Projects"
+              title={titleIntro}
               subtitle="Portofolio"
-              desc='Explore selected projects that reflect our approach — user-centered, technically sound, and crafted to meet real business goals.' />
+              desc={!hideContent && 'Explore selected projects that reflect our approach — user-centered, technically sound, and crafted to meet real business goals.'} />
           </div>
-          <div className="w-full h-auto self-stretch mt-auto ">
-          <Button variant="bordered" className='h-fit rounded-full  md:ml-auto block'>View All</Button>
-         </div>
+            {!hideContent &&
+              <div className="w-full h-auto self-stretch mt-auto ">
+                <Link href='/project'>
+                  <Button variant="bordered" className='h-fit rounded-full  md:ml-auto block'>View All</Button>
+                </Link>
+              </div>}
         </div>
        </m.div>
 
@@ -129,14 +138,14 @@ const Works = () =>
               <SectionTitle
                 sizeTitle="h0"
                 title="Other Works"
-                desc='Not every design ends up in production — but every exploration helps us grow, think differently, and uncover new possibilities.' />
+                desc={!hideContent && 'Not every design ends up in production — but every exploration helps us grow, think differently, and uncover new possibilities.'} />
             </div>
-            <div className="w-full h-auto self-stretch mt-auto">
+           {!hideContent &&  <div className="w-full h-auto self-stretch mt-auto">
               <Button variant="bordered" className='h-fit flex items-center gap-2 rounded-full md:ml-auto'>
                 See All Exploration
                 <DribbbleIcon size={20}/>
               </Button>
-          </div>
+          </div>}
           </div>
        </m.div>
 

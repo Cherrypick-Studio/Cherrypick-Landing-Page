@@ -17,12 +17,12 @@ const Goals = () => {
          duration: 0.6,
          delay:  0.5,
        }}>
-        <div ref={ref}>
+        <div ref={ref} className=" w-full">
         <Image
               src={'/images/second-section.svg'}
               width={100}
               height={200}
-              className="w-full hover:scale-105 transition-all duration-300"
+              className="w-full container hover:scale-105 transition-all duration-300"
               alt="cherry-pick-goals"
             />
         </div>

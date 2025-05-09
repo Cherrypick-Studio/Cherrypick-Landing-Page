@@ -12,7 +12,7 @@ const Services = () =>
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <section className="container space-y-20 mx-auto lg:px-12" id="section-services">
+    <section className="container space-y-20 mx-auto max-lg:px-10 lg:px-20" id="section-services">
        <div className="flex w-full justify-between items-end max-md:flex-col gap-3">
           <div className="w-full">
           <SectionTitle

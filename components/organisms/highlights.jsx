@@ -14,7 +14,7 @@ const Highlights = () =>
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <section className="container space-y-20 mx-auto lg:px-12" id="section-services">
+    <section className="container space-y-20 mx-auto max-lg:px-10 lg:px-20" id="section-services">
        <div className="flex w-full justify-between items-end max-md:flex-col gap-3">
           <div className="w-full">
           <SectionTitle
@@ -23,7 +23,7 @@ const Highlights = () =>
                 subtitle="HIGHLIGHTS"
                 desc="We let the numbers speak for themselves — consistently delivering product design and development solutions that exceed expectations."/>
           </div>
-          <div className="w-full h-auto self-stretch mt-auto ">
+          <div className="w-1/2 h-auto self-stretch mt-auto ">
          </div>
       </div>
       <LazyMotion  features={domAnimation}>

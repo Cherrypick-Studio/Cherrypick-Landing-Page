@@ -45,7 +45,7 @@ const Clients = () => {
   const isInView = useInView(ref);
 
   return (
-    <section className="my-16 md:container md:mx-auto !px-10">
+    <section className="my-16 md:container md:mx-auto max-lg:px-10 lg:px-20">
       <div className="xl:w-[800px]">
       <SectionTitle
         title="Our Clients"
