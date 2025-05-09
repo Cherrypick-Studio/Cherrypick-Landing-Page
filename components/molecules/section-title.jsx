@@ -1,16 +1,15 @@
 import Text from '@/components/ui/text'
 
-const SectionTitle = ({title, subtitle}) => {
+const SectionTitle = ({title, subtitle, desc, sizeTitle = 'banner', spanCherrypick = false}) => {
   return (
-    <div className="flex flex-col justify-center text-center">
-      <Text variant="primary" size="h0" weight="700">
-        <h1>{title}</h1>
-      </Text>
-      <div className="mt-4 max-w-fit mx-auto">
-        <Text variant="subtitle" size="h6" rounded="lg">
+    <div className="flex flex-col justify-start text-left gap-5">
+       <Text variant="primary" size="h6" rounded="lg" className="text-red-cherry-500">
           {subtitle}
         </Text>
-      </div>
+        <Text variant="primary" size={sizeTitle} weight="400">
+        <h1>{title} {spanCherrypick && <span className='text-red-cherry-500'>Cherrypick</span>}</h1> 
+        </Text>
+         <Text size="h2" className="text-gray-150">{desc}</Text>
     </div>
   );
 }

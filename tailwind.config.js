@@ -12,7 +12,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1440px",
       },
     },
     extend: {
@@ -42,6 +42,9 @@ module.exports = {
         'gray-800': '#101010',
         'gray-850': '#0C0C0C',
         'gray-900': '#080808',
+        black: {
+          DEFAULT:'#282828'
+        }
       },
       boxShadow: {
         'custom-shadow-left': '32px 0px 24px 0px rgba(255, 255, 255, 1)',

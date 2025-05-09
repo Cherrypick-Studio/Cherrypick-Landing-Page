@@ -1,58 +1,75 @@
 "use client";
 import Text from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
-import { emailAction } from "@/configs/email-action";
-import Lottie from "lottie-react";
-import heroLottie from "@/public/lotties/hero-section.json";
-import { m, LazyMotion, domAnimation } from "framer-motion";
+import { ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const MainSection = () => {
   return (
     <section
-      className=" pt-24 md:pt-40 pb-56 md:pb-20 md:bg-cover bg-no-repeat md:bg-center md:bg-[url('/images/bg-mask.svg')] bg-[url('/images/bg-mask-3.svg')]"
+      className="py-24 max-lg:pt-[200px] xl:pt-[300px] container"
       id="section-hero"
     >
-      <div className="md:container md:mx-auto lg:px-12 lg:flex space-y-16 lg:space-y-0">
-        <div className="w-full lg:w-2/5 text-center lg:text-start">
+      <div className="md:mx-auto max-lg:px-10 lg:px-20 lg:flex space-y-16 w-full lg:space-y-0">
+        <div className="w-full">
+          <div className="w-fit flex items-center gap-2 h-fit border-b border-red-cherry-500 pb-4">
+            <div className="w-2 h-2 bg-red-cherry-500 rounded-full animate-pulse" />
+            <Text variant="black" size="h4" weight="400">
+              Digital Product Agency
+            </Text>
+          </div>
+        </div>
+        <div className="w-fit text-start space-y-[40px]">
           <Text
-            variant="white"
+            variant="black"
             size="h0"
-            weight="700"
-            className="block !leading-[44px] md:!leading-[70px]"
+            weight="500"
+            className="block xl:!text-[80px] !leading-[120%] xl:!leading-[70px] xl:whitespace-nowrap"
           >
-            <h1>Digitalize Your Products with Us</h1>
+            <h1>Design it. Build it. Love it.</h1>
           </Text>
           <Text
             variant="white"
             size="h2"
-            weight="400"
-            className="block my-6 mx-4 md:mx-auto leading-9"
+            weight="normal"
+            className="block font-light text-[28px] max-lg:text-[24px] text-gray-150 md:mx-auto leading-9"
           >
             <h2>
-              Create intuitive UI/UX designs aligned with client goals,
-              delivering high-quality UI/UX Design & Development services.
+              We blend creativity and engineering to bring your product to life,
+              just the way it should be.
             </h2>
           </Text>
-          <a href={emailAction} target="_blank">
-            <Button variant="homepage" rounded="2xl" id="btn-jumbotron">
-              Create Together Now
-            </Button>
-          </a>
-        </div>
-        <div className="w-full lg:w-3/5">
-          <LazyMotion features={domAnimation}>
-            <m.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ease: "easeIn", duration: 0.8 }}
+          <div className="flex gap-3">
+            <a
+              href="https://calendly.com/cherrypick-main/30min"
+              target="_blank"
             >
-              <Lottie
-                animationData={heroLottie}
-                loop={true}
-                className="sm:ml-0 md:float-right"
-              />
-            </m.div>
-          </LazyMotion>
+              <Button
+                variant="primary"
+                rounded="xl"
+                id="btn-jumbotron"
+                className="flex rounded-full gap-5 py-2 pl-8 pr-1 items-center"
+              >
+                Book a Call
+                <div className="bg-white rounded-full w-fit h-fit p-3">
+                  <ArrowUp
+                    className="rotate-[50deg]  text-gray-500 "
+                    size={20}
+                  />
+                </div>
+              </Button>
+            </a>
+            <Link href="/portfolio">
+              <Button
+                variant="bordered"
+                rounded="xl"
+                id="btn-jumbotron"
+                className="flex rounded-full h-full items-center justify-center xl:w-[170px]"
+              >
+                Our Portfolio
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

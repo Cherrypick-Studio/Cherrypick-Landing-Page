@@ -45,17 +45,19 @@ const Clients = () => {
   const isInView = useInView(ref);
 
   return (
-    <section className="my-16 md:container md:mx-auto !px-0">
+    <section className="my-16 md:container md:mx-auto max-lg:px-10 lg:px-20">
+      <div className="xl:w-[800px]">
       <SectionTitle
         title="Our Clients"
         subtitle="Some of our partners and clients"
+        desc='They choose us not just for our expertise, but for the way we collaborate —
+          with care, clarity, and commitment to results.'   
       />
+     </div>
       <div className="mt-12" ref={ref}>
         <LazyMotion features={domAnimation}>
-          <div className="flex relative flex-col w-full justify-between">
-            <div className="w-24 h-64 hidden lg:block absolute z-20 bg-white shadow-custom-shadow-left top-0 left-0" />
-            <div>
-              <div className="!overflow-x-auto relative flex items-center justify-center space-x-6 py-4 w-full md:no-scrollbar">
+          <div className="flex relative flex-col w-full justify-between xl:gap-20 max-lg:gap-10">
+            <div className="relative flex items-center justify-between max-lg:grid max-lg:grid-cols-2 max-lg:gap-10">
                 {topClients.map((client, index) => (
                   <m.div
                     key={client.alt}
@@ -71,7 +73,7 @@ const Clients = () => {
                   </m.div>
                 ))}
               </div>
-              <div className="!overflow-x-auto relative flex items-center justify-center space-x-6 py-4 w-full md:no-scrollbar">
+              <div className="relative flex items-center justify-between max-lg:grid max-lg:grid-cols-2 max-lg:gap-10">
                 {bottomClients.map((client, index) => (
                   <m.div
                     key={client.alt}
@@ -87,8 +89,6 @@ const Clients = () => {
                   </m.div>
                 ))}
               </div>
-            </div>
-            <div className="w-24 h-64 hidden lg:block absolute z-20 bg-white shadow-custom-shadow-right top-0 right-0" />
           </div>
         </LazyMotion>
       </div>

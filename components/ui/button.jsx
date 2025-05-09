@@ -11,8 +11,10 @@ const getVariants = (variant) => {
       return 'bg-white text-neutral-700 border border-neutral-200 hover:border-neutral-700 focus:bg-neutral-50 focus:border-neutral-600'
     case 'tertiery':
       return 'bg-white text-neutral-700 p-spacing-2 hover:bg-neutral-50 focus:bg-neutral-50'
-      case 'homepage':
+    case 'homepage':
       return 'bg-[#3AA655] text-white'
+    case 'bordered':
+      return 'bg-transparent text-neutral-700 border-2 border-red-cherry-500 hover:bg-red-cherry-50'
     case 'disabled':
       return 'bg-neutral-200 text-white'
   }
