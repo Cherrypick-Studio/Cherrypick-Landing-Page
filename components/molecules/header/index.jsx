@@ -5,12 +5,6 @@ import LanguageMenu from "@/components/molecules/header/language-menu";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import Link from "next/link";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
