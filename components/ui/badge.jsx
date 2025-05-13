@@ -2,9 +2,9 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 const BadgeVariants = {
-    default: "flex border border-[#DDDDDD] items-center px-4 py-2 gap-3 rounded-full",
-    'bg-gray': "flex border-none items-center px-4 py-2 gap-3 rounded-full bg-[#F2F2F2]",
-    red: "bg-red-cherry-500 text-white px-4 py-2 rounded-full",
+    default: "flex border border-[#DDDDDD] items-center px-2 py-1 h-fit gap-3 rounded-full",
+    'bg-gray': "flex border-none items-center px-2 py-1 h-fit gap-3 rounded-full bg-[#F2F2F2]",
+    red: "bg-red-cherry-500 text-white px-2 py-1 h-fit rounded-full",
 }
 const Badge = React.forwardRef(({ 
   className, 
@@ -21,7 +21,7 @@ const Badge = React.forwardRef(({
                 ref={ref}
                 htmlFor={htmlFor}
                 className={cn(
-                "text-sm font-light leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+                "text-sm font-light text-center leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
                 className
                 )}
                 {...props}

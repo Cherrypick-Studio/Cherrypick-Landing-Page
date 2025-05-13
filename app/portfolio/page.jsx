@@ -1,6 +1,6 @@
 import DetailSection from "@/components/organisms/detail-section";
 import MainDetailSection from "@/components/organisms/main-detail-section";
-import Works from "@/components/organisms/works";
+import Works from "@/components/organisms/list-portfolio";
 
 export default function ListProject()
 {

@@ -3,7 +3,7 @@ import Clients from "@/components/organisms/clients";
 import Goals from "@/components/organisms/goals";
 import MainSection from "@/components/organisms/main-section";
 import Services from "@/components/organisms/services";
-import Works from "@/components/organisms/works";
+import Works from "@/components/organisms/list-portfolio";
 import Lottie from "lottie-react";
 import splashLottie from "@/public/lotties/splash.json";
 import { m, LazyMotion, domAnimation } from "framer-motion";

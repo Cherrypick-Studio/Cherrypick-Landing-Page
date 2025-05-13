@@ -59,7 +59,7 @@ const Works = ({
           </div>
             {!hideContent &&
               <div className="w-full h-auto self-stretch mt-auto ">
-                <Link href='/project'>
+                <Link href='/portfolio'>
                   <Button variant="bordered" className='h-fit rounded-full  md:ml-auto block'>View All</Button>
                 </Link>
               </div>}

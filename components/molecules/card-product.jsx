@@ -12,7 +12,7 @@ const CardProduct = ({
     const router = useRouter();
 
     return (
-        <div className="flex flex-col w-full gap-5 cursor-pointer" onClick={() => router.push("/project/termo-beton") }>
+        <div className="flex flex-col w-full gap-5 cursor-pointer" onClick={() => router.push("/portfolio/termo-beton") }>
             <div className="relative overflow-hidden w-fit">
             <Image src={img} alt="cherrypick-product-1" title="cherrypick-product-1" width={300} height={300} className="w-full hover:scale-105 transition-all duration-300 rounded-xl" />
             </div>
