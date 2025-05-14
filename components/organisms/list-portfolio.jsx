@@ -81,7 +81,7 @@ const Works = ({
             
             img={"/images/komerce-project.svg"}
                 title={'Komerce'}
-                url="komerce"
+                url="#"
             list={[
               'Website','Ecommerce'
               ]} />
@@ -100,7 +100,7 @@ const Works = ({
             <CardProduct
               img={"/images/harwi-project.svg"}
                 title={'Harwi Gadget'}
-                url="harwi"
+                url="#"
               list={[
                 'Website','Ecommerce'
               ]} />
@@ -184,7 +184,7 @@ const Works = ({
                 <CardProduct
                   img={"/images/symmetry-project.svg"}
                 title={'Symmetry'}
-                url="symmetry"
+                url="#"
                   list={[
                     'Landing Page'
                   ]} />
@@ -203,7 +203,7 @@ const Works = ({
               <CardProduct
                   img={"/images/spinzy-project.svg"}
                 title={'Spinzy'}
-                url="spinzy"
+                url="#"
                   list={[
                     'Landing Page'
                     ]} />
@@ -224,7 +224,7 @@ const Works = ({
               <CardProduct
                 img={"/images/pulse-project.svg"}
                 title={'PulseTrack'}
-                url="pulse-track"
+                url="#"
                 list={[
                 'Dashboard Design'
                   ]} />
@@ -243,7 +243,7 @@ const Works = ({
                 <CardProduct
                   img={"/images/komerce-2-project.svg"}
                 title={'Komerce'}
-                url="komerce"
+                url="#"
                   list={[
                     'Landing Page'
                   ]} />

@@ -7,7 +7,7 @@ import SectionTitle from "../molecules/section-title";
 import CardIcon from "../molecules/card-icon";
 
 const ResultHighlights = ({
-    img ='/images/second-section.svg'
+    portfolioData
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -28,21 +28,25 @@ const ResultHighlights = ({
                     title='Result Highlights'
                           subtitle='RESULT'
                       desc='A quick look at the key outcomes and value delivered in this project.'/>
-                  </div>
-                  <Image
-                                src='/images/termo-highlight.svg'
-                                width={100}
-                                height={200}
-                                className="w-full hover:scale-105 transition-all duration-300"
-                                alt="cherry-pick-goals"
-                  />
-                    <Image
+          </div>
+          {portfolioData?.result_highlights?.map((item, index) => (
+            <Image
+              key={index}
+             src={item}
+             width={100}
+             height={200}
+             className="w-full hover:scale-105 transition-all duration-300"
+             alt="cherry-pick-goals"
+/>
+          ))}
+                 
+                    {/* <Image
                                 src='/images/termo-highlight-2.svg'
                                 width={100}
                                 height={200}
                                 className="w-full hover:scale-105 transition-all duration-300"
                                 alt="cherry-pick-goals"
-                            />
+                            /> */}
         </div>
       </m.div>
    </LazyMotion>

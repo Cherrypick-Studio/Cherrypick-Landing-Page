@@ -64,7 +64,7 @@ const Footer = () =>
               </span>
              </div>
             <div className="flex gap-6 items-center overflow-auto justify-center max-[400px]:flex-col max-[400px]:justify-center maxlg:w-full">
-              <Link href="#section-portofolio">
+              <Link href="/portfolio">
                   <Text
                     variant="primary"
                     size="h4"
@@ -73,7 +73,7 @@ const Footer = () =>
                     Portfolio
                    </Text>
                 </Link>
-                <Link href="#section-services" >
+                <Link href="#" >
                     <Text
                       variant="primary"
                       size="h4"
@@ -82,7 +82,7 @@ const Footer = () =>
                       Services
                     </Text>
                 </Link>
-                <Link href="#section-aboutus">
+                <Link href="/about-us">
                     <Text
                       variant="primary"
                       size="h4"
@@ -91,7 +91,7 @@ const Footer = () =>
                         About us
                     </Text>
                 </Link>
-                    <Link href="#footer">
+                    <Link href="/contact">
                       <Text
                         variant="primary"
                         size="h4"
@@ -101,8 +101,8 @@ const Footer = () =>
                       </Text>
                   </Link>
                   <Link href="#section-hero">
-                  <div className="bg-red-cherry-500 p-3 rounded-full">
-                  <ArrowUp color="white"/>
+                  <div className="bg-red-cherry-500 p-3 rounded-full max-lg:p-1">
+                  <ArrowUp color="white" className="max-lg:w-[70%] mx-auto"/>
                    </div>
                 </Link>
             </div>

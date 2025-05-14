@@ -5,7 +5,7 @@
         "name_company": "termo-beton",
         "country": "Bosnia",
         "industry": "Construction",
-        "flag":"/images/british.svg",
+        "flag":"/images/bosnia.svg",
         "description": [
             "Termo-beton doo is a company for construction, trade and services founded on April 17, 1996.in Breza. The founders of the company are Frljak Sabit,Bachelor of Civil Engineering and Turbo Ahmed, Bachelor of Civil Engineering.",
             "The Company`s main activity is construction (civil and building construction), production of concrete and precast concrete products, as well as reinforced concrete structures."
@@ -55,21 +55,21 @@
             },
             {
                 "color": "#EC4989",
-                "title": "Discovery & Planning",
-                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
-                "badge":["Project Brief","Site map","Timeline"]
+                "title": "Design & Prototyping",
+                "description": "Next, we translate ideas into visuals. Wireframes evolve into high-fidelity UI designs and clickable prototypes. You’ll be part of the feedback loop at every step.",
+                "badge":["Wireframes","Design Mockups"]
             },
             {
                 "color": "#FA8F21",
-                "title": "Discovery & Planning",
-                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
-                "badge":["Project Brief","Site map","Timeline"]
+                "title": "Development & Testing",
+                "description": "Our developers bring the design to life with clean, scalable code — responsive, accessible, and optimized for performance. We run continuous tests to ensure quality.",
+                "badge":["Staging Env","QA Test","Deployment"]
             },
             {
                 "color": "#4CA853",
-                "title": "Discovery & Planning",
-                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
-                "badge":["Project Brief","Site map","Timeline"]
+                "title": "Launch & Handover",
+                "description": "Once everything is tested and approved, we go live! We also provide documentation, training (if needed), and post-launch support to ensure a smooth transition.t",
+                "badge":["Live Website","Documentation"]
             }
         ],
         "result_highlights":[

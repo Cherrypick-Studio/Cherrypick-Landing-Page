@@ -21,8 +21,8 @@ export default function DetailProject({params})
           <DetailSection portfolioData={portfolioData?.details_project} />
           <DevelopmentPortfolioSection />
           <ToolsSection portfolioData={portfolioData?.details_project}/>
-          <TimelineSection />
-          <ResultHighlights/>
+          <TimelineSection portfolioData={portfolioData?.detail_timeline}/>
+          <ResultHighlights portfolioData={portfolioData}/>
       </div>
     )
 }

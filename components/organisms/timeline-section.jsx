@@ -6,7 +6,9 @@ import CardInfoProject from "../molecules/card-info-project";
 import SectionTitle from "../molecules/section-title";
 import CardTimeline from "../molecules/card-timeline";
 
-const TimelineSection = () => {
+const TimelineSection = ({
+  portfolioData
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 

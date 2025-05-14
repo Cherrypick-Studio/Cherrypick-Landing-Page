@@ -90,7 +90,8 @@ useEffect(() => {
     <header
       // className={`sticky bg-white top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
       className={`sticky bg-white top-0 inset-x-0 z-40 transition-transform duration-300 ease-in-out ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
+        pathname.split('/').length > 2 && ( isVisible ? 'translate-y-0' : '-translate-y-full')
+  
       }`}
     >
       <LazyMotion features={domAnimation}>
