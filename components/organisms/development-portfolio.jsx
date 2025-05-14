@@ -21,7 +21,7 @@ const DevelopmentPortfolioSection = ({
          duration: 0.6,
          delay:  0.5,
        }}>
-        <div ref={ref} className="space-y-20 container px-20 max-lg:px-10">
+        <div ref={ref} className="space-y-20 container px-20 max-lg:px-10"   id="development">
             <div className="w-[70%] max-lg:w-full flex max-lg:flex-col gap-10">
                 <SectionTitle
                     title='Starting Development'

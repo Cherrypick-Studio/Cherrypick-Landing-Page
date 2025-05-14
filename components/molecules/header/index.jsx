@@ -7,33 +7,99 @@ import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { m, LazyMotion, domAnimation } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [scroll, setScroll] = useState("");
+  // BE ABLE TO USE :could disabled when need it 
+  // const [scroll, setScroll] = useState("");
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(10);
+  const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState("");
 
-  const listenScrollEvent = () => {
-    if (window.scrollY > 25) {
-      setScroll("bg-white shadow-md");
-    } else {
-      setScroll("bg-white");
+ // BE ABLE TO USE :could disabled when need it 
+  // const listenScrollEvent = () => {
+  //   if (window.scrollY > 25) {
+  //     setScroll("bg-white block");
+  //   } else {
+  //     setScroll("hidden");
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent);
+  // });
+
+  const controlHeader = () => {
+    if (typeof window !== 'undefined') {
+      const currentScrollY = window.scrollY;
+      
+      // Determine scroll direction
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      
+      // Update last scroll position
+      setLastScrollY(currentScrollY);
     }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-  });
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlHeader);
+      
+      // Cleanup
+      return () => {
+        window.removeEventListener('scroll', controlHeader);
+      }
+    }
+  }, [lastScrollY]);
+
+  // Add this useEffect to track hash changes
+useEffect(() => {
+  // Only run on client side
+  if (typeof window !== 'undefined') {
+    // Set initial hash
+    setActiveHash(window.location.hash);
+    
+    // Function to handle hash changes
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash);
+    };
+    
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Clean up event listener
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }
+}, [window.location.hash]);
 
   return (
+    <>
     <header
-      className={`sticky top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300 container`}
+      // className={`sticky bg-white top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
+      className={`sticky bg-white top-0 inset-x-0 z-40 transition-transform duration-300 ease-in-out ${
+        pathname.split('/').length > 2 && ( isVisible ? 'translate-y-0' : '-translate-y-full')
+  
+      }`}
     >
       <LazyMotion features={domAnimation}>
         <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
-          className="relative flex items-center justify-between mx-auto py-3 px-0 lg:py-4 lg:px-10"
+          className={`relative flex items-center justify-between mx-auto py-3 px-6 lg:py-4 lg:px-20 container`}
         >
           <Link href="/">
             <Image
@@ -61,7 +127,7 @@ const Header = () => {
               </div>
               <div
                 data-menu={showMenu}
-                className="fixed inset-0 py-4 px-10 bg-white data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
+                className="fixed inset-0 py-4 px-10 bg-white h-[100vh] data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
               >
                 <div className="flex items-center justify-between">
                   <Image
@@ -126,38 +192,54 @@ const Header = () => {
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion> */}
-                     <Link href="#section-portofolio">
+                      <Link href="/portfolio" >
                       <Text
                         variant="primary"
                         size="h4"
-                        onClick={() => setShowMenu(false)}
+                          onClick={() => setShowMenu(false)}
+                          className={cn(
+                            'text-black',
+                             {'text-gray-150':pathname.includes('portfolio')},
+                           )}
                       >
                         Portfolio
                       </Text>
                     </Link>
-                    <Link href="#section-services">
+                      <Link href="/about-us" >
                       <Text
                         variant="primary"
                         size="h4"
-                        onClick={() => setShowMenu(false)}
+                          onClick={() => setShowMenu(false)}
+                          className={cn(
+                            'text-black',
+                             {'text-gray-150':pathname.includes('about-us')},
+                           )}
                       >
                         Services
                       </Text>
                     </Link>
-                    <Link href="#section-aboutus">
+                    <Link href="/about-us" >
                       <Text
                         variant="primary"
                         size="h4"
-                        onClick={() => setShowMenu(false)}
+                          onClick={() => setShowMenu(false)}
+                          className={cn(
+                            'text-black',
+                             {'text-gray-150':pathname.includes('about-us')},
+                           )}
                       >
                         About us
                       </Text>
                     </Link>
-                    <Link href="#footer">
+                    <Link href="/contact">
                       <Text
                         variant="primary"
                         size="h4"
-                        onClick={() => setShowMenu(false)}
+                          onClick={() => setShowMenu(false)}
+                          className={cn(
+                            'text-black',
+                             {'text-gray-150':pathname.includes('contact')},
+                           )}
                       >
                         Contact
                       </Text>
@@ -169,23 +251,35 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-10">
               {/* NOTE: commented temporary */}
               {/* <LanguageMenu /> */}
-              <Link href="/#section-portofolio">
-                <Text variant="link" size="h4">
+              <Link href="/portfolio" >
+                <Text variant="link" size="h4" className={cn(
+                      'text-black',
+                       {'text-gray-150':pathname.includes('portfolio')},
+                     )}>
                   Portofolio
                 </Text>
               </Link>
-              <Link href="#section-services">
-                <Text variant="link" size="h4">
+              <Link href="/about-us" >
+                <Text variant="link" size="h4" className={cn(
+                      'text-black',
+                       {'text-gray-150':pathname.includes('about-us')},
+                     )}>
                   Services
                 </Text>
               </Link>
-              <Link href="#section-aboutus">
-                <Text variant="link" size="h4">
+              <Link href="/about-us" >
+                <Text variant="link" size="h4" className={cn(
+                      'text-black',
+                       {'text-gray-150':pathname.includes('about-us')},
+                     )}>
                   About Us
                 </Text>
               </Link>
-              <Link href="#footer">
-                <Text variant="link" size="h4">
+              <Link href="/contact" >
+                <Text variant="link" size="h4" className={cn(
+                      'text-black',
+                       {'text-gray-150':pathname.includes('contact')},
+                     )}>
                   Contact
                 </Text>
               </Link>
@@ -196,10 +290,56 @@ const Header = () => {
          </div>
         </m.div>
       </LazyMotion>
-      {/* <div className="relative flex items-center justify-between container mx-auto md:py-8 py-4">
-        
-      </div> */}
     </header>
+
+      {/* second navbar  */}
+      {pathname.split('/').length > 2 && 
+        <div className={`sticky border border-[#EBEBEB] top-0 inset-x-0 z-30 bg-white transition-transform duration-300 ease-in-out ${isVisible && lastScrollY !==0 ? 'translate-y-[70px]':'translate-y-0'}`}>
+        <div className="container mx-auto py-3 px-6 lg:py-4 lg:px-20">
+          <div className="flex justify-between items-center max-lg:flex-col max-lg:items-start gap-4">
+              <Link href='/portfolio'>
+              <Button variant="secondary" className='flex p-0 gap-4 border-none text-[#909090]'>
+                    <ArrowLeft/>
+              See List Portfolio
+            </Button></Link>
+            <div className="flex items-center space-x-8">
+              {/* Secondary navbar right side content */}
+              <Link href="#overview">
+                  <Text variant="secondary" size="small" className={
+                    cn(
+                      'text-gray-150',
+                      {'text-red-cherry-500':activeHash === "#overview" || activeHash === ""  },
+                    )
+                }>
+                Overview
+                </Text>
+                    </Link>
+                    <Link href="#development">
+                  <Text variant="secondary" size="small" className={
+                     cn(
+                      'text-gray-150',
+                      {'text-red-cherry-500':activeHash === "#development"},
+                    )
+                  }
+                  >
+                Development
+                </Text>
+                    </Link>
+                    <Link href="#result">
+                <Text variant="secondary" size="small"  className={
+                     cn(
+                      'text-gray-150',
+                      {'text-red-cherry-500':activeHash === "#result"},
+                    )
+                  }>
+                Result
+                </Text>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>}
+    </>
   );
 };
 

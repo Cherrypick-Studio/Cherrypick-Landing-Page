@@ -9,26 +9,31 @@ import { ArrowUp } from "lucide-react";
 import SectionTitle from "../molecules/section-title";
 import Header from "../molecules/header";
 import { Badge } from "../ui/badge";
+import Image from "next/image";
 
-const MainDetailSection = () =>
+const MainDetailSection = ({
+    portofolioData
+}) =>
 {
-    const dummyData = 
-        [
-            'Website',
-            'Company Profile',
-            'Mobile App',
-            'Web App',
-            'E-Commerce',
-        ]
+    const {
+        name,
+        description,
+        products,
+        name_company,
+        country,
+        industry,
+        flag
+    } = portofolioData
+
   return (
     <section
-      className="py-24 max-lg:pt-[200px] xl:pt-[100px] max-lg:px-10 lg:px-20 container"
+      className="py-24 max-lg:pt-8 xl:pt-[100px] max-lg:px-10 lg:px-20 container"
       id="overview"
       >
           <div className="w-full space-y-10">
               <div className="w-full flex max-lg:flex-col gap-10">
                 <SectionTitle
-                    title='Termobeton Website'
+                    title={`${name} Website`}
                       subtitle='OVERVIEW' />
                     <Button variant="bordered" className='h-fit w-fit items-center flex gap-2 rounded-full  lg:ml-auto'>
                       Visit Website
@@ -36,15 +41,12 @@ const MainDetailSection = () =>
                   </Button>
               </div>
               <div className="w-[70%] max-lg:w-full space-y-10">
-                  <p className="text-gray-150 text-xl font-light">Termo-beton doo is a company for construction, trade and services founded on April 17, 1996.
-                      in Breza. The founders of the company are Frljak Sabit,
-                      Bachelor of Civil Engineering and Turbo Ahmed, Bachelor of Civil Engineering.</p>
-                  
-                      <p className="text-gray-150 text-xl font-light">The Company`s main activity is construction (civil and building construction), 
-                      production of concrete and precast concrete products, as well as reinforced concrete structures.</p>
+                  {description?.map((desc, index) => (
+                      <p key={index} className="text-gray-150 text-xl font-light">{desc}</p>
+                  ))}
                   
                   <div className="flex gap-3 max-lg:flex-wrap">
-                      {dummyData.map((item, index) => (
+                      {products.map((item, index) => (
                           <Badge key={index} showRedDot={false} variant='bg-gray'>{item}</Badge>
                       ))}
                   </div>
@@ -53,15 +55,24 @@ const MainDetailSection = () =>
                   <div className="flex w-fit bg-[#FBFBFB] p-10 rounded-xl gap-20 max-lg:flex-wrap">
                       <div className="grid gap-2">
                           <span className="text-xs text-gray-150">CLIENT</span>
-                          <span className="text-xl font-normal">termo-beton</span>
+                          <span className="text-xl font-normal">{name_company}</span>
                       </div>
                       <div className="grid gap-2">
                           <span className="text-xs text-gray-150">COUNTRY</span>
-                          <span className="text-xl font-normal">Bosnia</span>
+                          <div className="flex gap-2">
+                          <Image
+                                        src={flag}
+                                        alt='language'
+                                        title='language'
+                                        height={20}
+                                        width={26}
+                                      />
+                          <span className="text-xl font-normal">{country}</span>
+                         </div>
                       </div>
                       <div className="grid gap-2">
                           <span className="text-xs text-gray-150">INDUSTRY</span>
-                          <span className="text-xl font-normal">Construction</span>
+                          <span className="text-xl font-normal">{industry}</span>
                       </div>
                   </div>
               </div>

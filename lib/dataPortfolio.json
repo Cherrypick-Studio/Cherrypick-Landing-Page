@@ -1,0 +1,159 @@
+[
+    {
+        "code": "termobeton",
+        "name": "Termobeton",
+        "name_company": "termo-beton",
+        "country": "Bosnia",
+        "industry": "Construction",
+        "flag":"/images/bosnia.svg",
+        "description": [
+            "Termo-beton doo is a company for construction, trade and services founded on April 17, 1996.in Breza. The founders of the company are Frljak Sabit,Bachelor of Civil Engineering and Turbo Ahmed, Bachelor of Civil Engineering.",
+            "The Company`s main activity is construction (civil and building construction), production of concrete and precast concrete products, as well as reinforced concrete structures."
+        ],
+        "products":[
+            "Website",
+            "Company Profile",
+            "Mobile App",
+            "Web App",
+            "E-Commerce"
+        ],
+        "details_project":{
+            "profile_img":"/images/second-section.svg",
+            "needs_description":{
+                "list_desc":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ],
+                "list_scope":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ]
+            },
+            "list_tech_stack":[
+                "/images/typescript-icon.svg",
+                "/images/tailwind-icon.svg",
+                "/images/next-icon.svg",
+                "/images/laravel-icon.svg"
+            ],
+            "list_tools":[
+                "/images/trello-icon.svg",
+                "/images/telegram-icon.svg",
+                "/images/gmeet-icon.svg",
+                "/images/gmail-icon.svg",
+                "/images/mysql-icon.svg",
+                "/images/github-icon.svg"
+            ]
+        },
+        "detail_timeline":[
+            {
+                "color": "#0156FE",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#EC4989",
+                "title": "Design & Prototyping",
+                "description": "Next, we translate ideas into visuals. Wireframes evolve into high-fidelity UI designs and clickable prototypes. You’ll be part of the feedback loop at every step.",
+                "badge":["Wireframes","Design Mockups"]
+            },
+            {
+                "color": "#FA8F21",
+                "title": "Development & Testing",
+                "description": "Our developers bring the design to life with clean, scalable code — responsive, accessible, and optimized for performance. We run continuous tests to ensure quality.",
+                "badge":["Staging Env","QA Test","Deployment"]
+            },
+            {
+                "color": "#4CA853",
+                "title": "Launch & Handover",
+                "description": "Once everything is tested and approved, we go live! We also provide documentation, training (if needed), and post-launch support to ensure a smooth transition.t",
+                "badge":["Live Website","Documentation"]
+            }
+        ],
+        "result_highlights":[
+            "/images/termo-highlight.svg",
+            "/images/termo-highlight-2.svg"
+        ]
+    },
+
+    {
+        "code": "komerce",
+        "name": "Komerce",
+        "name_company": "komerce",
+        "country": "Bosnia",
+        "industry": "Construction",
+        "flag":"/images/british.svg",
+        "description": [
+            "Termo-beton doo is a company for construction, trade and services founded on April 17, 1996.in Breza. The founders of the company are Frljak Sabit,Bachelor of Civil Engineering and Turbo Ahmed, Bachelor of Civil Engineering.",
+            "The Company`s main activity is construction (civil and building construction), production of concrete and precast concrete products, as well as reinforced concrete structures."
+        ],
+        "products":[
+            "Website",
+            "Company Profile",
+            "Mobile App",
+            "Web App",
+            "E-Commerce"
+        ],
+        "details_project":{
+            "profile_img":"/images/second-section.svg",
+            "needs_description":{
+                "list_desc":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ],
+                "list_scope":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ]
+            },
+            "list_tech_stack":[
+                "/images/typescript-icon.svg",
+                "/images/tailwind-icon.svg",
+                "/images/next-icon.svg",
+                "/images/laravel-icon.svg"
+            ],
+            "list_tools":[
+                "/images/trello-icon.svg",
+                "/images/telegram-icon.svg",
+                "/images/gmeet-icon.svg",
+                "/images/gmail-icon.svg",
+                "/images/mysql-icon.svg",
+                "/images/github-icon.svg"
+            ]
+        },
+        "detail_timeline":[
+            {
+                "color": "#0156FE",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#EC4989",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#FA8F21",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#4CA853",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            }
+        ],
+        "result_highlights":[
+            "/images/termo-highlight.svg",
+            "/images/termo-highlight-2.svg"
+        ]
+    }
+]

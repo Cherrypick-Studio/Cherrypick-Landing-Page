@@ -5,7 +5,7 @@ import Works from "@/components/organisms/list-portfolio";
 export default function ListProject()
 {
     return (
-     <div className="flex flex-col md:gap-y-[100px] py-[100px]">
+     <div className="flex flex-col md:gap-y-[100px] py-[100px] max-lg:py-10">
         <Works titleIntro="What We Delivered" hideContent />
       </div>
     )

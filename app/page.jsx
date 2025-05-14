@@ -16,12 +16,20 @@ export default function Home() {
     <LenisProvider>
        <LazyMotion features={domAnimation}>
         <m.div
-          initial={{ opacity: 1, height: "100vh" }}
+          initial={{ opacity: 1, height: "100vh"}}
           animate={{ opacity: 0, height: 0 }}
           exit={{ y: -1000, opacity: 0, height: 0 }}
           transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
+          className="fixed top-0 left-0 w-full h-full z-50"
+          style={{
+            pointerEvents: "none",
+          }}
+          onAnimationComplete={() => {
+            // This ensures the element is completely removed from the DOM flow after animation
+            document.querySelector('.splash-container')?.classList.add('hidden');
+          }}
         >
-          <div className="flex items-center justify-center w-full h-[100dvh] bg-red-cherry-500 z-50">
+          <div className="splash-container flex items-center justify-center w-full h-[100dvh] bg-red-cherry-500 z-50">
             <Lottie animationData={splashLottie} loop={false} className="lg:min-w-[50%]" />
           </div>
         </m.div>

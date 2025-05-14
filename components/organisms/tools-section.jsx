@@ -5,46 +5,15 @@ import { useRef } from "react";
 import CardInfoProject from "../molecules/card-info-project";
 import SectionTitle from "../molecules/section-title";
 
-const ToolsSection = () => {
+const ToolsSection = ({
+    portfolioData
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
-
-    const dummyTech =
-        [
-            {
-                url:'/images/typescript-icon.svg',
-            },
-            {
-                url:'/images/tailwind-icon.svg',
-            },
-            {
-                url:'/images/next-icon.svg',
-            },
-            {
-                url:'/images/laravel-icon.svg',
-            }
-        ]
-        const dummyDevelopmentTect =
-        [
-            {
-                url:'/images/trello-icon.svg',
-            },
-            {
-                url:'/images/telegram-icon.svg',
-            },
-            {
-                url:'/images/gmeet-icon.svg',
-            },
-            {
-                url:'/images/gmail-icon.svg',
-                },
-                {
-                    url:'/images/mysql-icon.svg',
-                },
-                {
-                    url:'/images/github-icon.svg',
-                }
-    ]
+    const {
+        list_tech_stack,
+        list_tools
+    } = portfolioData
   return (
     <LazyMotion features={domAnimation}>
       <m.div
@@ -62,14 +31,14 @@ const ToolsSection = () => {
                       And we chose some of the most suitable tools and technologies to work on this project.</p>
                   </div>
                   <div className="w-full flex max-lg:flex-col gap-10">
-                      <div className="flex p-10 flex-shrink-0 w-fit gap-10 bg-[#FBFBFB] items-end justify-center h-[320px] max-lg:w-full max-lg:flex-wrap">
-                          {dummyTech.map((item, index) => (
-                                <Image key={index} src={item.url} alt="logo" width={50} height={50} className="hover:animate-bounce cursor-pointer"/>
+                      <div className="flex p-10 flex-shrink-0 w-fit gap-10 bg-[#FBFBFB] items-end justify-center h-[320px] max-lg:w-full max-lg:flex-wrap rounded-xl">
+                          {list_tech_stack.map((item, index) => (
+                                <Image key={index} src={item} alt="logo" width={50} height={50} className="hover:animate-bounce cursor-pointer"/>
                           ))}
                       </div>
-                      <div className="flex  p-10 w-full gap-10 bg-[#FBFBFB] items-end justify-center h-[320px] max-lg:flex-wrap">
-                          {dummyDevelopmentTect.map((item, index) => (
-                                <Image key={index} src={item.url} alt="logo" width={50} height={50} className="hover:animate-bounce cursor-pointer"/>
+                      <div className="flex  p-10 w-full gap-10 bg-[#FBFBFB] items-end justify-center h-[320px] max-lg:flex-wrap rounded-xl">
+                          {list_tools.map((item, index) => (
+                                <Image key={index} src={item} alt="logo" width={50} height={50} className="hover:animate-bounce cursor-pointer"/>
                           ))}
                     </div>
                   </div>  
