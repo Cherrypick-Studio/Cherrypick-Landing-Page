@@ -62,7 +62,7 @@ const Button = (
       getSize(size),
       getRounded(rounded),
       className,
-      'relative'
+      'relative max-lg:text-sm cursor-pointer'
     )
 
     return (

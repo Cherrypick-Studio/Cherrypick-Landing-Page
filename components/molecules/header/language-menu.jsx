@@ -15,7 +15,7 @@ const LanguageMenu = () =>
 {
   const [language, setLanguage] = useState('en')
   return (
-    <NavigationMenu className="border rounded-full">
+    <NavigationMenu className="border rounded-full border-[#DDDDDD]">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>

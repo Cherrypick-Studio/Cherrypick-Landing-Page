@@ -6,6 +6,7 @@ import productLottie from "@/public/lotties/services-product.json";
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
 import { Button } from "../ui/button";
 import { useRef } from "react";
+import Link from "next/link";
 
 const Services = () =>
 {
@@ -22,7 +23,9 @@ const Services = () =>
                   our team brings deep expertise and a proven process to deliver results you can count on."/>
           </div>
           <div className="w-full h-auto self-stretch mt-auto ">
-          <Button variant="bordered" className='h-fit rounded-full  md:ml-auto block'>Learn More</Button>
+          <Link href='about-us'>
+            <Button variant="bordered" className='h-fit rounded-full  md:ml-auto block'>Learn More</Button>
+          </Link>
          </div>
       </div>
       <LazyMotion  features={domAnimation}>

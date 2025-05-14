@@ -25,7 +25,7 @@ const Footer = () =>
                     alt="Background"
                     width={100}
                     height={100}
-                    className="opacity-20 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]" // Adjust opacity as needed (0.2 = 20%)
+                    className="opacity-5 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]" // Adjust opacity as needed (0.2 = 20%)
                 />
         <Link href={'/contact'}>
         <div className="z-10 flex justify-center items-center flex-col w-full gap-5">
@@ -42,8 +42,8 @@ const Footer = () =>
         </Link>
         </section>}
       <div className="bg-white pt-20 pb-10">
-        <div className="container mx-auto space-y-10 max-lg:px-10 lg:px-20">
-          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 items-center justify-between max-lg:items-start py-8">
+        <div className="container mx-auto max-lg:px-6 lg:px-20">
+          <div className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 items-center justify-between max-lg:items-start py-8 max-lg:py-0">
             <Link href="#section-hero">
               <Image
                 src="/images/logo-new.svg"
@@ -53,7 +53,17 @@ const Footer = () =>
                 width={176}
               />
             </Link>
-            <div className="flex gap-6 items-center overflow-auto">
+            <div className="w-fit max-w-[146px] grid gap-5 xl:hidden h-fit">
+              <div className="text-[80px] font-medium text-gray-0 h-10">
+                “
+              </div>
+              <span className="text-[32px] font-medium">
+              Design it. 
+              Build it. 
+              Love it.
+              </span>
+             </div>
+            <div className="flex gap-6 items-center overflow-auto justify-center max-[400px]:flex-col max-[400px]:justify-center maxlg:w-full">
               <Link href="#section-portofolio">
                   <Text
                     variant="primary"
@@ -97,16 +107,16 @@ const Footer = () =>
                 </Link>
             </div>
           </div>
-          <div className="w-fit max-w-[146px] grid gap-5">
-            <span className="text-[80px] font-medium text-gray-0 h-fit leading-[0px]">
-              “
-            </span>
-            <span className="text-[32px] font-medium">
-            Design it. 
-            Build it. 
-            Love it.
-            </span>
-          </div>
+          <div className="w-fit max-w-[146px] grid gap-5 max-lg:hidden h-fit">
+              <div className="text-[80px] font-medium text-gray-0 h-10">
+                “
+              </div>
+              <span className="text-[32px] font-medium">
+              Design it. 
+              Build it. 
+              Love it.
+              </span>
+             </div>
           <div className="flex flex-col lg:flex-row gap-0 items-center justify-between w-full">
           <div className="flex  items-center py-8">
             <Text variant="black" size="h6" className="font-light">

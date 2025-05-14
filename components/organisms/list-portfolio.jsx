@@ -40,7 +40,7 @@ const Works = ({
 
   const router =useRouter()
   return (
-    <section className="max-lg:px-10 lg:px-20 container space-y-10 mx-auto" id="section-portofolio">
+    <section className="max-lg:px-6 lg:px-20 container space-y-10 mx-auto" id="section-portofolio">
       <LazyMotion features={domAnimation}>
         <m.div
          initial={{ opacity: 0, x: 50 }}
@@ -50,7 +50,7 @@ const Works = ({
            duration: 0.4,
            delay:  0.3,
          }}>
-        <div className="flex w-full justify-between items-end max-md:flex-col gap-3" ref={introRef}>
+        <div className="flex w-full justify-between items-end max-md:flex-col gap-5" ref={introRef}>
           <div className="w-full">
             <SectionTitle
               title={titleIntro}
@@ -80,7 +80,8 @@ const Works = ({
             <CardProduct
             
             img={"/images/komerce-project.svg"}
-            title={'Komerce'}
+                title={'Komerce'}
+                url="komerce"
             list={[
               'Website','Ecommerce'
               ]} />
@@ -98,7 +99,8 @@ const Works = ({
             <div ref={harwiRef}>
             <CardProduct
               img={"/images/harwi-project.svg"}
-              title={'Harwi Gadget'}
+                title={'Harwi Gadget'}
+                url="harwi"
               list={[
                 'Website','Ecommerce'
               ]} />
@@ -117,7 +119,8 @@ const Works = ({
           <div ref={betonRef}>
           <CardProduct
           img={"/images/termo-project.svg"}
-          title={'Termo Beton'}
+              title={'Termo Beton'}
+              url="termo-beton"
           list={[
             'Website','Company Profile'
             ]} />
@@ -133,7 +136,7 @@ const Works = ({
            duration: 0.6,
            delay:  0.5,
          }}>
-          <div className="flex w-full justify-between items-end max-md:flex-col gap-3" ref={introOtherRef}>
+          <div className="flex w-full justify-between items-end max-md:flex-col gap-5" ref={introOtherRef}>
             <div className="w-full">
               <SectionTitle
                 sizeTitle="h0"
@@ -180,7 +183,8 @@ const Works = ({
               <div ref={symmetryRef}>
                 <CardProduct
                   img={"/images/symmetry-project.svg"}
-                  title={'Symmetry'}
+                title={'Symmetry'}
+                url="symmetry"
                   list={[
                     'Landing Page'
                   ]} />
@@ -198,7 +202,8 @@ const Works = ({
               <div ref={spinzyRef}>
               <CardProduct
                   img={"/images/spinzy-project.svg"}
-                  title={'Spinzy'}
+                title={'Spinzy'}
+                url="spinzy"
                   list={[
                     'Landing Page'
                     ]} />
@@ -219,6 +224,7 @@ const Works = ({
               <CardProduct
                 img={"/images/pulse-project.svg"}
                 title={'PulseTrack'}
+                url="pulse-track"
                 list={[
                 'Dashboard Design'
                   ]} />
@@ -236,7 +242,8 @@ const Works = ({
               <div ref={komerceOtherRef}>
                 <CardProduct
                   img={"/images/komerce-2-project.svg"}
-                  title={'Komerce'}
+                title={'Komerce'}
+                url="komerce"
                   list={[
                     'Landing Page'
                   ]} />

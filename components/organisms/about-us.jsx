@@ -14,7 +14,7 @@ const AboutUs = () =>
     const isIntroView = useInView(introRef);
     return (
         <LazyMotion features={domAnimation}>
-            <section className="px-10 py-[160px] max-lg:px-10 lg:px-20 container space-y-3 mx-auto bg-[#FBFBFB] relative overflow-hidden" id="section-aboutus">
+            <section className="px-10 py-[160px] max-lg:px-6 max-lg:py-6 lg:px-20 container space-y-3 mx-auto bg-[#FBFBFB] relative overflow-hidden min-[1440px]:rounded-xl" id="section-aboutus">
             {/* Background image with opacity */}
                 <m.div
                 initial={{ opacity: 0, y: 0 }}
@@ -30,7 +30,7 @@ const AboutUs = () =>
                             alt="Background"
                             width={100}
                             height={100}
-                            className="opacity-20 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]" // Adjust opacity as needed (0.2 = 20%)
+                            className="opacity-5 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]" // Adjust opacity as needed (0.2 = 20%)
                         />
                     </div>
                 </m.div>
@@ -46,10 +46,10 @@ const AboutUs = () =>
                         <Text variant="primary" size="h6" rounded="lg" className="text-red-cherry-500">
                             WHO WE ARE
                         </Text>
-                        <p className="text-[#939393] text-[48px]">
+                        <p className="text-[#939393] text-[48px] max-lg:text-[40px] max-lg:leading-[120%]">
                             We are a <span className="text-black">digital product agency</span> based in Malang, Indonesia.
                         </p>
-                        <p className="text-[#939393] text-[48px]">
+                        <p className="text-[#939393] text-[48px] max-lg:text-[40px] max-lg:leading-[120%]">
                             <span className="text-black">Create innovative website and mobile apps with best experience for user.</span>
                             And we provide a <span className="text-black">high-quality service</span> in UI/ UX Design & Development.
                         </p>
