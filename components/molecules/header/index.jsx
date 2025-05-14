@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Image from "next/image";
 import Text from "@/components/ui/text";
@@ -83,7 +84,7 @@ useEffect(() => {
       window.removeEventListener('hashchange', handleHashChange);
     };
   }
-}, [window.location.hash]);
+}, []);
 
   return (
     <>
