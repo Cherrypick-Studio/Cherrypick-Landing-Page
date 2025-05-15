@@ -65,26 +65,26 @@ const Header = () => {
   }, [lastScrollY]);
 
   // Add this useEffect to track hash changes
-useEffect(() => {
-  // Only run on client side
-  if (typeof window !== 'undefined') {
-    // Set initial hash
-    setActiveHash(window.location.hash);
-    
-    // Function to handle hash changes
-    const handleHashChange = () => {
-      setActiveHash(window.location.hash);
-    };
-    
-    // Add event listener for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-    
-    // Clean up event listener
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }
-}, []);
+  // useEffect(() => {
+  //   // Only run on client side
+  //   if (typeof window !== 'undefined') {
+  //     // Set initial hash
+  //     setActiveHash(window.location.hash);
+      
+  //     // Function to handle hash changes
+  //     const handleHashChange = () => {
+  //       setActiveHash(window.location.hash);
+  //     };
+      
+  //     // Add event listener for hash changes
+  //     window.addEventListener('hashchange', handleHashChange);
+      
+  //     // Clean up event listener
+  //     return () => {
+  //       window.removeEventListener('hashchange', handleHashChange);
+  //     };
+  //   }
+  // }, []);
 
   return (
     <>
@@ -100,14 +100,14 @@ useEffect(() => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
-          className={`relative flex items-center justify-between mx-auto py-3 px-6 lg:py-4 lg:px-20 container`}
+          className={`relative flex items-center justify-between mx-auto py-3 px-6 lg:py-6 lg:px-20 container`}
         >
           <Link href="/">
             <Image
               src="/images/logo-noword.svg"
               alt="cherry-pick-logo"
               title="cherry-pick-logo"
-              className="w-"
+              className="w-[90%] max-lg:w-[80%]"
               height={40}
               width={40}
             />
@@ -200,7 +200,7 @@ useEffect(() => {
                           onClick={() => setShowMenu(false)}
                           className={cn(
                             'text-black',
-                             {'text-gray-150':pathname.includes('portfolio')},
+                             {'text-red-cherry-500':pathname.includes('portfolio')},
                            )}
                       >
                         Portfolio
@@ -213,7 +213,7 @@ useEffect(() => {
                           onClick={() => setShowMenu(false)}
                           className={cn(
                             'text-black',
-                             {'text-gray-150':pathname.includes('about-us')},
+                             {'text-red-cherry-500':pathname.includes('about-us')},
                            )}
                       >
                         Services
@@ -226,7 +226,7 @@ useEffect(() => {
                           onClick={() => setShowMenu(false)}
                           className={cn(
                             'text-black',
-                             {'text-gray-150':pathname.includes('about-us')},
+                             {'text-red-cherry-500':pathname.includes('about-us')},
                            )}
                       >
                         About us
@@ -239,7 +239,7 @@ useEffect(() => {
                           onClick={() => setShowMenu(false)}
                           className={cn(
                             'text-black',
-                             {'text-gray-150':pathname.includes('contact')},
+                             {'text-red-cherry-500':pathname.includes('contact')},
                            )}
                       >
                         Contact
@@ -255,7 +255,7 @@ useEffect(() => {
               <Link href="/portfolio" >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
-                       {'text-gray-150':pathname.includes('portfolio')},
+                       {'text-red-cherry-500':pathname.includes('portfolio')},
                      )}>
                   Portofolio
                 </Text>
@@ -263,7 +263,7 @@ useEffect(() => {
               <Link href="/about-us" >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
-                       {'text-gray-150':pathname.includes('about-us')},
+                       {'text-red-cherry-500':pathname.includes('about-us')},
                      )}>
                   Services
                 </Text>
@@ -271,7 +271,7 @@ useEffect(() => {
               <Link href="/about-us" >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
-                       {'text-gray-150':pathname.includes('about-us')},
+                       {'text-red-cherry-500':pathname.includes('about-us')},
                      )}>
                   About Us
                 </Text>
@@ -279,7 +279,7 @@ useEffect(() => {
               <Link href="/contact" >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
-                       {'text-gray-150':pathname.includes('contact')},
+                       {'text-red-cherry-500':pathname.includes('contact')},
                      )}>
                   Contact
                 </Text>
@@ -296,7 +296,7 @@ useEffect(() => {
       {/* second navbar  */}
       {pathname.split('/').length > 2 && 
         <div className={`sticky border border-[#EBEBEB] top-0 inset-x-0 z-30 bg-white transition-transform duration-300 ease-in-out ${isVisible && lastScrollY !==0 ? 'translate-y-[70px]':'translate-y-0'}`}>
-        <div className="container mx-auto py-3 px-6 lg:py-4 lg:px-20">
+        <div className="container mx-auto py-3 px-6 lg:py-6 lg:px-20">
           <div className="flex justify-between items-center max-lg:flex-col max-lg:items-start gap-4">
               <Link href='/portfolio'>
               <Button variant="secondary" className='flex p-0 gap-4 border-none text-[#909090]'>
@@ -305,17 +305,17 @@ useEffect(() => {
             </Button></Link>
             <div className="flex items-center space-x-8">
               {/* Secondary navbar right side content */}
-              <Link href="#overview">
+              <Link href="#overview" onClick={()=>setActiveHash('#overview')}>
                   <Text variant="secondary" size="small" className={
                     cn(
                       'text-gray-150',
                       {'text-red-cherry-500':activeHash === "#overview" || activeHash === ""  },
                     )
-                }>
-                Overview
-                </Text>
+                    }>
+                    Overview
+                    </Text>
                     </Link>
-                    <Link href="#development">
+                    <Link href="#development" onClick={()=>setActiveHash('#development')}>
                   <Text variant="secondary" size="small" className={
                      cn(
                       'text-gray-150',
@@ -326,7 +326,7 @@ useEffect(() => {
                 Development
                 </Text>
                     </Link>
-                    <Link href="#result">
+                    <Link href="#result" onClick={()=>setActiveHash('#result')}>
                 <Text variant="secondary" size="small"  className={
                      cn(
                       'text-gray-150',
