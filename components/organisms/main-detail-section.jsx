@@ -22,7 +22,8 @@ const MainDetailSection = ({
         name_company,
         country,
         industry,
-        flag
+        flag,
+        year_project
     } = portofolioData
 
   return (
@@ -73,6 +74,10 @@ const MainDetailSection = ({
                       <div className="grid gap-2">
                           <span className="text-xs text-gray-150">INDUSTRY</span>
                           <span className="text-xl font-normal">{industry}</span>
+                      </div>
+                      <div className="grid gap-2">
+                          <span className="text-xs text-gray-150">YEAR</span>
+                          <span className="text-xl font-normal">{year_project}</span>
                       </div>
                   </div>
               </div>

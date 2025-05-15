@@ -63,7 +63,7 @@ const Footer = () =>
               Love it.
               </span>
              </div>
-            <div className="flex gap-6 items-center overflow-auto justify-center max-[400px]:flex-col max-[400px]:justify-center maxlg:w-full">
+            <div className="flex gap-6 items-center overflow-auto justify-center max-[400px]:flex-col max-[400px]:justify-center max-lg:w-full">
               <Link href="/portfolio">
                   <Text
                     variant="primary"

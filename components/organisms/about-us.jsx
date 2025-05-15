@@ -42,7 +42,7 @@ const AboutUs = () =>
                   duration: 0.6,
                   delay:  0.5,
                 }}>
-                    <div className="z-10 xl:w-[960px] space-y-5" ref={introRef}>
+                    <div className="z-10 xl:w-[960px] space-y-10" ref={introRef}>
                         <Text variant="primary" size="h6" rounded="lg" className="text-red-cherry-500">
                             WHO WE ARE
                         </Text>

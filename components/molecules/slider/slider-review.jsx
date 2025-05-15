@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowLeftCircle, ArrowRightCircle, Star, StarIcon } from "lucide-react";
+import { ArrowLeft, ArrowLeftCircle, ArrowRight, ArrowRightCircle, Star, StarIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const SliderReview = () =>
@@ -83,8 +83,12 @@ const SliderReview = () =>
       </div>
       {/* button slider  */}
       <div className="flex w-1/2 justify-end items-end gap-5 max-lg:justify-between max-lg:w-full">
-      <ArrowLeftCircle onClick={prevSlide} size={40}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
-        <ArrowRightCircle onClick={nextSlide} size={40}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
+        <div className="w-fit border border-black rounded-full p-1 cursor-pointer"  onClick={prevSlide}>
+          <ArrowLeft size={30}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
+        </div>
+        <div className="w-fit border border-black rounded-full p-1 cursor-pointer"  onClick={nextSlide}>
+        <ArrowRight size={30}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
+        </div>
       </div>
     </div>
   )

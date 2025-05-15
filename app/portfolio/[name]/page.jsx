@@ -10,8 +10,8 @@ import portfolios from "@/lib/dataPortfolio.json";
 export default function DetailProject({params})
 {
   
-  const { name } = params
-  const portfolioData = portfolios.find(p => p.name_company === name);
+  const param = params
+  const portfolioData = portfolios.find(p => p.name_company === param?.name);
   if (!portfolioData) {
     return <div>Project not found</div>;
   }

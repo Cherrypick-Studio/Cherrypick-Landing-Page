@@ -4,6 +4,7 @@
         "name": "Termobeton",
         "name_company": "termo-beton",
         "country": "Bosnia",
+        "year_project":"2025",
         "industry": "Construction",
         "flag":"/images/bosnia.svg",
         "description": [
@@ -18,7 +19,7 @@
             "E-Commerce"
         ],
         "details_project":{
-            "profile_img":"/images/second-section.svg",
+            "profile_img":"/images/termo-project.svg",
             "needs_description":{
                 "list_desc":[
                     "Company profile website with fresh & modern looks.",
@@ -82,22 +83,23 @@
         "code": "komerce",
         "name": "Komerce",
         "name_company": "komerce",
-        "country": "Bosnia",
-        "industry": "Construction",
-        "flag":"/images/british.svg",
+        "year_project":"2024",
+        "country": "Indonesia",
+        "industry": "E-Commerce",
+        "flag":"/images/indonesia.svg",
         "description": [
-            "Termo-beton doo is a company for construction, trade and services founded on April 17, 1996.in Breza. The founders of the company are Frljak Sabit,Bachelor of Civil Engineering and Turbo Ahmed, Bachelor of Civil Engineering.",
-            "The Company`s main activity is construction (civil and building construction), production of concrete and precast concrete products, as well as reinforced concrete structures."
+            "Komerce is a leading tech-startup company in Central Java, Indonesia. The company have a role to become end-to-end e-commerce enabler for Indonesian SMEs. Starting with a product as platform that collaborating SMEs and village youth that we have trained in e-commerce field to co-optimize business on internet. ",
+            "Komerce already funded by Achmad Zaky Foundation (Zaky is a founder of Bukalapak) & Indigo (Telkom Indonesia's arm for startup acceleration). We are now open & ongoing for the next fundraising stage."
         ],
         "products":[
             "Website",
-            "Company Profile",
-            "Mobile App",
-            "Web App",
-            "E-Commerce"
+            "E-Commerce Website",
+            "Tech-Startup",
+            "Web Development",
+            "SMEs"
         ],
         "details_project":{
-            "profile_img":"/images/second-section.svg",
+            "profile_img":"/images/komerce-project.svg",
             "needs_description":{
                 "list_desc":[
                     "Company profile website with fresh & modern looks.",
@@ -152,8 +154,168 @@
             }
         ],
         "result_highlights":[
-            "/images/termo-highlight.svg",
-            "/images/termo-highlight-2.svg"
+            "/images/komerce-highlight.svg",
+            "/images/komerce-highlight-2.svg"
+        ]
+    },
+
+    {
+        "code": "harwi",
+        "name": "Harwi",
+        "name_company": "harwi",
+        "year_project":"2024",
+        "country": "Indonesia",
+        "industry": "E-Commerce",
+        "flag":"/images/indonesia.svg",
+        "description": [
+            "Komerce is a leading tech-startup company in Central Java, Indonesia. The company have a role to become end-to-end e-commerce enabler for Indonesian SMEs. Starting with a product as platform that collaborating SMEs and village youth that we have trained in e-commerce field to co-optimize business on internet. ",
+            "Komerce already funded by Achmad Zaky Foundation (Zaky is a founder of Bukalapak) & Indigo (Telkom Indonesia's arm for startup acceleration). We are now open & ongoing for the next fundraising stage."
+        ],
+        "products":[
+            "Website",
+            "E-Commerce Website",
+            "Tech-Startup",
+            "Web Development",
+            "SMEs"
+        ],
+        "details_project":{
+            "profile_img":"/images/harwi-project.svg",
+            "needs_description":{
+                "list_desc":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ],
+                "list_scope":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ]
+            },
+            "list_tech_stack":[
+                "/images/typescript-icon.svg",
+                "/images/tailwind-icon.svg",
+                "/images/next-icon.svg",
+                "/images/laravel-icon.svg"
+            ],
+            "list_tools":[
+                "/images/trello-icon.svg",
+                "/images/telegram-icon.svg",
+                "/images/gmeet-icon.svg",
+                "/images/gmail-icon.svg",
+                "/images/mysql-icon.svg",
+                "/images/github-icon.svg"
+            ]
+        },
+        "detail_timeline":[
+            {
+                "color": "#0156FE",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#EC4989",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#FA8F21",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#4CA853",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            }
+        ],
+        "result_highlights":[
+            "/images/harwi-highlight.svg",
+            "/images/harwi-highlight-2.svg"
+        ]
+    },
+
+    {
+        "code": "kyoo",
+        "name": "Kyoo",
+        "name_company": "kyoo",
+        "year_project":"2024",
+        "country": "Indonesia",
+        "industry": "E-Commerce",
+        "flag":"/images/indonesia.svg",
+        "description": [
+            "Komerce is a leading tech-startup company in Central Java, Indonesia. The company have a role to become end-to-end e-commerce enabler for Indonesian SMEs. Starting with a product as platform that collaborating SMEs and village youth that we have trained in e-commerce field to co-optimize business on internet. ",
+            "Komerce already funded by Achmad Zaky Foundation (Zaky is a founder of Bukalapak) & Indigo (Telkom Indonesia's arm for startup acceleration). We are now open & ongoing for the next fundraising stage."
+        ],
+        "products":[
+            "Website",
+            "E-Commerce Website",
+            "Tech-Startup",
+            "Web Development",
+            "SMEs"
+        ],
+        "details_project":{
+            "profile_img":"/images/harwi-project.svg",
+            "needs_description":{
+                "list_desc":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ],
+                "list_scope":[
+                    "Company profile website with fresh & modern looks.",
+                    "Revamp all screen and information to make to make it more informative and interesting.",
+                    "Provide to multiple language for content information (Bosnian, Germany, English)."
+                ]
+            },
+            "list_tech_stack":[
+                "/images/typescript-icon.svg",
+                "/images/tailwind-icon.svg",
+                "/images/next-icon.svg",
+                "/images/laravel-icon.svg"
+            ],
+            "list_tools":[
+                "/images/trello-icon.svg",
+                "/images/telegram-icon.svg",
+                "/images/gmeet-icon.svg",
+                "/images/gmail-icon.svg",
+                "/images/mysql-icon.svg",
+                "/images/github-icon.svg"
+            ]
+        },
+        "detail_timeline":[
+            {
+                "color": "#0156FE",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#EC4989",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#FA8F21",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            },
+            {
+                "color": "#4CA853",
+                "title": "Discovery & Planning",
+                "description": "We start by understanding your business, users, and objectives. Through research, interviews, and strategy sessions, we define the project scope, goals, and key features.",
+                "badge":["Project Brief","Site map","Timeline"]
+            }
+        ],
+        "result_highlights":[
+            "/images/harwi-highlight.svg",
+            "/images/harwi-highlight-2.svg"
         ]
     }
 ]

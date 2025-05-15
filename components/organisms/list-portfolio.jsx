@@ -40,7 +40,7 @@ const Works = ({
 
   const router =useRouter()
   return (
-    <section className="max-lg:px-6 lg:px-20 container space-y-10 mx-auto" id="section-portofolio">
+    <section className="max-lg:px-6 lg:px-20 container space-y-10 lg:space-y-20 mx-auto" id="section-portofolio">
       <LazyMotion features={domAnimation}>
         <m.div
          initial={{ opacity: 0, x: 50 }}
@@ -81,7 +81,7 @@ const Works = ({
             
             img={"/images/komerce-project.svg"}
                 title={'Komerce'}
-                url="#"
+                url="komerce"
             list={[
               'Website','Ecommerce'
               ]} />
@@ -100,7 +100,7 @@ const Works = ({
             <CardProduct
               img={"/images/harwi-project.svg"}
                 title={'Harwi Gadget'}
-                url="#"
+                url="harwi"
               list={[
                 'Website','Ecommerce'
               ]} />
