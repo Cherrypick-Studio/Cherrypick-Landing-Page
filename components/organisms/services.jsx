@@ -23,7 +23,7 @@ const Services = () =>
                   our team brings deep expertise and a proven process to deliver results you can count on."/>
           </div>
           <div className="w-full h-auto self-stretch mt-auto ">
-          <Link href='about-us'>
+          <Link href='/service'>
             <Button variant="bordered" className='h-fit rounded-full  md:ml-auto block'>Learn More</Button>
           </Link>
          </div>

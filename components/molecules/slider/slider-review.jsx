@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowLeftCircle, ArrowRight, ArrowRightCircle, Star, StarIcon } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const SliderReview = () =>
@@ -10,25 +11,11 @@ const SliderReview = () =>
     const exampleData = [
         {
           review:5,
-          text: ' Working with Cherrypick was a game-changer for our product. They didn’t just execute — they questioned assumptions,proposed smarter solutions, and delivered a polished product ahead of schedule. Their team felt like an extension of ours.',
-          name: 'John Doe',
-          position: 'CEO, ABC Company',
+          text: '“Working with Cherrypick was a game-changer for our product. They didn’t just execute — they questioned assumptions, proposed smarter solutions, and delivered a polished product ahead of schedule. Their team felt like an extension of ours."',
+          name: 'Alexander Robinson',
+          position: 'Product Manager at Komerce',
           image: '/images/avatar-1.png',
       },
-      {
-        review:2,
-        text: ' Working with Cherrypick was a game-changer for our product. They didn’t just execute — they questioned assumptions,proposed smarter solutions, and delivered a polished product ahead of schedule. Their team felt like an extension of ours.',
-        name: 'John Doe',
-        position: 'CEO, ABC Company',
-        image: '/images/avatar-1.png',
-      },
-      {
-        review:3,
-        text: ' Working with Cherrypick was a game-changer for our product. They didn’t just execute — they questioned assumptions,proposed smarter solutions, and delivered a polished product ahead of schedule. Their team felt like an extension of ours.',
-        name: 'John Doe',
-        position: 'CEO, ABC Company',
-        image: '/images/avatar-1.png',
-      }
       ]
       
       // button execution function
@@ -72,24 +59,26 @@ const SliderReview = () =>
                   {exampleData[currentIndex].text}
                 </p>
               <div className="flex gap-3 items-center">
-                <div className="w-14 h-14 rounded-full bg-gray-300" />
+              <Image width={56} height={56} src={'/images/alex-komerce-photo.svg'} alt="photo-review"/>
                 <div className="flex flex-col">
                   <h1 className="text-xl font-medium">{exampleData[currentIndex].name}</h1>
-                  <span className="text-base text-gray-150">{exampleData[currentIndex].name}</span>
+                  <span className="text-base text-gray-150">{exampleData[currentIndex].position}</span>
                 </div>
               </div>
             </div>
           </div>
       </div>
       {/* button slider  */}
+      {exampleData.length > 1 &&
       <div className="flex w-1/2 justify-end items-end gap-5 max-lg:justify-between max-lg:w-full">
-        <div className="w-fit border border-black rounded-full p-1 cursor-pointer"  onClick={prevSlide}>
-          <ArrowLeft size={30}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
-        </div>
-        <div className="w-fit border border-black rounded-full p-1 cursor-pointer"  onClick={nextSlide}>
-        <ArrowRight size={30}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
-        </div>
+      <div className="w-fit border border-black rounded-full p-1 cursor-pointer"  onClick={prevSlide}>
+        <ArrowLeft size={30}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
       </div>
+      <div className="w-fit border border-black rounded-full p-1 cursor-pointer"  onClick={nextSlide}>
+      <ArrowRight size={30}  className="text-gray-500 cursor-pointer hover:text-gray-700 transition-colors"/>
+      </div>
+        </div>
+      }
     </div>
   )
 }
