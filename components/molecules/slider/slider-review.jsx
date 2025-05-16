@@ -12,8 +12,8 @@ const SliderReview = () =>
         {
           review:5,
           text: '“Working with Cherrypick was a game-changer for our product. They didn’t just execute — they questioned assumptions, proposed smarter solutions, and delivered a polished product ahead of schedule. Their team felt like an extension of ours."',
-          name: 'Alexander Robinson',
-          position: 'Product Manager at Komerce',
+          name: 'Bintang Aditya',
+          position: 'Owner of Harwi Gadget',
           image: '/images/avatar-1.png',
       },
       ]
