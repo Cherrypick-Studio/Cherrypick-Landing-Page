@@ -206,14 +206,14 @@ const Header = () => {
                         Portfolio
                       </Text>
                     </Link>
-                      <Link href="/about-us" >
+                      <Link href="/service" >
                       <Text
                         variant="primary"
                         size="h4"
                           onClick={() => setShowMenu(false)}
                           className={cn(
                             'text-black',
-                             {'text-red-cherry-500':pathname.includes('about-us')},
+                             {'text-red-cherry-500':pathname.includes('service')},
                            )}
                       >
                         Services
@@ -260,10 +260,10 @@ const Header = () => {
                   Portofolio
                 </Text>
               </Link>
-              <Link href="/about-us" >
+              <Link href="/service" >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
-                       {'text-red-cherry-500':pathname.includes('about-us')},
+                       {'text-red-cherry-500':pathname.includes('service')},
                      )}>
                   Services
                 </Text>

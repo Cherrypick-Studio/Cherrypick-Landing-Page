@@ -4,8 +4,9 @@ import Text from "@/components/ui/text";
 import Lottie from "lottie-react";
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
 import { useRef } from "react";
+import { Badge } from "../ui/badge";
 
-const CardServices = ({ lottieFile, icon,number, title, description, delay = 0 }) => {
+const CardServices = ({ lottieFile, icon,number, title, description, products=[],delay = 0 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -26,7 +27,12 @@ const CardServices = ({ lottieFile, icon,number, title, description, delay = 0 }
                       className="leading-[30px]"
                     >
                       {description}
-                  </Text>
+        </Text>
+        <div className="flex gap-3 max-lg:flex-wrap">
+                              {products.map((item, index) => (
+                                  <Badge key={index} showRedDot={false} variant='bg-gray'>{item}</Badge>
+                              ))}
+                          </div>
               </div>
           </div>
   );

@@ -8,7 +8,7 @@ const CardInfoProject = ({
 }) =>
 {
     return (
-        <div className="grid gap-10 p-10 rounded-xl bg-[#FBFBFB] w-full">
+        <div className="flex flex-col gap-10 p-10 rounded-xl bg-[#FBFBFB] w-full">
             <Image src={img} alt="project-1" width={400} height={400} className="w-16 h-16"/>
             <div className="space-y-2">
                 <h1 className="text-3xl font-light">{title}</h1>
