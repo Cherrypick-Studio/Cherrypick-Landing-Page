@@ -125,7 +125,48 @@ const Works = ({
             'Website','Company Profile'
             ]} />
         </div>
-       </m.div>
+        </m.div>
+        
+        <div className="flex w-full items-center gap-5 max-md:flex-col">
+          <m.div
+           initial={{ opacity: 0, x: 50 }}
+           animate={isKomerceView && { opacity: 1, x: 0 }}
+           transition={{
+             ease: "easeIn",
+             duration: 0.6,
+             delay:  0.5,
+           }}>
+            <div ref={komerceRef}>
+            <CardProduct
+            
+            img={"/images/kyoo-project.svg"}
+                title={'Kyoo'}
+                url="kyoo"
+            list={[
+              'Website','Ecommerce'
+              ]} />
+           </div>
+         </m.div>
+          
+         <m.div
+           initial={{ opacity: 0, x: -50 }}
+           animate={isHarwiView && { opacity: 1, x: 0 }}
+           transition={{
+             ease: "easeIn",
+             duration: 0.6,
+             delay:  0.5,
+           }}>
+            <div ref={harwiRef}>
+            <CardProduct
+              img={"/images/gamemarket-project.svg"}
+                title={'Game Market'}
+                url="gamemarket"
+              list={[
+                'Website','Ecommerce'
+              ]} />
+            </div>
+         </m.div>
+        </div>
         
         {/* other works projects  */}
         <m.div
