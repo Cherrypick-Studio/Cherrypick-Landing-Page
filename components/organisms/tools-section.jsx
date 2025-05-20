@@ -2,8 +2,6 @@
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import CardInfoProject from "../molecules/card-info-project";
-import SectionTitle from "../molecules/section-title";
 
 const ToolsSection = ({
     portfolioData

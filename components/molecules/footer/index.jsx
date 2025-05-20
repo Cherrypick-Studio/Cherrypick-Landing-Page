@@ -53,7 +53,7 @@ const Footer = () =>
                 width={176}
               />
             </Link>
-            <div className="w-fit max-w-[146px] grid gap-5 xl:hidden h-fit">
+            <div className="w-fit max-w-[146px] grid gap-5 lg:hidden h-fit">
               <div className="text-[80px] font-medium text-gray-0 h-10">
                 “
               </div>

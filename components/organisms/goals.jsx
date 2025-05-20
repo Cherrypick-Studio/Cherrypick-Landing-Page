@@ -1,6 +1,8 @@
 "use client";
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import Lottie from "lottie-react";
 import Image from "next/image";
+import aboutLottie from "@/public/lotties/about-us.json";
 import { useRef } from "react";
 
 const Goals = () => {
@@ -18,14 +20,9 @@ const Goals = () => {
          delay:  0.5,
        }}>
         <div ref={ref} className=" w-full">
-        <Image
-              src={'/images/second-section.svg'}
-              width={100}
-              height={100}
-              className="w-full container hover:scale-105 transition-all duration-300 p-0 min-[1440px]:rounded-xl"
-              alt="cherry-pick-goals"
-            />
+           <Lottie animationData={aboutLottie} loop={false} className="lg:min-w-[50%]" />
         </div>
+         
       </m.div>
    </LazyMotion>
   );

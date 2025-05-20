@@ -143,7 +143,7 @@ const Header = () => {
                     onClick={() => setShowMenu(false)}
                   />
                 </div>
-                <div className="flex flex-col justify-center items-center h-full">
+                <div className="flex flex-col justify-start pt-20 items-center h-full">
                   <div className="flex flex-col items-center space-y-5">
                     {/* NOTE: commented temporary */}
                     {/* <Accordion
@@ -199,7 +199,7 @@ const Header = () => {
                         size="h4"
                           onClick={() => setShowMenu(false)}
                           className={cn(
-                            'text-black',
+                            'text-black text-3xl',
                              {'text-red-cherry-500':pathname.includes('portfolio')},
                            )}
                       >
@@ -212,7 +212,7 @@ const Header = () => {
                         size="h4"
                           onClick={() => setShowMenu(false)}
                           className={cn(
-                            'text-black',
+                            'text-black text-3xl',
                              {'text-red-cherry-500':pathname.includes('service')},
                            )}
                       >
@@ -225,7 +225,7 @@ const Header = () => {
                         size="h4"
                           onClick={() => setShowMenu(false)}
                           className={cn(
-                            'text-black',
+                            'text-black text-3xl',
                              {'text-red-cherry-500':pathname.includes('about-us')},
                            )}
                       >
@@ -238,7 +238,7 @@ const Header = () => {
                         size="h4"
                           onClick={() => setShowMenu(false)}
                           className={cn(
-                            'text-black',
+                            'text-black text-3xl',
                              {'text-red-cherry-500':pathname.includes('contact')},
                            )}
                       >
