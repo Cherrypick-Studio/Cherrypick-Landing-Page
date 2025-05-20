@@ -1,13 +1,7 @@
 "use client";
-import Text from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
-import { emailAction } from "@/configs/email-action";
-import Lottie from "lottie-react";
-import heroLottie from "@/public/lotties/hero-section.json";
-import { m, LazyMotion, domAnimation } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import SectionTitle from "../molecules/section-title";
-import Header from "../molecules/header";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
 

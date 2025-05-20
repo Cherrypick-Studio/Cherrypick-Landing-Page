@@ -1,7 +1,5 @@
 "use client";
 import SectionTitle from "@/components/molecules/section-title";
-import Text from "@/components/ui/text";
-import Image from "next/image";
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "../ui/button";

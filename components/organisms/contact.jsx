@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import { useRef } from "react";
 import { domAnimation, LazyMotion, useInView, m } from "framer-motion";

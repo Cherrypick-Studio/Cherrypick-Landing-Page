@@ -11,7 +11,7 @@ const getVariant = (variant) => {
     case "flutix":
       return "text-[#503E9D]";
     case "link":
-      return "text-black hover:text-red-cherry-50 cursor-pointer";
+      return "text-black hover:text-red-cherry-500 cursor-pointer";
   }
 };
 
