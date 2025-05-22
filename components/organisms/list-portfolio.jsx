@@ -183,10 +183,12 @@ const Works = ({
                 desc={!hideContent && 'Not every design ends up in production — but every exploration helps us grow, think differently, and uncover new possibilities.'} />
             </div>
            {!hideContent &&  <div className="w-full h-auto self-stretch mt-auto">
-              <Button variant="bordered" className='h-fit flex items-center gap-2 rounded-full md:ml-auto'>
-                See All Exploration
-                <DribbbleIcon size={20}/>
-              </Button>
+              <Link href={'https://dribbble.com/rdhidayat'} target="_blank">
+                <Button variant="bordered" className='h-fit flex items-center gap-2 rounded-full md:ml-auto'>
+                  See All Exploration
+                  <DribbbleIcon size={20}/>
+                </Button>
+              </Link>
           </div>}
           </div>
        </m.div>
