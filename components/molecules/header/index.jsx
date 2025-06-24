@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "../language-switcher";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,6 +23,8 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(10);
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState("");
+
+    const translate = useTranslations('navigation')
 
  // BE ABLE TO USE :could disabled when need it 
   // const listenScrollEvent = () => {
@@ -123,7 +127,7 @@ const Header = () => {
                 
                 </div>
                 <div className="-z-10">
-                  <LanguageMenu />
+                    <LanguageMenu />
                 </div>
               </div>
               <div
@@ -257,7 +261,7 @@ const Header = () => {
                       'text-black',
                        {'text-red-cherry-500':pathname.includes('portfolio')},
                      )}>
-                  Portofolio
+                  {translate('porto')}
                 </Text>
               </Link>
               <Link href="/service" >
@@ -287,7 +291,9 @@ const Header = () => {
             </div>
           </nav>
           <div className="hidden lg:block">
-          <LanguageMenu/>
+              <LanguageMenu />
+              
+              <LanguageSwitcher/>
          </div>
         </m.div>
       </LazyMotion>

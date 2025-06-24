@@ -10,12 +10,11 @@ import { m, LazyMotion, domAnimation } from "framer-motion";
 import AboutUs from "@/components/organisms/about-us";
 import Highlights from "@/components/organisms/highlights";
 import LenisProvider from "@/components/molecules/lenis";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
 
-export default function Home()
-{
-  const translation = useTranslations('homepage')
-  
+export default function Home() {
+  const t = useTranslations('HomePage');
+
   return (
     <LenisProvider>
        <LazyMotion features={domAnimation}>
@@ -29,7 +28,6 @@ export default function Home()
             pointerEvents: "none",
           }}
           onAnimationComplete={() => {
-            // This ensures the element is completely removed from the DOM flow after animation
             document.querySelector('.splash-container')?.classList.add('hidden');
           }}
         >

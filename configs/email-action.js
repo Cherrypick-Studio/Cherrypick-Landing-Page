@@ -1,2 +1,7 @@
-export const emailAction =
-  "mailto:cherrypick.main@gmail.com?subject=Interest to Start a New Project&body=Hi there, I'm interested in starting my new project with you. Please reach out!";
+import {useTranslations} from 'next-intl';
+
+export const getEmailAction = (t) => {
+  const subject = encodeURIComponent(t('contact.email_subject'));
+  const body = encodeURIComponent(t('contact.email_body'));
+  return `mailto:cherrypick.main@gmail.com?subject=${subject}&body=${body}`;
+};

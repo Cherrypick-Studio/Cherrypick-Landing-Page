@@ -3,6 +3,9 @@ import Header from "@/components/molecules/header";
 import Footer from "@/components/molecules/footer";
 import Script from "next/script";
 import "./globals.css";
+import { getLocale, getMessages } from "next-intl/server";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
+import LocaleProvider from "@/components/providers/locale-provider";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -14,7 +17,13 @@ export const metadata = {
   themeColor: "#C42026",
 };
 
-export default function RootLayout({ children }) {
+export default  async function RootLayout({ children })
+{
+  const locale = await getLocale();
+  const message = await getMessages({
+    locale:'en'
+  });
+
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <body className={rubik.className}>
@@ -31,9 +40,16 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* END: Google Analytics */}
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {/* <NextIntlClientProvider messages={message}>
+            <Header/>
+            <main>{children}</main>
+            <Footer />
+      </NextIntlClientProvider> */}
+        <LocaleProvider initialLocale='en' initialMessages={message}>
+           <Header/>
+            <main>{children}</main>
+            <Footer />
+        </LocaleProvider>
       </body>
     </html>
   );
