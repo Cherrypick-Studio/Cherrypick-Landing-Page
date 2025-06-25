@@ -1,33 +1,36 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {notFound} from 'next/navigation';
-import '../globals.css';
+import { Rubik } from "next/font/google";
+import Header from "@/components/molecules/header";
+import Footer from "@/components/molecules/footer";
+import Script from "next/script";
+import "../globals.css";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
-const locales = ['en', 'es', 'fr'];
+const rubik = Rubik({ subsets: ["latin"] });
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-}
+export const metadata = {
+  title: "Cherrypick Studio",
+  description:
+    "Cherry Pick is your trusted partner for cutting-edge web and mobile application services. We are committed to helping businesses of all sizes harness the power of technology to drive growth, innovation, and customer engagement.",
+  manifest: './manifest.json',
+  themeColor: "#C42026",
+};
 
-export default async function LocaleLayout({
-  children,
-  params: { locale }
-})
-{
-  // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale)) notFound();
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
+export default async function LocaleLayout({ children, params }) {
+  const { locale } = params;
+  
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </NextIntlClientProvider>
   );
 }

@@ -1,22 +1,17 @@
-import { NextResponse } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
 
-export function middleware(request) {
-  // You can add logic here to redirect or handle default locales
-  // For example, if you want to redirect `/` to `/?lang=en`
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ['en', 'es', 'fr'],
   
-  const url = request.nextUrl.clone();
-  const hasLangParam = url.searchParams.has('lang') || url.searchParams.has('locale');
+  // Used when no locale matches
+  defaultLocale: 'en',
   
-  // Optionally redirect to default language
-  if (url.pathname === '/' && !hasLangParam) {
-    // Uncomment if you want to force a default language parameter
-    // url.searchParams.set('lang', 'en');
-    // return NextResponse.redirect(url);
-  }
-  
-  return NextResponse.next();
-}
+  // Always use locale prefix
+  localePrefix: 'always'
+});
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  // Match only internationalized pathnames - fix the matcher to include 'fr'
+  matcher: ['/', '/(en|es|fr)/:path*']
 };

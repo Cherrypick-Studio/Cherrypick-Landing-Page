@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import LanguageSwitcher from "../language-switcher";
 
 const Header = () => {
@@ -24,7 +24,8 @@ const Header = () => {
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState("");
 
-    const translate = useTranslations('navigation')
+  const locale = useLocale();
+  const translate = useTranslations('navigation')
 
  // BE ABLE TO USE :could disabled when need it 
   // const listenScrollEvent = () => {
@@ -256,7 +257,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-10">
               {/* NOTE: commented temporary */}
               {/* <LanguageMenu /> */}
-              <Link href="/portfolio" >
+              <Link href={`/${locale}/portfolio`} >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
                        {'text-red-cherry-500':pathname.includes('portfolio')},
@@ -264,34 +265,34 @@ const Header = () => {
                   {translate('porto')}
                 </Text>
               </Link>
-              <Link href="/service" >
+              <Link href={`/${locale}/service`} >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
                        {'text-red-cherry-500':pathname.includes('service')},
                      )}>
-                  Services
+                  {translate('services')}
                 </Text>
               </Link>
-              <Link href="/about-us" >
+              <Link href={`/${locale}/about-us`} >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
                        {'text-red-cherry-500':pathname.includes('about-us')},
                      )}>
-                  About Us
+                  {translate('about')}
                 </Text>
               </Link>
-              <Link href="/contact" >
+              <Link href={`/${locale}/contact`} >
                 <Text variant="link" size="h4" className={cn(
                       'text-black',
                        {'text-red-cherry-500':pathname.includes('contact')},
                      )}>
-                  Contact
+                  {translate('contact')}
                 </Text>
               </Link>
             </div>
           </nav>
           <div className="hidden lg:block">
-              <LanguageMenu />
+              {/* <LanguageMenu /> */}
               
               <LanguageSwitcher/>
          </div>

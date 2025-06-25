@@ -1,53 +1,40 @@
 'use client';
 
-import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
+import { useRouter, usePathname } from 'next/navigation';
+
+const languages = [
+  { code: 'en', name: 'English' },
+  { code: 'es', name: 'Español' },
+  { code: 'fr', name: 'Français' }
+];
 
 export default function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const currentLocale = useLocale();
+  const locale = useLocale();
 
-  const switchLanguage = (newLocale) => {
-    const params = new URLSearchParams(searchParams);
+  const handleLanguageChange = (newLocale) => {
+    // Remove the current locale from pathname and add new locale
+    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+    const newPath = `/${newLocale}${pathWithoutLocale}`;
     
-    if (newLocale === 'en') {
-      // Remove lang param for default language (optional)
-      params.delete('lang');
-    } else {
-      params.set('lang', newLocale);
-    }
-
-    const newUrl = params.toString() 
-      ? `${pathname}?${params.toString()}`
-      : pathname;
-    
-    router.push(newUrl);
+    router.push(newPath);
   };
 
   return (
-    <div className="flex gap-2">
-      <button
-        onClick={() => switchLanguage('en')}
-        className={`px-3 py-1 rounded transition-colors ${
-          currentLocale === 'en' 
-            ? 'bg-red-cherry-500 text-white' 
-            : 'bg-gray-200 hover:bg-gray-300'
-        }`}
+    <div>
+      <select 
+        value={locale} 
+        onChange={(e) => handleLanguageChange(e.target.value)}
+        className="language-switcher"
       >
-        EN
-      </button>
-      <button
-        onClick={() => switchLanguage('fr')}
-        className={`px-3 py-1 rounded transition-colors ${
-          currentLocale === 'fr' 
-            ? 'bg-red-cherry-500 text-white' 
-            : 'bg-gray-200 hover:bg-gray-300'
-        }`}
-      >
-        Fr
-      </button>
+        {languages.map((lang) => (
+          <option key={lang.code} value={lang.code}>
+            {lang.name}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }

@@ -40,7 +40,7 @@ const LanguageMenu = () =>
                 size='h4'
                 className='block py-1'
               >
-                Bahasa Indonesia
+                English
               </Text>
             </NavigationMenuLink>
             <NavigationMenuLink>
