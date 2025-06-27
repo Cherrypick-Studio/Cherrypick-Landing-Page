@@ -1,0 +1,20 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "homepage":{
+
+  },
+  "hero": {
+    "title": "Cherry Pick Studio",
+    "subtitle": "Su socio de confianza para servicios de aplicaciones web y móviles de vanguardia",
+    "cta": "Iniciar Su Proyecto"
+  },
+  "contact": {
+    "email_subject": "Interés en Iniciar un Nuevo Proyecto",
+    "email_body": "Hola, estoy interesado en iniciar mi nuevo proyecto con ustedes. ¡Por favor contáctenme!"
+  }
+}
