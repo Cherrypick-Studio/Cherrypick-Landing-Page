@@ -6,7 +6,9 @@ import { useRef } from "react"
 import { domAnimation, LazyMotion, useInView,m } from "framer-motion"
 import Link from "next/link"
 
-const AboutUs = () =>
+const AboutUs = ({
+    about
+}) =>
 { 
     const imageRef = useRef(null);
     const isImageView = useInView(imageRef);
@@ -44,7 +46,7 @@ const AboutUs = () =>
                 }}>
                     <div className="z-10 xl:w-[960px] space-y-10" ref={introRef}>
                         <Text variant="primary" size="h6" rounded="lg" className="text-red-cherry-500">
-                            WHO WE ARE
+                            {about('sub_title')}
                         </Text>
                         <p className="text-[#939393] text-[48px] max-lg:text-[40px] max-lg:leading-[120%]">
                             We are a <span className="text-black">digital product agency</span> based in Malang, Indonesia.

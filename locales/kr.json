@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "porto": "포트폴리오",
+    "about": "회사 소개",
+    "services": "서비스",
+    "contact": "문의하기"
+  },
+  "homepage": {
+  "agency": "디지털 제품 에이전시",
+  "title": "디자인하고, 개발하고, 사랑하세요.",
+  "desc": "우리는 창의성과 엔지니어링을 결합하여 이상적인 방식으로 제품을 실현합니다.",
+  "services": "서비스",
+  "built": "임팩트를 위한 개발",
+  "desc_build": "처음부터 시작하든 기존 제품을 개선하든, 우리는 깊은 전문성과 검증된 프로세스를 통해 신뢰할 수 있는 결과를 제공합니다."
+  },
+  "porto": {
+    "sub_title": "포트폴리오",
+    "second_sub_title": "ماذا قدمنا",
+    "title": "주요 프로젝트",
+    "desc": "사용자 중심, 기술적 완성도, 실질적인 비즈니스 목표를 반영한 대표 프로젝트를 확인해보세요."
+  },
+  "about": {
+    "sub_title": "우리는 누구인가",
+    "first_about": "우리는 인도네시아 말랑에 본사를 둔 디지털 제품 에이전시입니다.",
+    "second_about": "우리는 최고의 사용자 경험을 제공하는 혁신적인 웹사이트와 모바일 앱을 제작합니다. 또한 UI/UX 디자인 및 개발에서 고품질 서비스를 제공합니다."
+  },
+  "brand_identity": {
+    "development": "개발",
+    "desc_development": "아이디어를 실제 디지털 제품으로 구현하는 것은 아름다운 디자인이 실현 가능함을 보여줍니다.",
+    "brand": "브랜드 아이덴티티",
+    "desc_brand": "브랜딩을 통해 기업은 강력한 인지도를 확보하고 소비자가 브랜드를 쉽게 인식하고 기억할 수 있습니다."
+  },
+  "clients": {
+    "sub_title": "협력사 및 클라이언트",
+    "title": "우리의 고객",
+    "desc": "우리를 선택한 이유는 단순한 전문성뿐만 아니라, 배려와 명확성, 그리고 결과에 대한 헌신적인 협업 방식 때문입니다."
+  },
+  "highlight": {
+    "sub_title": "하이라이트",
+    "title": "주요 성과",
+    "desc": "숫자가 증명합니다 — 우리는 기대를 뛰어넘는 제품 디자인 및 개발 솔루션을 지속적으로 제공합니다."
+  },
+  "hero": {
+    "title": "Cherry Pick Studio",
+    "subtitle": "Votre partenaire de confiance pour des services d'applications web et mobiles de pointe",
+    "cta": "Démarrer Votre Projet"
+  },
+  "contact": {
+    "email_subject": "Intérêt pour Démarrer un Nouveau Projet",
+    "email_body": "Bonjour, je suis intéressé à démarrer mon nouveau projet avec vous. Veuillez me contacter!"
+  }
+}

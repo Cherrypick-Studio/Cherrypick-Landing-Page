@@ -8,13 +8,13 @@ export default getRequestConfig(async ({ locale }) => {
   try {
       return {
         locale: validatedLocale,
-        messages: (await import(`./messages/${validatedLocale}.json`)).default
+        messages: (await import(`./locales/${validatedLocale}.json`)).default
     };
   } catch (error) {
     console.error(`Failed to load messages for locale: ${locale}`, error);
     // Fallback to English if the locale file doesn't exist
     return {
-      messages: (await import(`./messages/en.json`)).default
+      messages: (await import(`./locales/en.json`)).default
     };
   }
 });

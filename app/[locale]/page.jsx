@@ -13,7 +13,9 @@ import LenisProvider from "@/components/molecules/lenis";
 import { useTranslations } from 'next-intl';
 
 export default function Home() {
-  const t = useTranslations('homepage');
+  const homepage = useTranslations('homepage');
+  const porto = useTranslations('porto');
+  const about = useTranslations('about');
 
   return (
     <LenisProvider>
@@ -37,10 +39,10 @@ export default function Home() {
         </m.div>
       </LazyMotion>
       <div className="flex flex-col space-y-20 md:gap-y-[100px] gap-y-8">
-        <MainSection />
+        <MainSection homepage={homepage} />
         <Goals />
-        <Works />
-        <AboutUs />
+        <Works porto={porto} titleIntro={porto('title')} />
+        <AboutUs about={about}/>
         <Services />
         <Clients />
         <Highlights />

@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
 
-const MainSection = () => {
+const MainSection = ({
+  homepage
+}) => {
   return (
     <section
       className="py-24 max-lg:pb-[10px] max-lg:pt-[30px] xl:pt-[300px] container"
@@ -15,7 +17,7 @@ const MainSection = () => {
           <div className="w-fit flex items-center gap-2 h-fit border-b border-red-cherry-500 pb-4">
             <div className="w-2 h-2 bg-red-cherry-500 rounded-full animate-pulse" />
             <Text variant="black" size="h4" weight="400">
-              Digital Product Agency
+              {homepage('agency')}
             </Text>
           </div>
         </div>
@@ -26,7 +28,7 @@ const MainSection = () => {
             weight="500"
             className="block xl:!text-[80px] !leading-[120%] xl:!leading-[70px] xl:whitespace-nowrap max-lg:text-[64px]"
           >
-            <h1>Design it. Build it. Love it.</h1>
+            <h1>{homepage('title')}</h1>
           </Text>
           <Text
             variant="white"
@@ -35,8 +37,7 @@ const MainSection = () => {
             className="block font-light text-[28px] max-lg:text-xl text-gray-150 md:mx-auto leading-9"
           >
             <h2>
-              We blend creativity and engineering to bring your product to life,
-              just the way it should be.
+             {homepage('desc')}
             </h2>
           </Text>
           <div className="flex gap-3 max-[400px]:flex-col max-[400px]:w-full ">

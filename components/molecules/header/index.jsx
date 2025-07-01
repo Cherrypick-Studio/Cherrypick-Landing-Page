@@ -292,9 +292,9 @@ const Header = () => {
             </div>
           </nav>
           <div className="hidden lg:block">
-              {/* <LanguageMenu /> */}
+              <LanguageMenu />
               
-              <LanguageSwitcher/>
+              {/* <LanguageSwitcher/> */}
          </div>
         </m.div>
       </LazyMotion>

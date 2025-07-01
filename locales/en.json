@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "porto": "Portofolio",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "homepage":{
+    "agency":"Digital Product Agency",
+    "title":"Design it. Build it. Love it.",
+    "desc":"We blend creativity and engineering to bring your product to life, just the way it should be.",
+    "services": "Services",
+    "built":"We Built for Impact",
+    "desc_build":"Whether you're building from scratch or improving an existing product, our team brings deep expertise and a proven process to deliver results you can count on."
+  },
+  "porto":{
+    "sub_title":"PORTFOLIO",
+    "title":"Featured Projects",
+    "desc":"Explore selected projects that reflect our approach — user-centered, technically sound, and crafted to meet real business goals."
+  },
+  "about":{
+    "sub_title":"WHO WE ARE",
+    "second_sub_title":"What We Delivered",
+     "first_about":"We are a digital product agency based in Malang, Indonesia.",
+    "second_about":"Create innovative website and mobile apps with best experience for user.And we provide a high-quality service in UI/ UX Design & Development."
+  },
+  "brand_identity":{
+    "development":"Development",
+    "desc_development":"Turning ideas into real digital products is a valid indicator that beautiful designs can be created and implemented.",
+    "brand":"Brand Identity",
+    "desc_brand":"Through branding, the company will have strong awareness, so that consumers can easily identify and remember the brand."
+  },
+  "clients":{
+    "sub_title":"Some of our partners and clients",
+    "title":"Our Clients",
+    "desc":"They choose us not just for our expertise, but for the way we collaborate — with care, clarity, and commitment to results."
+  },
+  "highlight":{
+    "sub_title":"HIGHLIGHTS",
+    "title":"Highlight of ",
+    "desc":"We let the numbers speak for themselves — consistently delivering product design and development solutions that exceed expectations."
+  },
+  "hero": {
+    "title": "Cherry Pick Studio",
+    "subtitle": "Your trusted partner for cutting-edge web and mobile application services",
+    "cta": "Start Your Project"
+  },
+  "contact": {
+    "email_subject": "Interest to Start a New Project",
+    "email_body": "Hi there, I'm interested in starting my new project with you. Please reach out!"
+  }
+}

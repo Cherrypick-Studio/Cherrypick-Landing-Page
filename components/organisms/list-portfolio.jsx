@@ -10,7 +10,8 @@ import Link from "next/link";
 
 const Works = ({
   titleIntro ='Featured Projects',
-  hideContent = false
+  hideContent = false,
+  porto
 }) =>
 {
   const introRef = useRef(null);
@@ -52,8 +53,8 @@ const Works = ({
           <div className="w-full">
             <SectionTitle
               title={titleIntro}
-              subtitle="Portofolio"
-              desc={!hideContent && 'Explore selected projects that reflect our approach — user-centered, technically sound, and crafted to meet real business goals.'} />
+              subtitle={porto('sub_title')}
+              desc={!hideContent && porto('desc')} />
           </div>
             {!hideContent &&
               <div className="w-full h-auto self-stretch mt-auto ">

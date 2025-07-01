@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "porto": "作品集",
+    "about": "关于我们",
+    "services": "服务",
+    "contact": "联系"
+  },
+  "homepage": {
+  "agency": "数字产品代理公司",
+  "title": "设计它。构建它。热爱它。",
+  "desc": "我们融合创意与工程，让您的产品如您所愿地呈现。",
+  "services": "服务",
+  "built": "我们为影响而创造",
+  "desc_build": "无论是从零开始还是改进现有产品，我们的团队都拥有丰富经验和可靠流程，确保交付可信成果。"
+  },
+  "porto": {
+    "sub_title": "作品集",
+    "second_sub_title": "ماذا قدمنا",
+    "title": "精选项目",
+    "desc": "探索展示我们方法的精选项目 — 以用户为中心，技术可靠，专注于实现真实的商业目标。"
+  },
+  "about": {
+    "sub_title": "我们是谁",
+    "first_about": "我们是一家位于印尼玛琅的数字产品代理公司。",
+    "second_about": "我们打造创新的网站和移动应用，提供最佳用户体验。我们在UI/UX设计与开发方面提供高质量的服务。"
+  },
+  "brand_identity": {
+    "development": "开发",
+    "desc_development": "将创意转化为真实的数字产品，证明精美的设计是可以实现的。",
+    "brand": "品牌识别",
+    "desc_brand": "通过品牌建设，公司能获得强烈的认知度，方便消费者识别并记住品牌。"
+  },
+  "clients": {
+    "sub_title": "我们的合作伙伴与客户",
+    "title": "我们的客户",
+    "desc": "他们选择我们，不仅因为我们的专业能力，更因为我们注重沟通、清晰与结果导向的合作方式。"
+  },
+  "highlight": {
+    "sub_title": "亮点",
+    "title": "亮点：",
+    "desc": "我们用数据说话 — 持续交付超出预期的产品设计与开发解决方案。"
+  },
+  "hero": {
+    "title": "Cherry Pick Studio",
+    "subtitle": "Votre partenaire de confiance pour des services d'applications web et mobiles de pointe",
+    "cta": "Démarrer Votre Projet"
+  },
+  "contact": {
+    "email_subject": "Intérêt pour Démarrer un Nouveau Projet",
+    "email_body": "Bonjour, je suis intéressé à démarrer mon nouveau projet avec vous. Veuillez me contacter!"
+  }
+}

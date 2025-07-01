@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "porto": "الرئيسية",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "contact": "اتصل بنا"
+  },
+ "homepage": {
+  "agency": "وكالة المنتجات الرقمية",
+  "title": "صمّمه. ابنِه. أحبّه.",
+  "desc": "نمزج بين الإبداع والهندسة لنُحيي منتجك بالشكل المثالي.",
+  "services": "الخدمات",
+  "built": "نُنشئ للتأثير",
+  "desc_build": "سواء كنت تبدأ من الصفر أو تطوّر منتجًا قائمًا، فإن فريقنا يقدم خبرة عميقة وعملية مجربة لتحقيق نتائج مضمونة."
+  },
+  "porto": {
+    "sub_title": "أعمالنا",
+    "second_sub_title": "ماذا قدمنا",
+    "title": "مشاريع مميزة",
+    "desc": "استكشف مشاريع مختارة تعكس منهجنا — تركيز على المستخدم، تقنيًا قوي، ومصمم لتحقيق أهداف تجارية حقيقية."
+  },
+  "about": {
+    "sub_title": "من نحن",
+    "first_about": "نحن وكالة منتجات رقمية مقرها مالانج، إندونيسيا.",
+    "second_about": "نصمم مواقع وتطبيقات مبتكرة بتجربة مستخدم متميزة، ونقدم خدمات عالية الجودة في تصميم وتطوير UI/UX."
+  },
+  "brand_identity": {
+    "development": "التطوير",
+    "desc_development": "تحويل الأفكار إلى منتجات رقمية فعلية هو دليل على أن التصميمات الجميلة قابلة للتنفيذ.",
+    "brand": "الهوية التجارية",
+    "desc_brand": "من خلال الهوية التجارية، يصبح للشركة وعي قوي، ما يسهل على المستهلكين التعرف على العلامة التجارية وتذكرها."
+  },
+  "clients": {
+    "sub_title": "بعض من شركائنا وعملائنا",
+    "title": "عملاؤنا",
+    "desc": "اختارونا ليس فقط لخبرتنا، بل لطريقتنا في التعاون — بعناية ووضوح والتزام بالنتائج."
+  },
+  "highlight": {
+    "sub_title": "أبرز الإنجازات",
+    "title": "أبرز ما في",
+    "desc": "نترك الأرقام تتحدث عن نفسها — نقدم حلول تصميم وتطوير منتجات تتجاوز التوقعات باستمرار."
+  },
+  "hero": {
+    "title": "Cherry Pick Studio",
+    "subtitle": "Votre partenaire de confiance pour des services d'applications web et mobiles de pointe",
+    "cta": "Démarrer Votre Projet"
+  },
+  "contact": {
+    "email_subject": "Intérêt pour Démarrer un Nouveau Projet",
+    "email_body": "Bonjour, je suis intéressé à démarrer mon nouveau projet avec vous. Veuillez me contacter!"
+  }
+}
