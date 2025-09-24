@@ -10,19 +10,24 @@ import Link from "next/link";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  // BE ABLE TO USE :could disabled when need it 
+  // BE ABLE TO USE :could disabled when need it
   // const [scroll, setScroll] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(10);
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState("");
 
- // BE ABLE TO USE :could disabled when need it 
+  // BE ABLE TO USE :could disabled when need it
   // const listenScrollEvent = () => {
   //   if (window.scrollY > 25) {
   //     setScroll("bg-white block");
@@ -36,9 +41,9 @@ const Header = () => {
   // });
 
   const controlHeader = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const currentScrollY = window.scrollY;
-      
+
       // Determine scroll direction
       if (currentScrollY > lastScrollY) {
         // Scrolling down
@@ -47,20 +52,20 @@ const Header = () => {
         // Scrolling up
         setIsVisible(true);
       }
-      
+
       // Update last scroll position
       setLastScrollY(currentScrollY);
     }
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlHeader);
-      
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlHeader);
+
       // Cleanup
       return () => {
-        window.removeEventListener('scroll', controlHeader);
-      }
+        window.removeEventListener("scroll", controlHeader);
+      };
     }
   }, [lastScrollY]);
 
@@ -70,15 +75,15 @@ const Header = () => {
   //   if (typeof window !== 'undefined') {
   //     // Set initial hash
   //     setActiveHash(window.location.hash);
-      
+
   //     // Function to handle hash changes
   //     const handleHashChange = () => {
   //       setActiveHash(window.location.hash);
   //     };
-      
+
   //     // Add event listener for hash changes
   //     window.addEventListener('hashchange', handleHashChange);
-      
+
   //     // Clean up event listener
   //     return () => {
   //       window.removeEventListener('hashchange', handleHashChange);
@@ -88,65 +93,64 @@ const Header = () => {
 
   return (
     <>
-    <header
-      // className={`sticky bg-white top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
-      className={`sticky bg-white top-0 inset-x-0 z-40 transition-transform duration-300 ease-in-out ${
-        pathname.split('/').length > 2 && ( isVisible ? 'translate-y-0' : '-translate-y-full')
-  
-      }`}
-    >
-      <LazyMotion features={domAnimation}>
-        <m.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
-          className={`relative flex items-center justify-between mx-auto py-3 px-6 lg:py-6 lg:px-20 container`}
-        >
-          <Link href="/">
-            <Image
-              src="/images/logo-noword.svg"
-              alt="cherry-pick-logo"
-              title="cherry-pick-logo"
-              className="w-[90%] max-lg:w-[80%]"
-              height={40}
-              width={40}
-            />
-          </Link>
-          <nav>
-            <div className="block lg:hidden">
-              <div className="flex flex-row-reverse gap-3">
-              <div className="w-fit h-fit bg-red-cherry-500 rounded-full p-3">
-                <HiOutlineMenuAlt1
-                  className="h-6 w-6 text-white cursor-pointer"
-                  onClick={() => setShowMenu(true)}
-                  />
-                
+      <header
+        // className={`sticky bg-white top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
+        className={`sticky bg-white top-0 inset-x-0 z-40 transition-transform duration-300 ease-in-out ${
+          pathname.split("/").length > 2 &&
+          (isVisible ? "translate-y-0" : "-translate-y-full")
+        }`}
+      >
+        <LazyMotion features={domAnimation}>
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.5, delay: 2 }}
+            className={`relative flex items-center justify-between mx-auto py-3 px-6 lg:py-6 lg:px-20 container`}
+          >
+            <Link href="/">
+              <Image
+                src="/images/logo-noword.svg"
+                alt="cherry-pick-logo"
+                title="cherry-pick-logo"
+                className="w-[90%] max-lg:w-[80%]"
+                height={40}
+                width={40}
+              />
+            </Link>
+            <nav>
+              <div className="block lg:hidden">
+                <div className="flex flex-row-reverse gap-3">
+                  <div className="w-fit h-fit bg-red-cherry-500 rounded-full p-3">
+                    <HiOutlineMenuAlt1
+                      className="h-6 w-6 text-white cursor-pointer"
+                      onClick={() => setShowMenu(true)}
+                    />
+                  </div>
+                  <div className="-z-10">
+                    <LanguageMenu />
+                  </div>
                 </div>
-                <div className="-z-10">
-                  <LanguageMenu />
-                </div>
-              </div>
-              <div
-                data-menu={showMenu}
-                className="fixed inset-0 py-4 px-10 bg-white h-[100vh] data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
-              >
-                <div className="flex items-center justify-between">
-                  <Image
-                    src="/images/logo-noword.svg"
-                    alt="cherry-pick"
-                    title="cherry-pick"
-                    height={40}
-                    width={40}
-                  />
-                  <RxCross2
-                    className="h-6 w-6 text-black cursor-pointer"
-                    onClick={() => setShowMenu(false)}
-                  />
-                </div>
-                <div className="flex flex-col justify-start pt-20 items-center h-full">
-                  <div className="flex flex-col items-center space-y-5">
-                    {/* NOTE: commented temporary */}
-                    {/* <Accordion
+                <div
+                  data-menu={showMenu}
+                  className="fixed inset-0 py-4 px-10 bg-white h-[100vh] data-[menu=true]:animate-in data-[menu=true]:zoom-in-90 data-[menu=true]:visible data-[menu=false]:invisible data-[menu=false]:animate-out data-[menu=false]:zoom-out-95"
+                >
+                  <div className="flex items-center justify-between">
+                    <Image
+                      src="/images/logo-noword.svg"
+                      alt="cherry-pick"
+                      title="cherry-pick"
+                      height={40}
+                      width={40}
+                    />
+                    <RxCross2
+                      className="h-6 w-6 text-black cursor-pointer"
+                      onClick={() => setShowMenu(false)}
+                    />
+                  </div>
+                  <div className="flex flex-col justify-start pt-20 items-center h-full">
+                    <div className="flex flex-col items-center space-y-5">
+                      {/* NOTE: commented temporary */}
+                      {/* <Accordion
                     type="single"
                     collapsible={true}
                     className="text-center"
@@ -193,153 +197,287 @@ const Header = () => {
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion> */}
-                      <Link href="/portfolio" >
-                      <Text
-                        variant="primary"
-                        size="h4"
+                      <Link href="/portfolio">
+                        <Text
+                          variant="primary"
+                          size="h4"
                           onClick={() => setShowMenu(false)}
-                          className={cn(
-                            'text-black text-3xl',
-                             {'text-red-cherry-500':pathname.includes('portfolio')},
-                           )}
-                      >
-                        Portfolio
-                      </Text>
-                    </Link>
-                      <Link href="/service" >
-                      <Text
-                        variant="primary"
-                        size="h4"
+                          className={cn("text-black text-3xl", {
+                            "text-red-cherry-500":
+                              pathname.includes("portfolio"),
+                          })}
+                        >
+                          Portfolio
+                        </Text>
+                      </Link>
+                      <Link href="/service">
+                        <Text
+                          variant="primary"
+                          size="h4"
                           onClick={() => setShowMenu(false)}
-                          className={cn(
-                            'text-black text-3xl',
-                             {'text-red-cherry-500':pathname.includes('service')},
-                           )}
-                      >
-                        Services
-                      </Text>
-                    </Link>
-                    <Link href="/about-us" >
-                      <Text
-                        variant="primary"
-                        size="h4"
+                          className={cn("text-black text-3xl", {
+                            "text-red-cherry-500": pathname.includes("service"),
+                          })}
+                        >
+                          Services
+                        </Text>
+                      </Link>
+                      <Link href="/about-us">
+                        <Text
+                          variant="primary"
+                          size="h4"
                           onClick={() => setShowMenu(false)}
-                          className={cn(
-                            'text-black text-3xl',
-                             {'text-red-cherry-500':pathname.includes('about-us')},
-                           )}
-                      >
-                        About us
-                      </Text>
-                    </Link>
-                    <Link href="/contact">
-                      <Text
-                        variant="primary"
-                        size="h4"
+                          className={cn("text-black text-3xl", {
+                            "text-red-cherry-500":
+                              pathname.includes("about-us"),
+                          })}
+                        >
+                          About us
+                        </Text>
+                      </Link>
+                      <div className="flex flex-col space-y-4">
+                        <Text
+                          variant="primary"
+                          size="h4"
+                          className="text-black text-3xl"
+                        >
+                          Shop
+                        </Text>
+                        <div className="flex flex-col space-y-3 justify-center text-center items-center">
+                          <a
+                            href="https://ui8.net/cherrypick-studio/products"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setShowMenu(false)}
+                            className="flex items-center space-x-2 group"
+                          >
+                            <Text
+                              variant="primary"
+                              size="h5"
+                              className="text-gray-600 group-hover:text-red-cherry-500 transition-colors duration-200"
+                            >
+                              UI8
+                            </Text>
+                          </a>
+                          <a
+                            href="https://cherrypickstudio.gumroad.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setShowMenu(false)}
+                            className="flex items-center space-x-2 group"
+                          >
+                            <Text
+                              variant="primary"
+                              size="h5"
+                              className="text-gray-600 group-hover:text-red-cherry-500 transition-colors duration-200"
+                            >
+                              Gumroad
+                            </Text>
+                          </a>
+                        </div>
+                      </div>
+                      <Link href="/contact">
+                        <Text
+                          variant="primary"
+                          size="h4"
                           onClick={() => setShowMenu(false)}
-                          className={cn(
-                            'text-black text-3xl',
-                             {'text-red-cherry-500':pathname.includes('contact')},
-                           )}
-                      >
-                        Contact
-                      </Text>
-                    </Link>
+                          className={cn("text-black text-3xl", {
+                            "text-red-cherry-500": pathname.includes("contact"),
+                          })}
+                        >
+                          Contact
+                        </Text>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div className="hidden lg:flex items-center space-x-10">
+                {/* NOTE: commented temporary */}
+                {/* <LanguageMenu /> */}
+                <Link href="/portfolio">
+                  <Text
+                    variant="link"
+                    size="h4"
+                    className={cn("text-black", {
+                      "text-red-cherry-500": pathname.includes("portfolio"),
+                    })}
+                  >
+                    Portofolio
+                  </Text>
+                </Link>
+                <Link href="/service">
+                  <Text
+                    variant="link"
+                    size="h4"
+                    className={cn("text-black", {
+                      "text-red-cherry-500": pathname.includes("service"),
+                    })}
+                  >
+                    Services
+                  </Text>
+                </Link>
+                <Link href="/about-us">
+                  <Text
+                    variant="link"
+                    size="h4"
+                    className={cn("text-black", {
+                      "text-red-cherry-500": pathname.includes("about-us"),
+                    })}
+                  >
+                    About Us
+                  </Text>
+                </Link>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <button className="text-black hover:text-red-cherry-500 transition-colors duration-200">
+                      <Text
+                        variant="link"
+                        size="h4"
+                        className="text-black hover:text-red-cherry-500"
+                      >
+                        Shop
+                      </Text>
+                    </button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-56 p-2">
+                    <div className="space-y-2">
+                      <a
+                        href="https://ui8.net/cherrypick-studio/products"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                      >
+                        <div>
+                          <Text
+                            variant="primary"
+                            size="small"
+                            className="font-medium text-gray-900 mr-2"
+                          >
+                            UI8
+                          </Text>
+                          <Text
+                            variant="secondary"
+                            size="xs"
+                            className="text-gray-500"
+                          >
+                            Design templates & resources
+                          </Text>
+                        </div>
+                      </a>
+                      <a
+                        href="https://cherrypickstudio.gumroad.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                      >
+                        <div>
+                          <Text
+                            variant="primary"
+                            size="small"
+                            className="font-medium text-gray-900 mr-2"
+                          >
+                            Gumroad
+                          </Text>
+                          <Text
+                            variant="secondary"
+                            size="xs"
+                            className="text-gray-500"
+                          >
+                            Digital products & UI kits
+                          </Text>
+                        </div>
+                      </a>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+                <Link href="/contact">
+                  <Text
+                    variant="link"
+                    size="h4"
+                    className={cn("text-black", {
+                      "text-red-cherry-500": pathname.includes("contact"),
+                    })}
+                  >
+                    Contact
+                  </Text>
+                </Link>
+              </div>
+            </nav>
+            <div className="hidden lg:block">
+              <LanguageMenu />
             </div>
-            <div className="hidden lg:flex items-center space-x-10">
-              {/* NOTE: commented temporary */}
-              {/* <LanguageMenu /> */}
-              <Link href="/portfolio" >
-                <Text variant="link" size="h4" className={cn(
-                      'text-black',
-                       {'text-red-cherry-500':pathname.includes('portfolio')},
-                     )}>
-                  Portofolio
-                </Text>
-              </Link>
-              <Link href="/service" >
-                <Text variant="link" size="h4" className={cn(
-                      'text-black',
-                       {'text-red-cherry-500':pathname.includes('service')},
-                     )}>
-                  Services
-                </Text>
-              </Link>
-              <Link href="/about-us" >
-                <Text variant="link" size="h4" className={cn(
-                      'text-black',
-                       {'text-red-cherry-500':pathname.includes('about-us')},
-                     )}>
-                  About Us
-                </Text>
-              </Link>
-              <Link href="/contact" >
-                <Text variant="link" size="h4" className={cn(
-                      'text-black',
-                       {'text-red-cherry-500':pathname.includes('contact')},
-                     )}>
-                  Contact
-                </Text>
-              </Link>
-            </div>
-          </nav>
-          <div className="hidden lg:block">
-          <LanguageMenu/>
-         </div>
-        </m.div>
-      </LazyMotion>
-    </header>
+          </m.div>
+        </LazyMotion>
+      </header>
 
       {/* second navbar  */}
-      {pathname.split('/').length > 2 && 
-        <div className={`sticky border border-[#EBEBEB] top-0 inset-x-0 z-30 bg-white transition-transform duration-300 ease-in-out ${isVisible && lastScrollY !==0 ? 'translate-y-[70px]':'translate-y-0'}`}>
-        <div className="container mx-auto py-3 px-6 lg:py-6 lg:px-20">
-          <div className="flex justify-between items-center max-lg:flex-col max-lg:items-start gap-4">
-              <Link href='/portfolio'>
-              <Button variant="secondary" className='flex p-0 gap-4 border-none text-[#909090]'>
-                    <ArrowLeft/>
-              See List Portfolio
-            </Button></Link>
-            <div className="flex items-center space-x-8">
-              {/* Secondary navbar right side content */}
-              <Link href="#overview" onClick={()=>setActiveHash('#overview')}>
-                  <Text variant="secondary" size="small" className={
-                    cn(
-                      'text-gray-150',
-                      {'text-red-cherry-500':activeHash === "#overview" || activeHash === ""  },
-                    )
-                    }>
-                    Overview
-                    </Text>
-                    </Link>
-                    <Link href="#development" onClick={()=>setActiveHash('#development')}>
-                  <Text variant="secondary" size="small" className={
-                     cn(
-                      'text-gray-150',
-                      {'text-red-cherry-500':activeHash === "#development"},
-                    )
-                  }
-                  >
-                Development
-                </Text>
-                    </Link>
-                    <Link href="#result" onClick={()=>setActiveHash('#result')}>
-                <Text variant="secondary" size="small"  className={
-                     cn(
-                      'text-gray-150',
-                      {'text-red-cherry-500':activeHash === "#result"},
-                    )
-                  }>
-                Result
-                </Text>
+      {pathname.split("/").length > 2 && (
+        <div
+          className={`sticky border border-[#EBEBEB] top-0 inset-x-0 z-30 bg-white transition-transform duration-300 ease-in-out ${
+            isVisible && lastScrollY !== 0
+              ? "translate-y-[70px]"
+              : "translate-y-0"
+          }`}
+        >
+          <div className="container mx-auto py-3 px-6 lg:py-6 lg:px-20">
+            <div className="flex justify-between items-center max-lg:flex-col max-lg:items-start gap-4">
+              <Link href="/portfolio">
+                <Button
+                  variant="secondary"
+                  className="flex p-0 gap-4 border-none text-[#909090]"
+                >
+                  <ArrowLeft />
+                  See List Portfolio
+                </Button>
               </Link>
+              <div className="flex items-center space-x-8">
+                {/* Secondary navbar right side content */}
+                <Link
+                  href="#overview"
+                  onClick={() => setActiveHash("#overview")}
+                >
+                  <Text
+                    variant="secondary"
+                    size="small"
+                    className={cn("text-gray-150", {
+                      "text-red-cherry-500":
+                        activeHash === "#overview" || activeHash === "",
+                    })}
+                  >
+                    Overview
+                  </Text>
+                </Link>
+                <Link
+                  href="#development"
+                  onClick={() => setActiveHash("#development")}
+                >
+                  <Text
+                    variant="secondary"
+                    size="small"
+                    className={cn("text-gray-150", {
+                      "text-red-cherry-500": activeHash === "#development",
+                    })}
+                  >
+                    Development
+                  </Text>
+                </Link>
+                <Link href="#result" onClick={() => setActiveHash("#result")}>
+                  <Text
+                    variant="secondary"
+                    size="small"
+                    className={cn("text-gray-150", {
+                      "text-red-cherry-500": activeHash === "#result",
+                    })}
+                  >
+                    Result
+                  </Text>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>}
+      )}
     </>
   );
 };
