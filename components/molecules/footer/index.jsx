@@ -13,7 +13,6 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <footer className="mt-32" id="footer">
       {pathname !== "/contact" && (

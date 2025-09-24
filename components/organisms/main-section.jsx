@@ -41,8 +41,7 @@ const MainSection = () => {
           </Text>
           <div className="flex gap-3 max-[400px]:flex-col max-[400px]:w-full ">
             <a
-              href="https://calendly.com/cherrypick-main/30min"
-              target="_blank"
+              href="mailto:cherrypick.main@gmail.com?subject=Let's collaborate!"
             >
               <Button
                 variant="primary"

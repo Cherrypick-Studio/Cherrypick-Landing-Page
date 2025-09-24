@@ -35,10 +35,7 @@ const ContactSection = () => {
               id="btn-jumbotron"
               className="flex rounded-full gap-5 py-2 pl-8 pr-1 items-center"
               onClick={() => {
-                window.open(
-                  "https://calendly.com/cherrypick-main/30min",
-                  "_blank"
-                );
+                window.location.href = "mailto:cherrypick.main@gmail.com?subject=Let's collaborate!";
               }}
             >
               Book a Call
