@@ -115,13 +115,13 @@ const Footer = () => {
               </Text>
             </div>
             <div className="flex items-center justify-center lg:justify-end gap-3">
-              <Link href="https://www.instagram.com/cherrypick.studio/">
+              <Link href="https://www.instagram.com/cherrypick.studioid/">
                 <CardIcon image="/images/instagram.svg" alt="instagram-icon" />
               </Link>
               <Link href="https://dribbble.com/cherrypick-studio">
                 <CardIcon image="/images/dribbble.svg" alt="dribbble-icon" />
               </Link>
-              <Link href="https://dribbble.com/cherrypick-studio">
+              <Link href="https://www.behance.net/Cherrypick-Studio">
                 <CardIcon
                   image="/images/ri_behance-line.svg"
                   alt="behance-icon"
