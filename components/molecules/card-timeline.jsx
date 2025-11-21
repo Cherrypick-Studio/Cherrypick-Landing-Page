@@ -15,7 +15,7 @@ const CardTimeline = ({
                 <Separator orientation="vertical" className="h-[1px] w-full flex-1" />
             </div>
             <div className="grid gap-4 border border-[#DDDDDD] p-3 w-full rounded-xl h-full self-stretch">
-                <h1 className="text-black text-lg font-normal">{title}</h1>
+                <h3 className="text-black text-lg font-normal">{title}</h3>
                 <p className="text-sm text-gray-150 font-light">{description}</p>
                 <div className="flex gap-2">
                 {

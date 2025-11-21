@@ -20,7 +20,7 @@ const TimelineSection = ({
        }}>
         <div ref={ref} className="space-y-20 container px-20 max-lg:px-10">
             <div className="w-[70%] max-lg:w-full flex flex-col gap-5">
-                      <h1 className="text-3xl font-light text-black">Set Project Timeline</h1>
+                      <h3 className="text-3xl font-light text-black">Set Project Timeline</h3>
                       <p className="text-xl font-light text-gray-150">Next, we divided the timeline into several phases. The client gave us a maximum of 4 months.</p>
                   </div>
                   <div className="w-full flex max-lg:flex-col gap-6 p-8 rounded-xl bg-[#FBFBFB]">

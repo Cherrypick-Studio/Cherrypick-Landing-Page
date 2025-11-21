@@ -1,16 +1,14 @@
 export const metadata = {
-    title: "Cherrypick Studio - Service",
-    description:
-        "Cherry Pick offers expert web and mobile app development services tailored to help your business grow through innovation and digital transformation.",
-        manifest: './manifest.json',
-        themeColor: "#C42026",
+  title: "Cherrypick Studio - Service",
+  description:
+    "Cherry Pick offers expert web and mobile app development services tailored to help your business grow through innovation and digital transformation.",
+  manifest: "./manifest.json",
+  themeColor: "#C42026",
+  alternates: {
+    canonical: "https://cherrypick.studio/service",
+  },
 };
-  
-export default function ServiceLayout({ children })
-{
-    return (
-        <>
-            {children}
-        </>
-    )
+
+export default function ServiceLayout({ children }) {
+  return <>{children}</>;
 }

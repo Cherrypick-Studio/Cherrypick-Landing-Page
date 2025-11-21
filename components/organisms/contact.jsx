@@ -22,13 +22,13 @@ const ContactSection = () => {
           }}
         >
           <div className="z-10 xl:w-[960px] space-y-5" ref={introRef}>
-            <p className="text-black text-[80px] max-lg:text-6xl">
+            <h1 className="text-black text-[80px] max-lg:text-6xl">
               Have a challenge? We’ve got the solution.
-            </p>
-            <p className="text-gray-150 text-[28px] max-lg:text-2xl">
+            </h1>
+            <h2 className="text-gray-150 text-[28px] max-lg:text-2xl">
               Tell us what you need. Whether you have a full brief or just an
               idea, we’re here to help you bring it to life.
-            </p>
+            </h2>
             <Button
               variant="primary"
               rounded="xl"

@@ -46,13 +46,13 @@ const AboutUs = () =>
                         <Text variant="primary" size="h6" rounded="lg" className="text-red-cherry-500">
                             WHO WE ARE
                         </Text>
-                        <p className="text-[#939393] text-[48px] max-lg:text-[40px] max-lg:leading-[120%]">
+                        <h2 className="text-[#939393] text-[48px] max-lg:text-[40px] max-lg:leading-[120%]">
                             We are a <span className="text-black">digital product agency</span> based in Malang, Indonesia.
-                        </p>
-                        <p className="text-[#939393] text-[48px] max-lg:text-[40px] max-lg:leading-[120%]">
+                        </h2>
+                        <h2 className="text-[#939393] text-[48px] max-lg:text-[40px] max-lg:leading-[120%]">
                             <span className="text-black">Create innovative website and mobile apps with best experience for user.</span>
                             And we provide a <span className="text-black">high-quality service</span> in UI/ UX Design & Development.
-                        </p>
+                        </h2>
                         <Link href={'/about-us'}>
                         <Button variant="primary" rounded="xl" id="btn-jumbotron" className='flex rounded-full gap-5 py-2 pl-8 pr-1 items-center'>
                             Get to Know Us

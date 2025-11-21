@@ -18,7 +18,7 @@ const CardServices = ({ lottieFile, icon,number, title, description, products=[]
               </div>
               <div className="flex gap-4 flex-col">
                 <Text variant="primary" size="h1" weight="700">
-                  <h1>{title}</h1>
+                  <h3>{title}</h3>
                 </Text>
                 <Text
                       variant="primary"

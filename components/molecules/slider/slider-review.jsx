@@ -87,9 +87,9 @@ It’s been a big step for our brand, and we’re super happy with the result!
                 alt="photo-review"
               />
               <div className="flex flex-col">
-                <h1 className="text-xl font-medium">
+                <h3 className="text-xl font-medium">
                   {exampleData[currentIndex].name}
-                </h1>
+                </h3>
                 <span className="text-base text-gray-150">
                   {exampleData[currentIndex].position}
                 </span>

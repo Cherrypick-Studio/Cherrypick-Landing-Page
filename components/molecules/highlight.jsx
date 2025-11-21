@@ -5,7 +5,7 @@ const HighLightList = ({
 {
     return (
         <div className="flex flex-col gap-2 items-center justify-center w-fit">
-            <h1 className="text-[80px] text-red-cherry-500 font-medium">{title}</h1>
+            <h3 className="text-[80px] text-red-cherry-500 font-medium">{title}</h3>
             <span className="text-xl text-gray-500">{label}</span>
         </div>
     )

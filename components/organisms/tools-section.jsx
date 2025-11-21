@@ -24,7 +24,7 @@ const ToolsSection = ({
        }}>
         <div ref={ref} className="space-y-20 container px-20 max-lg:px-10">
             <div className="w-[70%] max-lg:w-full flex flex-col gap-5">
-                      <h1 className="text-3xl font-light text-black">Tools & Technology Stack</h1>
+                      <h3 className="text-3xl font-light text-black">Tools & Technology Stack</h3>
                       <p className="text-xl font-light text-gray-150">First, we then determine what technology will be used. 
                       And we chose some of the most suitable tools and technologies to work on this project.</p>
                   </div>

@@ -1,7 +1,4 @@
 User-Agent: *
 Allow: /
 
-Disallow: /private/
-Crawl-delay: 5
-
 Sitemap: https://cherrypick.studio/sitemap.xml

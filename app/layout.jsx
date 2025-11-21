@@ -12,6 +12,9 @@ export const metadata = {
     "Cherry Pick is your trusted partner for cutting-edge web and mobile application services. We are committed to helping businesses of all sizes harness the power of technology to drive growth, innovation, and customer engagement.",
   manifest: './manifest.json',
   themeColor: "#C42026",
+  alternates: {
+    canonical: "https://cherrypick.studio",
+  },
 };
 
 export default function RootLayout({ children }) {
