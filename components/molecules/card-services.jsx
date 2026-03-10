@@ -14,7 +14,7 @@ const CardServices = ({ lottieFile, icon,number, title, description, products=[]
     <div className="flex bg-[#FBFBFB] w-full flex-col p-10 gap-16 rounded-2xl">
              <div className="flex justify-between">
                 <span className="text-2xl text-gray-150 font-normal">{number}</span>
-                <Image src={icon} alt="icon" title="icon" height={100} width={100} />
+                <Image src={icon} alt={`${title} service icon`} title={title} height={100} width={100} />
               </div>
               <div className="flex gap-4 flex-col">
                 <Text variant="primary" size="h1" weight="700">

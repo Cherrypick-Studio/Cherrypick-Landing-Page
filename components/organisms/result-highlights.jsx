@@ -9,6 +9,7 @@ const ResultHighlights = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const projectName = portfolioData?.name ?? "project";
 
   return (
     <LazyMotion features={domAnimation}>
@@ -34,7 +35,7 @@ const ResultHighlights = ({
              width={100}
              height={200}
              className="w-full hover:scale-105 transition-all duration-300"
-             alt="cherry-pick-goals"
+             alt={`${projectName} project result highlight ${index + 1} by Cherrypick Studio`}
 />
           ))}
                  

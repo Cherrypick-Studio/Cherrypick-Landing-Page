@@ -5,7 +5,8 @@ import { useRef } from "react";
 import CardInfoProject from "../molecules/card-info-project";
 
 const DetailSection = ({
-  portfolioData
+  portfolioData,
+  projectName = "project",
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -30,7 +31,7 @@ const DetailSection = ({
               width={100}
               height={200}
               className="w-full hover:scale-105 transition-all duration-300"
-              alt="cherry-pick-goals"
+              alt={`${projectName} project overview by Cherrypick Studio`}
           />
           <div className="flex max-lg:flex-col px-20 gap-10 w-full max-lg:px-0">
           <CardInfoProject

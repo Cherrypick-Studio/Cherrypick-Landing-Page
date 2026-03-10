@@ -63,8 +63,8 @@ const MainDetailSection = ({ portofolioData }) => {
               <div className="flex gap-2">
                 <Image
                   src={flag}
-                  alt="language"
-                  title="language"
+                  alt={`${country} flag`}
+                  title={country}
                   height={20}
                   width={26}
                 />

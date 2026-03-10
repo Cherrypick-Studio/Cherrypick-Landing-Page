@@ -25,7 +25,7 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
-      url: "https://cherrypick.studio/portfolio/harwi-gadget",
+      url: "https://cherrypick.studio/portfolio/harwi",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,

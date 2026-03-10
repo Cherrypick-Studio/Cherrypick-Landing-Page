@@ -30,14 +30,16 @@ const ToolsSection = ({
                   </div>
                   <div className="w-full flex max-lg:flex-col gap-10">
                       <div className="flex p-10 flex-shrink-0 w-fit gap-10 bg-[#FBFBFB] items-end justify-center h-[320px] max-lg:w-full max-lg:flex-wrap rounded-xl">
-                          {list_tech_stack.map((item, index) => (
-                                <Image key={index} src={item} alt="logo" width={50} height={50} className="hover:animate-bounce cursor-pointer"/>
-                          ))}
+                          {list_tech_stack.map((item, index) => {
+                            const toolName = item.split("/").pop().replace(/-icon\.svg$/, "").replace(/\.svg$/, "");
+                            return <Image key={index} src={item} alt={`${toolName} logo`} title={toolName} width={50} height={50} className="hover:animate-bounce cursor-pointer"/>;
+                          })}
                       </div>
                       <div className="flex  p-10 w-full gap-10 bg-[#FBFBFB] items-end justify-center h-[320px] max-lg:flex-wrap rounded-xl">
-                          {list_tools.map((item, index) => (
-                                <Image key={index} src={item} alt="logo" width={50} height={50} className="hover:animate-bounce cursor-pointer"/>
-                          ))}
+                          {list_tools.map((item, index) => {
+                            const toolName = item.split("/").pop().replace(/-icon\.svg$/, "").replace(/\.svg$/, "");
+                            return <Image key={index} src={item} alt={`${toolName} logo`} title={toolName} width={50} height={50} className="hover:animate-bounce cursor-pointer"/>;
+                          })}
                     </div>
                   </div>  
         </div>

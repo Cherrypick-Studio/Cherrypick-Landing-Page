@@ -18,7 +18,7 @@ export default function DetailProject({params})
     return (
      <div className="flex flex-col md:gap-y-[100px] gap-y-8">
           <MainDetailSection portofolioData={portfolioData}/>
-          <DetailSection portfolioData={portfolioData?.details_project} />
+          <DetailSection portfolioData={portfolioData?.details_project} projectName={portfolioData?.name} />
           <DevelopmentPortfolioSection />
           <ToolsSection portfolioData={portfolioData?.details_project}/>
           <TimelineSection portfolioData={portfolioData?.detail_timeline}/>

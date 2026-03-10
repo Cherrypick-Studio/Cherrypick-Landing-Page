@@ -22,11 +22,12 @@ const Footer = () => {
         >
           {/* Background image with opacity */}
           <Image
-            src="/images/logo-noword.svg" // Replace with your image path
-            alt="Background"
+            src="/images/logo-noword.svg"
+            alt=""
+            aria-hidden="true"
             width={100}
             height={100}
-            className="opacity-5 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]" // Adjust opacity as needed (0.2 = 20%)
+            className="opacity-5 w-full absolute max-md:-bottom-[100px] md:-right-[150px] md:-bottom-[400px] xl:w-[60%] xl:-right-[100px] xl:-bottom-[400px] -z-[5px]"
           />
           <Link href={"/contact"}>
             <div className="z-10 flex justify-center items-center flex-col w-full gap-5">
@@ -80,7 +81,7 @@ const Footer = () => {
                   Portfolio
                 </Text>
               </Link>
-              <Link href="#">
+              <Link href="/service">
                 <Text variant="primary" size="h4" className="max-lg:text-sm">
                   Services
                 </Text>

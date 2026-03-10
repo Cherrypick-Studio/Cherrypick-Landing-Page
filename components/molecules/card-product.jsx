@@ -15,7 +15,7 @@ const CardProduct = ({
     return (
         <div className="flex flex-col w-full gap-5 cursor-pointer" onClick={() => router.push(`/portfolio/${url}`) }>
             <div className="relative overflow-hidden w-full">
-            <Image src={img} alt="cherrypick-product-1" title="cherrypick-product-1" width={300} height={300} className="hover:scale-105 transition-all duration-300 rounded-xl w-full" />
+            <Image src={img} alt={`${title} project by Cherrypick Studio`} title={title} width={300} height={300} className="hover:scale-105 transition-all duration-300 rounded-xl w-full" />
             </div>
             <div className="flex justify-between max-lg:items-center">
                 <Text size="h1" weight="400" className="max-lg:text-base">{title}</Text>
