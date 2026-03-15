@@ -91,6 +91,11 @@ const Footer = () => {
                   About us
                 </Text>
               </Link>
+              <Link href="/blog">
+                <Text variant="primary" size="h4" className="max-lg:text-sm">
+                  Blog
+                </Text>
+              </Link>
               <Link href="/contact">
                 <Text variant="primary" size="h4" className="max-lg:text-sm">
                   Contact

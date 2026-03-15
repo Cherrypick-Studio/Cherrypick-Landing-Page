@@ -91,8 +91,11 @@ const Header = () => {
       <header
         // className={`sticky bg-white top-0 inset-x-0 z-40 ${scroll} transition-all ease-in-out duration-300`}
         className={`sticky bg-white top-0 inset-x-0 z-40 transition-transform duration-300 ease-in-out ${
-          pathname.split("/").length > 2 &&
-          (isVisible ? "translate-y-0" : "-translate-y-full")
+          pathname.split("/").length > 2
+            ? isVisible
+              ? "translate-y-0"
+              : "-translate-y-full"
+            : ""
         }`}
       >
         <LazyMotion features={domAnimation}>
@@ -230,6 +233,18 @@ const Header = () => {
                           About us
                         </Text>
                       </Link>
+                      <Link href="/blog">
+                        <Text
+                          variant="primary"
+                          size="h4"
+                          onClick={() => setShowMenu(false)}
+                          className={cn("text-black text-3xl", {
+                            "text-red-cherry-500": pathname.includes("blog"),
+                          })}
+                        >
+                          Blog
+                        </Text>
+                      </Link>
                       <a
                         href="https://store.cherrypick.studio/"
                         target="_blank"
@@ -296,6 +311,17 @@ const Header = () => {
                     About Us
                   </Text>
                 </Link>
+                <Link href="/blog">
+                  <Text
+                    variant="link"
+                    size="h4"
+                    className={cn("text-black", {
+                      "text-red-cherry-500": pathname.includes("blog"),
+                    })}
+                  >
+                    Blog
+                  </Text>
+                </Link>
                 <a
                   href="https://store.cherrypick.studio/"
                   target="_blank"
@@ -330,7 +356,7 @@ const Header = () => {
       </header>
 
       {/* second navbar  */}
-      {pathname.split("/").length > 2 && (
+      {pathname.startsWith("/portfolio/") && pathname.split("/").length > 2 && (
         <div
           className={`sticky border border-[#EBEBEB] top-0 inset-x-0 z-30 bg-white transition-transform duration-300 ease-in-out ${
             isVisible && lastScrollY !== 0
