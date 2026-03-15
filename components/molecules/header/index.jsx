@@ -12,11 +12,6 @@ import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-} from "@/components/ui/popover";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -235,7 +230,12 @@ const Header = () => {
                           About us
                         </Text>
                       </Link>
-                      <div className="flex flex-col space-y-4">
+                      <a
+                        href="https://store.cherrypick.studio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setShowMenu(false)}
+                      >
                         <Text
                           variant="primary"
                           size="h4"
@@ -243,39 +243,7 @@ const Header = () => {
                         >
                           Shop
                         </Text>
-                        <div className="flex flex-col space-y-3 justify-center text-center items-center">
-                          <a
-                            href="https://ui8.net/cherrypick-studio/products"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => setShowMenu(false)}
-                            className="flex items-center space-x-2 group"
-                          >
-                            <Text
-                              variant="primary"
-                              size="h5"
-                              className="text-gray-600 group-hover:text-red-cherry-500 transition-colors duration-200"
-                            >
-                              UI8
-                            </Text>
-                          </a>
-                          <a
-                            href="https://cherrypickstudio.gumroad.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => setShowMenu(false)}
-                            className="flex items-center space-x-2 group"
-                          >
-                            <Text
-                              variant="primary"
-                              size="h5"
-                              className="text-gray-600 group-hover:text-red-cherry-500 transition-colors duration-200"
-                            >
-                              Gumroad
-                            </Text>
-                          </a>
-                        </div>
-                      </div>
+                      </a>
                       <Link href="/contact">
                         <Text
                           variant="primary"
@@ -328,69 +296,19 @@ const Header = () => {
                     About Us
                   </Text>
                 </Link>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <button className="text-black hover:text-red-cherry-500 transition-colors duration-200">
-                      <Text
-                        variant="link"
-                        size="h4"
-                        className="text-black hover:text-red-cherry-500"
-                      >
-                        Shop
-                      </Text>
-                    </button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-56 p-2">
-                    <div className="space-y-2">
-                      <a
-                        href="https://ui8.net/cherrypick-studio/products"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
-                      >
-                        <div>
-                          <Text
-                            variant="primary"
-                            size="small"
-                            className="font-medium text-gray-900 mr-2"
-                          >
-                            UI8
-                          </Text>
-                          <Text
-                            variant="secondary"
-                            size="xs"
-                            className="text-gray-500"
-                          >
-                            Design templates & resources
-                          </Text>
-                        </div>
-                      </a>
-                      <a
-                        href="https://cherrypickstudio.gumroad.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
-                      >
-                        <div>
-                          <Text
-                            variant="primary"
-                            size="small"
-                            className="font-medium text-gray-900 mr-2"
-                          >
-                            Gumroad
-                          </Text>
-                          <Text
-                            variant="secondary"
-                            size="xs"
-                            className="text-gray-500"
-                          >
-                            Digital products & UI kits
-                          </Text>
-                        </div>
-                      </a>
-                    </div>
-                  </PopoverContent>
-                </Popover>
+                <a
+                  href="https://store.cherrypick.studio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Text
+                    variant="link"
+                    size="h4"
+                    className="text-black hover:text-red-cherry-500"
+                  >
+                    Shop
+                  </Text>
+                </a>
                 <Link href="/contact">
                   <Text
                     variant="link"
