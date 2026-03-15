@@ -1,4 +1,8 @@
-import { getBlogPost } from "@/lib/blogData";
+import { getBlogMeta as getBlogPost, getAllSlugs } from "@/lib/blogMeta";
+
+export function generateStaticParams() {
+  return getAllSlugs().map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = params;

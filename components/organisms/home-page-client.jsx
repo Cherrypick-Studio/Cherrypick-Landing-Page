@@ -4,14 +4,20 @@ import Goals from "@/components/organisms/goals";
 import MainSection from "@/components/organisms/main-section";
 import Services from "@/components/organisms/services";
 import Works from "@/components/organisms/list-portfolio";
-import Lottie from "lottie-react";
 import splashLottie from "@/public/lotties/splash.json";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import AboutUs from "@/components/organisms/about-us";
 import Highlights from "@/components/organisms/highlights";
 import LenisProvider from "@/components/molecules/lenis";
+import { useState, useEffect } from "react";
 
 export default function HomePageClient() {
+  const [LottieComponent, setLottieComponent] = useState(null);
+
+  useEffect(() => {
+    import("lottie-react").then((mod) => setLottieComponent(() => mod.default));
+  }, []);
+
   return (
     <LenisProvider>
       <LazyMotion features={domAnimation}>
@@ -29,7 +35,7 @@ export default function HomePageClient() {
           }}
         >
           <div className="splash-container flex items-center justify-center w-full h-[100dvh] bg-red-cherry-500 z-50">
-            <Lottie animationData={splashLottie} loop={false} className="lg:min-w-[50%]" />
+            {LottieComponent && <LottieComponent animationData={splashLottie} loop={false} className="lg:min-w-[50%]" />}
           </div>
         </m.div>
       </LazyMotion>

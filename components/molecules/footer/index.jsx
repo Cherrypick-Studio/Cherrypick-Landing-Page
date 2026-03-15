@@ -6,8 +6,6 @@ import CardIcon from "../card-icon";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { emailAction } from "@/configs/email-action";
-import Lottie from "lottie-react";
-import getToWorkLottie from "@/public/lotties/get-to-work.json";
 import { ArrowUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 

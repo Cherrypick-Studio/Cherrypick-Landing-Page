@@ -1,5 +1,4 @@
 "use client";
-import { m, LazyMotion, domAnimation } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,12 +9,15 @@ const categoryColors = {
   "Branding": "bg-orange-100 text-orange-700",
   "Digital Transformation": "bg-red-100 text-red-700",
   "Design Process": "bg-pink-100 text-pink-700",
+  "AI & SaaS": "bg-indigo-100 text-indigo-700",
+  "AI & Development": "bg-violet-100 text-violet-700",
+  "SaaS Founders": "bg-cyan-100 text-cyan-700",
 };
 
 const marketLabels = {
-  ID: { label: "🇮🇩 Indonesia", className: "bg-red-50 text-red-600" },
-  SG: { label: "🇸🇬 Singapore", className: "bg-orange-50 text-orange-600" },
-  Both: { label: "🌏 Regional", className: "bg-gray-100 text-gray-600" },
+  ID: { label: "🇮🇩 Indonesia", className: "bg-red-100 text-red-700" },
+  SG: { label: "🇸🇬 Singapore", className: "bg-orange-100 text-orange-700" },
+  Both: { label: "🌏 Regional", className: "bg-teal-100 text-teal-700" },
 };
 
 function BlogCard({ post, index }) {
@@ -24,11 +26,9 @@ function BlogCard({ post, index }) {
     categoryColors[post.category] ?? "bg-gray-100 text-gray-600";
 
   return (
-    <m.article
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
+    <article
       className="group bg-white rounded-2xl overflow-hidden border border-[#EBEBEB] hover:border-red-cherry-500 transition-all duration-300 hover:shadow-lg flex flex-col"
+      style={{ animationDelay: `${index * 80}ms` }}
     >
       <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
         <div className="relative w-full aspect-[1200/630] bg-[#F5F5F5] overflow-hidden">
@@ -70,38 +70,30 @@ function BlogCard({ post, index }) {
                 year: "numeric",
               })}
             </time>
-            <span className="text-xs text-gray-400">{post.readingTime} min read</span>
           </div>
         </div>
       </Link>
-    </m.article>
+    </article>
   );
 }
 
-export default function BlogList({ posts }) {
+export default function BlogList({ posts = [] }) {
   return (
-    <LazyMotion features={domAnimation}>
-      <section className="container mx-auto px-6 lg:px-20 py-16">
-        <m.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Blog
-          </h1>
-          <p className="text-lg text-gray-500 max-w-2xl">
-            Insights on web development, design, and digital strategy from the
-            Cherrypick Studio team.
-          </p>
-        </m.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post, index) => (
-            <BlogCard key={post.slug} post={post} index={index} />
-          ))}
-        </div>
-      </section>
-    </LazyMotion>
+    <section className="container mx-auto px-6 lg:px-20 py-16">
+      <div className="mb-12">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          Blog
+        </h1>
+        <p className="text-lg text-gray-500 max-w-2xl">
+          Insights on web development, design, and digital strategy from the
+          Cherrypick Studio team.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post, index) => (
+          <BlogCard key={post.slug} post={post} index={index} />
+        ))}
+      </div>
+    </section>
   );
 }

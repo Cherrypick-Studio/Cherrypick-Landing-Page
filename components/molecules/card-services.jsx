@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Text from "@/components/ui/text";
-import Lottie from "lottie-react";
 import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
 import { useRef } from "react";
 import { Badge } from "../ui/badge";
