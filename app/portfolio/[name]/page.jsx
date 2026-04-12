@@ -7,11 +7,10 @@ import ToolsSection from "@/components/organisms/tools-section";
 import portfolios from "@/lib/dataPortfolio.json";
 
 
-export default function DetailProject({params})
+export default async function DetailProject({params})
 {
-  
-  const param = params
-  const portfolioData = portfolios.find(p => p.name_company === param?.name);
+  const { name } = await params;
+  const portfolioData = portfolios.find(p => p.name_company === name);
   if (!portfolioData) {
     return <div>Project not found</div>;
   }

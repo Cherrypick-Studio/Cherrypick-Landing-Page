@@ -1,7 +1,7 @@
 import portfolios from "@/lib/dataPortfolio.json";
 
 export async function generateMetadata({ params }) {
-  const { name } = params;
+  const { name } = await params;
 
   const portfolioData = portfolios.find((p) => p.name_company === name);
 
@@ -46,8 +46,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function Layout({ children, params }) {
-  const { name } = params;
+export default async function Layout({ children, params }) {
+  const { name } = await params;
   const portfolioData = portfolios.find((p) => p.name_company === name);
 
   const breadcrumbJsonLd = {
