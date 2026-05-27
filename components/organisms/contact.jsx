@@ -35,7 +35,7 @@ const ContactSection = () => {
               id="btn-jumbotron"
               className="flex rounded-full gap-5 py-2 pl-8 pr-1 items-center"
               onClick={() => {
-                window.location.href = "mailto:cherrypick.main@gmail.com?subject=Let's collaborate!";
+                window.open("https://wa.me/6282326546380?text=Hi%20Cherrypick%20Studio!%20I%27m%20interested%20in%20collaborating%20on%20an%20IT%20project%20with%20your%20team.%20Could%20we%20schedule%20a%20time%20to%20discuss%20further%3F", "_blank", "noopener,noreferrer");
               }}
             >
               Book a Call

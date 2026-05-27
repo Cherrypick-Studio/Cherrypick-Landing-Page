@@ -41,7 +41,9 @@ const MainSection = () => {
           </Text>
           <div className="flex gap-3 max-[400px]:flex-col max-[400px]:w-full ">
             <a
-              href="mailto:cherrypick.main@gmail.com?subject=Let's collaborate!"
+              href="https://wa.me/6282326546380?text=Hi%20Cherrypick%20Studio!%20I%27m%20interested%20in%20collaborating%20on%20an%20IT%20project%20with%20your%20team.%20Could%20we%20schedule%20a%20time%20to%20discuss%20further%3F"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Button
                 variant="primary"
