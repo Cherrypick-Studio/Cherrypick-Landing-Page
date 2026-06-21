@@ -1,7 +1,7 @@
 "use client";
 import SectionTitle from "@/components/molecules/section-title";
 import CardClient from "../molecules/card-client";
-import { m, LazyMotion, domAnimation, useInView } from "framer-motion";
+import { m, LazyMotion, domAnimation, useInView } from "motion/react";
 import { useRef } from "react";
 
 const topClients = [

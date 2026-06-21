@@ -1,6 +1,6 @@
 "use client";
 import SectionTitle from "@/components/molecules/section-title";
-import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import { m, useInView, LazyMotion, domAnimation } from "motion/react";
 import { useRef } from "react";
 import { Button } from "../ui/button";
 import CardProduct from "../molecules/card-product";

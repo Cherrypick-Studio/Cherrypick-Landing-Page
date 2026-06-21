@@ -1,6 +1,6 @@
 'use client'
 import SectionTitle from "../molecules/section-title";
-import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import { m, useInView, LazyMotion, domAnimation } from "motion/react";
 import { useRef } from "react";
 import HighLightList from "../molecules/highlight";
 import SliderReview from "../molecules/slider/slider-review";

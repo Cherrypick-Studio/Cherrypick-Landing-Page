@@ -3,7 +3,7 @@ import Text from "../ui/text"
 import { Button } from "../ui/button"
 import { ArrowUp } from "lucide-react"
 import { useRef } from "react"
-import { domAnimation, LazyMotion, useInView,m } from "framer-motion"
+import { domAnimation, LazyMotion, useInView,m } from "motion/react"
 import Link from "next/link"
 
 const AboutUs = () =>

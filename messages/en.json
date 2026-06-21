@@ -1,0 +1,30 @@
+{
+  "Nav": {
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "shop": "Shop",
+    "contact": "Contact",
+    "seeListPortfolio": "See Portfolio List",
+    "overview": "Overview",
+    "development": "Development",
+    "result": "Result"
+  },
+  "Footer": {
+    "tagline": "We build high-quality web apps, mobile apps, and design systems that help businesses grow through technology.",
+    "explore": "Explore",
+    "company": "Company",
+    "connect": "Connect",
+    "rights": "All rights reserved.",
+    "madeIn": "Crafted in Malang, Indonesia — serving clients worldwide."
+  },
+  "Common": {
+    "getInTouch": "Get in Touch",
+    "startProject": "Start a Project",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "backToBlog": "Back to Blog",
+    "freeConsultation": "Free Consultation"
+  }
+}

@@ -1,25 +1,29 @@
-"use client";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
-import { useState, useEffect } from "react";
 
-export default function BlogArticle({ slug }) {
-  const [post, setPost] = useState(null);
+const INTERNAL_LINK_LABELS = {
+  "/portfolio": "View our portfolio",
+  "/service": "Explore our services",
+  "/contact": "Get in touch",
+  "/about-us": "About Cherrypick Studio",
+  "/blog": "Read more articles",
+};
 
-  useEffect(() => {
-    import("@/lib/blogData").then(({ getBlogPost }) => {
-      setPost(getBlogPost(slug));
-    });
-  }, [slug]);
+function linkLabel(href) {
+  return (
+    INTERNAL_LINK_LABELS[href] ||
+    href.replace(/^\//, "").replace(/-/g, " ") ||
+    "Learn more"
+  );
+}
 
-  if (!post) {
-    return (
-      <div className="container mx-auto px-6 lg:px-20 py-24 flex justify-center">
-        <div className="w-8 h-8 border-2 border-red-cherry-500 border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
-  }
+export default function BlogArticle({ post }) {
+  if (!post) return null;
+
+  // Posts are single-language; Indonesian-market posts get Indonesian UI labels.
+  const isId = post.targetMarket === "ID";
+  const summary = post.summary || post.metaDescription;
 
   return (
     <div className="container mx-auto px-6 lg:px-20 py-12">
@@ -88,6 +92,16 @@ export default function BlogArticle({ slug }) {
           />
         </div>
 
+        {/* TL;DR — an AI-citable summary near the top of the article */}
+        {summary ? (
+          <aside className="mb-12 rounded-2xl border border-red-100 bg-red-50/50 p-6">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-red-cherry-500">
+              {isId ? "Ringkasan" : "TL;DR"}
+            </p>
+            <p className="text-gray-700 leading-relaxed">{summary}</p>
+          </aside>
+        ) : null}
+
         {/* Article body */}
         <article className="prose prose-gray max-w-none">
           {post.sections.map((section) => (
@@ -111,12 +125,15 @@ export default function BlogArticle({ slug }) {
         {post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-10 pt-8 border-t border-[#EBEBEB]">
             {post.tags.map((tag) => (
-              <span
+              <Link
                 key={tag}
-                className="text-xs px-3 py-1.5 rounded-full bg-gray-100 text-gray-600"
+                href={`/blog/tag/${encodeURIComponent(
+                  tag.toLowerCase().replace(/\s+/g, "-")
+                )}`}
+                className="text-xs px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-red-50 hover:text-red-cherry-500 transition-colors"
               >
                 #{tag}
-              </span>
+              </Link>
             ))}
           </div>
         )}
@@ -138,6 +155,21 @@ export default function BlogArticle({ slug }) {
                 </Link>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Internal links — keep crawlers moving through the site */}
+        {post.internalLinks?.length > 0 && (
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            {post.internalLinks.map((href) => (
+              <Link
+                key={href}
+                href={href}
+                className="font-medium text-gray-500 hover:text-red-cherry-500 transition-colors"
+              >
+                {linkLabel(href)} →
+              </Link>
+            ))}
           </div>
         )}
 

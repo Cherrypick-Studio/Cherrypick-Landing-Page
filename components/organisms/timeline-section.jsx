@@ -1,5 +1,5 @@
 "use client";
-import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import { m, useInView, LazyMotion, domAnimation } from "motion/react";
 import { useRef } from "react";
 import CardTimeline from "../molecules/card-timeline";
 

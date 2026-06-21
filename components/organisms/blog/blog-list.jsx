@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 const categoryColors = {
@@ -16,12 +16,12 @@ const categoryColors = {
 
 const marketLabels = {
   ID: { label: "🇮🇩 Indonesia", className: "bg-red-100 text-red-700" },
-  SG: { label: "🇸🇬 Singapore", className: "bg-orange-100 text-orange-700" },
-  Both: { label: "🌏 Regional", className: "bg-teal-100 text-teal-700" },
+  EU: { label: "🇪🇺 Europe", className: "bg-blue-100 text-blue-700" },
+  Global: { label: "🌍 Global", className: "bg-teal-100 text-teal-700" },
 };
 
 function BlogCard({ post, index }) {
-  const market = marketLabels[post.targetMarket] ?? marketLabels.Both;
+  const market = marketLabels[post.targetMarket] ?? marketLabels.Global;
   const categoryColor =
     categoryColors[post.category] ?? "bg-gray-100 text-gray-600";
 
@@ -77,23 +77,49 @@ function BlogCard({ post, index }) {
   );
 }
 
-export default function BlogList({ posts = [] }) {
+export default function BlogList({
+  posts = [],
+  title = "Blog",
+  description = "Insights on web development, design, and digital strategy from the Cherrypick Studio team.",
+  eyebrow,
+  categories = [],
+  emptyLabel = "No articles yet — check back soon.",
+}) {
   return (
     <section className="container mx-auto px-6 lg:px-20 py-16">
       <div className="mb-12">
+        {eyebrow ? (
+          <p className="text-sm font-semibold uppercase tracking-wide text-red-cherry-500 mb-3">
+            {eyebrow}
+          </p>
+        ) : null}
         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          Blog
+          {title}
         </h1>
-        <p className="text-lg text-gray-500 max-w-2xl">
-          Insights on web development, design, and digital strategy from the
-          Cherrypick Studio team.
-        </p>
+        <p className="text-lg text-gray-500 max-w-2xl">{description}</p>
+        {categories.length > 0 ? (
+          <div className="mt-6 flex flex-wrap gap-2">
+            {categories.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/blog/category/${c.slug}`}
+                className="rounded-full border border-[#EBEBEB] px-3 py-1 text-sm text-gray-600 transition-colors hover:border-red-cherry-500 hover:text-red-cherry-500"
+              >
+                {c.name}
+              </Link>
+            ))}
+          </div>
+        ) : null}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map((post, index) => (
-          <BlogCard key={post.slug} post={post} index={index} />
-        ))}
-      </div>
+      {posts.length === 0 ? (
+        <p className="text-gray-500">{emptyLabel}</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post, index) => (
+            <BlogCard key={post.slug} post={post} index={index} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

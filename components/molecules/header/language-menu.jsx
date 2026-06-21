@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Text from '@/components/ui/text'
+"use client";
+import Text from "@/components/ui/text";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -7,74 +7,60 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu'
-import { useState } from 'react'
+} from "@/components/ui/navigation-menu";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { useParams } from "next/navigation";
 
+const LOCALES = [
+  { code: "en", label: "English" },
+  { code: "id", label: "Bahasa Indonesia" },
+];
 
-const LanguageMenu = () =>
-{
-  const [language, setLanguage] = useState('en')
+const LanguageMenu = () => {
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+  const params = useParams();
+
+  const switchTo = (nextLocale) => {
+    if (nextLocale === locale) return;
+    // Keep the user on the same page, just in the other locale.
+    router.replace({ pathname, params }, { locale: nextLocale });
+  };
+
   return (
     <NavigationMenu className="border rounded-full border-[#DDDDDD]">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            <Image
-              src='/images/british.svg'
-              alt='language'
-              title='language'
-              height={20}
-              width={26}
-            />
-            <Text
-              size="h4"
-              className="ml-3"
-            >
-              {language.toUpperCase()}
+            <Text size="h4" className="ml-3">
+              {locale.toUpperCase()}
             </Text>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink>
-              <Text
-                variant='link'
-                size='h4'
-                className='block py-1'
+            {LOCALES.map((l) => (
+              <NavigationMenuLink
+                key={l.code}
+                onClick={() => switchTo(l.code)}
+                className="cursor-pointer"
               >
-                Bahasa Indonesia
-              </Text>
-            </NavigationMenuLink>
-            <NavigationMenuLink>
-              <Text
-                variant='link'
-                size='h4'
-                className='block py-1'
-              >
-                French
-              </Text>
-            </NavigationMenuLink>
-            <NavigationMenuLink>
-              <Text
-                variant='link'
-                size='h4'
-                className='block py-1'
-              >
-                Germany
-              </Text>
-            </NavigationMenuLink>
-            <NavigationMenuLink>
-              <Text
-                variant='link'
-                size='h4'
-                className='block py-1'
-              >
-                Dutch
-              </Text>
-            </NavigationMenuLink>
+                <Text
+                  variant="link"
+                  size="h4"
+                  className={`block py-1 ${
+                    l.code === locale ? "text-red-cherry-500" : ""
+                  }`}
+                >
+                  {l.label}
+                </Text>
+              </NavigationMenuLink>
+            ))}
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
-}
+  );
+};
 
-export default LanguageMenu
+export default LanguageMenu;

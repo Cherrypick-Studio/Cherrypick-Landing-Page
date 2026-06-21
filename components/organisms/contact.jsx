@@ -1,7 +1,7 @@
 "use client";
 import { ArrowUp } from "lucide-react";
 import { useRef } from "react";
-import { domAnimation, LazyMotion, useInView, m } from "framer-motion";
+import { domAnimation, LazyMotion, useInView, m } from "motion/react";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {

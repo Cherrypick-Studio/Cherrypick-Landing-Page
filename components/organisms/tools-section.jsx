@@ -1,5 +1,5 @@
 "use client";
-import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import { m, useInView, LazyMotion, domAnimation } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 

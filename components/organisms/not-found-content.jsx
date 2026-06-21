@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { m, LazyMotion, domAnimation } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "motion/react";
 
 function Custom404Content() {
   return (

@@ -5,7 +5,7 @@ import MainSection from "@/components/organisms/main-section";
 import Services from "@/components/organisms/services";
 import Works from "@/components/organisms/list-portfolio";
 import splashLottie from "@/public/lotties/splash.json";
-import { m, LazyMotion, domAnimation } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "motion/react";
 import AboutUs from "@/components/organisms/about-us";
 import Highlights from "@/components/organisms/highlights";
 import LenisProvider from "@/components/molecules/lenis";

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Text from "@/components/ui/text";
-import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import { m, useInView, LazyMotion, domAnimation } from "motion/react";
 import { useRef } from "react";
 import { Badge } from "../ui/badge";
 

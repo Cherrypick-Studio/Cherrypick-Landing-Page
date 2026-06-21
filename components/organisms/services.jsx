@@ -2,7 +2,7 @@ import SectionTitle from "../molecules/section-title";
 import CardServices from "../molecules/card-services";
 import devLottie from "@/public/lotties/services-dev.json";
 import brandLottie from "@/public/lotties/services-brand.json";
-import { m, useInView, LazyMotion, domAnimation } from "framer-motion";
+import { m, useInView, LazyMotion, domAnimation } from "motion/react";
 import { Button } from "../ui/button";
 import { useRef } from "react";
 import Link from "next/link";

@@ -1,0 +1,30 @@
+{
+  "Nav": {
+    "portfolio": "Portofolio",
+    "services": "Layanan",
+    "aboutUs": "Tentang Kami",
+    "blog": "Blog",
+    "shop": "Toko",
+    "contact": "Kontak",
+    "seeListPortfolio": "Lihat Daftar Portofolio",
+    "overview": "Ringkasan",
+    "development": "Pengembangan",
+    "result": "Hasil"
+  },
+  "Footer": {
+    "tagline": "Kami membangun web app, mobile app, dan design system berkualitas tinggi yang membantu bisnis berkembang melalui teknologi.",
+    "explore": "Jelajahi",
+    "company": "Perusahaan",
+    "connect": "Terhubung",
+    "rights": "Hak cipta dilindungi.",
+    "madeIn": "Dibuat di Malang, Indonesia — melayani klien di seluruh dunia."
+  },
+  "Common": {
+    "getInTouch": "Hubungi Kami",
+    "startProject": "Mulai Proyek",
+    "learnMore": "Selengkapnya",
+    "readMore": "Baca Selengkapnya",
+    "backToBlog": "Kembali ke Blog",
+    "freeConsultation": "Konsultasi Gratis"
+  }
+}

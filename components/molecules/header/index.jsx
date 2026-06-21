@@ -6,14 +6,15 @@ import LanguageMenu from "@/components/molecules/header/language-menu";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { m, LazyMotion, domAnimation } from "framer-motion";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import { m, LazyMotion, domAnimation } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
+  const t = useTranslations("Nav");
   const [showMenu, setShowMenu] = useState(false);
   // BE ABLE TO USE :could disabled when need it
   // const [scroll, setScroll] = useState("");
@@ -205,7 +206,7 @@ const Header = () => {
                               pathname.includes("portfolio"),
                           })}
                         >
-                          Portfolio
+                          {t("portfolio")}
                         </Text>
                       </Link>
                       <Link href="/service">
@@ -217,7 +218,7 @@ const Header = () => {
                             "text-red-cherry-500": pathname.includes("service"),
                           })}
                         >
-                          Services
+                          {t("services")}
                         </Text>
                       </Link>
                       <Link href="/about-us">
@@ -230,7 +231,7 @@ const Header = () => {
                               pathname.includes("about-us"),
                           })}
                         >
-                          About us
+                          {t("aboutUs")}
                         </Text>
                       </Link>
                       <Link href="/blog">
@@ -242,7 +243,7 @@ const Header = () => {
                             "text-red-cherry-500": pathname.includes("blog"),
                           })}
                         >
-                          Blog
+                          {t("blog")}
                         </Text>
                       </Link>
                       <a
@@ -256,7 +257,7 @@ const Header = () => {
                           size="h4"
                           className="text-black text-3xl"
                         >
-                          Shop
+                          {t("shop")}
                         </Text>
                       </a>
                       <Link href="/contact">
@@ -268,7 +269,7 @@ const Header = () => {
                             "text-red-cherry-500": pathname.includes("contact"),
                           })}
                         >
-                          Contact
+                          {t("contact")}
                         </Text>
                       </Link>
                     </div>
@@ -286,7 +287,7 @@ const Header = () => {
                       "text-red-cherry-500": pathname.includes("portfolio"),
                     })}
                   >
-                    Portofolio
+                    {t("portfolio")}
                   </Text>
                 </Link>
                 <Link href="/service">
@@ -297,7 +298,7 @@ const Header = () => {
                       "text-red-cherry-500": pathname.includes("service"),
                     })}
                   >
-                    Services
+                    {t("services")}
                   </Text>
                 </Link>
                 <Link href="/about-us">
@@ -308,7 +309,7 @@ const Header = () => {
                       "text-red-cherry-500": pathname.includes("about-us"),
                     })}
                   >
-                    About Us
+                    {t("aboutUs")}
                   </Text>
                 </Link>
                 <Link href="/blog">
@@ -319,7 +320,7 @@ const Header = () => {
                       "text-red-cherry-500": pathname.includes("blog"),
                     })}
                   >
-                    Blog
+                    {t("blog")}
                   </Text>
                 </Link>
                 <a
@@ -332,7 +333,7 @@ const Header = () => {
                     size="h4"
                     className="text-black hover:text-red-cherry-500"
                   >
-                    Shop
+                    {t("shop")}
                   </Text>
                 </a>
                 <Link href="/contact">
@@ -343,7 +344,7 @@ const Header = () => {
                       "text-red-cherry-500": pathname.includes("contact"),
                     })}
                   >
-                    Contact
+                    {t("contact")}
                   </Text>
                 </Link>
               </div>
@@ -372,7 +373,7 @@ const Header = () => {
                   className="flex p-0 gap-4 border-none text-[#909090]"
                 >
                   <ArrowLeft />
-                  See List Portfolio
+                  {t("seeListPortfolio")}
                 </Button>
               </Link>
               <div className="flex items-center space-x-8">
@@ -389,7 +390,7 @@ const Header = () => {
                         activeHash === "#overview" || activeHash === "",
                     })}
                   >
-                    Overview
+                    {t("overview")}
                   </Text>
                 </Link>
                 <Link
@@ -403,7 +404,7 @@ const Header = () => {
                       "text-red-cherry-500": activeHash === "#development",
                     })}
                   >
-                    Development
+                    {t("development")}
                   </Text>
                 </Link>
                 <Link href="#result" onClick={() => setActiveHash("#result")}>
@@ -414,7 +415,7 @@ const Header = () => {
                       "text-red-cherry-500": activeHash === "#result",
                     })}
                   >
-                    Result
+                    {t("result")}
                   </Text>
                 </Link>
               </div>

@@ -4,13 +4,19 @@ import Text from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
 import CardIcon from "../card-icon";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { emailAction } from "@/configs/email-action";
 import { ArrowUp } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { solutionPages, serviceLocationPages } from "@/lib/seoPages";
 
 const Footer = () => {
+  const t = useTranslations("Nav");
+  const locale = useLocale();
   const pathname = usePathname();
+  const localeServicePages = serviceLocationPages.filter(
+    (p) => p.locale === locale
+  );
   return (
     <footer className="mt-32" id="footer">
       {pathname !== "/contact" && (
@@ -57,6 +63,71 @@ const Footer = () => {
       )}
       <div className="bg-white pt-20 pb-10">
         <div className="container mx-auto max-lg:px-6 lg:px-20">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 border-b border-[#F0F0F0] pb-10">
+            <div>
+              <p className="mb-3 text-sm font-semibold text-gray-900">
+                {locale === "id" ? "Solusi" : "Solutions"}
+              </p>
+              <ul className="space-y-2">
+                {solutionPages.map((s) => (
+                  <li key={s.slug}>
+                    <Link
+                      href={`/solutions/${s.slug}`}
+                      className="text-sm text-gray-500 hover:text-red-cherry-500"
+                    >
+                      {s.h1[locale] ?? s.h1.en}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {localeServicePages.length > 0 ? (
+              <div>
+                <p className="mb-3 text-sm font-semibold text-gray-900">
+                  {locale === "id" ? "Layanan & Lokasi" : "Services & Locations"}
+                </p>
+                <ul className="space-y-2">
+                  {localeServicePages.map((s) => (
+                    <li key={s.slug}>
+                      <Link
+                        href={`/services/${s.slug}`}
+                        className="text-sm text-gray-500 hover:text-red-cherry-500"
+                      >
+                        {s.h1}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+            <div>
+              <p className="mb-3 text-sm font-semibold text-gray-900">
+                {locale === "id" ? "Perusahaan" : "Company"}
+              </p>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/portfolio" className="text-sm text-gray-500 hover:text-red-cherry-500">
+                    {t("portfolio")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="text-sm text-gray-500 hover:text-red-cherry-500">
+                    {t("blog")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about-us" className="text-sm text-gray-500 hover:text-red-cherry-500">
+                    {t("aboutUs")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-sm text-gray-500 hover:text-red-cherry-500">
+                    {t("contact")}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
           <div className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 items-center justify-between max-lg:items-start py-8 max-lg:py-0">
             <Link href="#section-hero">
               <Image
@@ -76,27 +147,27 @@ const Footer = () => {
             <div className="flex gap-6 items-center overflow-auto justify-center max-[400px]:flex-col max-[400px]:justify-center max-lg:w-full">
               <Link href="/portfolio">
                 <Text variant="primary" size="h4" className="max-lg:text-sm">
-                  Portfolio
+                  {t("portfolio")}
                 </Text>
               </Link>
               <Link href="/service">
                 <Text variant="primary" size="h4" className="max-lg:text-sm">
-                  Services
+                  {t("services")}
                 </Text>
               </Link>
               <Link href="/about-us">
                 <Text variant="primary" size="h4" className="max-lg:text-sm">
-                  About us
+                  {t("aboutUs")}
                 </Text>
               </Link>
               <Link href="/blog">
                 <Text variant="primary" size="h4" className="max-lg:text-sm">
-                  Blog
+                  {t("blog")}
                 </Text>
               </Link>
               <Link href="/contact">
                 <Text variant="primary" size="h4" className="max-lg:text-sm">
-                  Contact
+                  {t("contact")}
                 </Text>
               </Link>
               <Link href="#section-hero">
